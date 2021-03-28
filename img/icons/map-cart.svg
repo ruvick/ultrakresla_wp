@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="34" viewBox="0 0 23 34">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="crop" width="23" height="34" transform="translate(1.977)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Прямоугольник_5" data-name="Прямоугольник 5" width="22.986" height="46.467" transform="translate(1.977 -6.233)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="map_копия_2" data-name="map копия 2" transform="translate(-952 -1057)">
+    <g id="map_копия_2-2" data-name="map копия 2" transform="translate(950.023 1057)" clip-path="url(#clip-path)">
+      <g id="Сгруппировать_15" data-name="Сгруппировать 15">
+        <g id="Сгруппировать_14" data-name="Сгруппировать 14">
+          <g id="Сгруппировать_13" data-name="Сгруппировать 13" clip-path="url(#clip-path-2)">
+            <path id="Контур_5" data-name="Контур 5" d="M13.477-6.233c-6.351,0-11.5,6.494-11.5,14.507A17.631,17.631,0,0,0,3.1,14.541c.04.108,10.373,25.647,10.373,25.647l10.249-25.33a17.565,17.565,0,0,0,1.251-6.585c0-8.013-5.148-14.507-11.5-14.507Zm0,23.211c-3.811,0-6.9-3.9-6.9-8.7s3.089-8.7,6.9-8.7,6.9,3.9,6.9,8.7-3.091,8.7-6.9,8.7Zm0,0"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path id="Color_Overlay" data-name="Color Overlay" d="M961,1091c-3.061-7.566-7.843-19.386-7.87-19.46a17.618,17.618,0,0,1-1.127-6.267,17.182,17.182,0,0,1,2.052-8.274h7.3c-2.759,1.141-4.75,4.415-4.75,8.274,0,4.805,3.09,8.7,6.9,8.7s6.9-3.9,6.9-8.7c0-3.858-1.993-7.132-4.752-8.274h7.3a17.05,17.05,0,0,1,2.038,7.542V1066a17.465,17.465,0,0,1-1.237,5.854L966,1091Z" fill="#1c6434"/>
+  </g>
+</svg>

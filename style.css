@@ -1,5 +1,5 @@
 ﻿/*
-Theme Name: ultrakresla
+Theme Name: broczo
 Theme URI: 
 Author: ruvick
 Author URI: 
@@ -8,7 +8,9 @@ Version: 1.0.1
 
 
 @charset "UTF-8";
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
 @font-face {
   font-family: "Lato";
   src: url("fonts/Lato-Regular.eot");
@@ -18,14 +20,14 @@ Version: 1.0.1
 
 @font-face {
   font-family: "Lato";
-  src: url("../fonts/Lato-Bold.eot");
+  src: url("fonts/Lato-Bold.eot");
   src: local("☺"), url("fonts/Lato-Bold.woff") format("woff"), url("fonts/Lato-Bold.ttf") format("truetype"), url("fonts/Lato-Bold.svg") format("svg");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'Stolzl';
-  src: url("../fonts/Stolzl-Regular.eot");
+  src: url("fonts/Stolzl-Regular.eot");
   src: local("☺"), url("fonts/Stolzl-Regular.woff") format("woff"), url("fonts/Stolzl-Regular.ttf") format("truetype"), url("fonts/Stolzl-Regular.svg") format("svg");
   font-weight: 400;
   font-style: normal; }
@@ -1415,6 +1417,7 @@ body.ie .ibg img {
   -ms-flex-align: center;
   align-items: center; }
   .header-top__menu {
+    display: flex;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
@@ -1937,15 +1940,15 @@ body.ie .ibg img {
   .benefit__item_l {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/bn-01.jpg"); }
+    background-image: url("img/bn-01.jpg"); }
   .benefit__item_c {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/bn-02.jpg"); }
+    background-image: url("img/bn-02.jpg"); }
   .benefit__item_r {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/bn-03.jpg"); }
+    background-image: url("img/bn-03.jpg"); }
 
 .info-img {
   -webkit-box-pack: justify;
@@ -2046,7 +2049,7 @@ body.ie .ibg img {
 
 .cashback {
   padding: 75px 0 15px 0;
-  background-image: url("../img/cashback.jpg");
+  background-image: url("img/cashback.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2221,7 +2224,7 @@ body.ie .ibg img {
     text-align: center; }
 
 .useful__item-img_01 {
-  background-image: url("../img/useful/useful-01.jpg");
+  background-image: url("img/useful/useful-01.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2231,7 +2234,7 @@ body.ie .ibg img {
   border-radius: 5px; }
 
 .useful__item-img_02 {
-  background-image: url("../img/useful/useful-02.jpg");
+  background-image: url("img/useful/useful-02.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2241,7 +2244,7 @@ body.ie .ibg img {
   border-radius: 5px; }
 
 .useful__item-img_03 {
-  background-image: url("../img/useful/useful-03.jpg");
+  background-image: url("img/useful/useful-03.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2251,7 +2254,7 @@ body.ie .ibg img {
   border-radius: 5px; }
 
 .useful__item-img_04 {
-  background-image: url("../img/useful/useful-04.jpg");
+  background-image: url("img/useful/useful-04.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2261,7 +2264,7 @@ body.ie .ibg img {
   border-radius: 5px; }
 
 .useful__item-img_05 {
-  background-image: url("../img/useful/useful-05.jpg");
+  background-image: url("img/useful/useful-05.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

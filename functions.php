@@ -27,9 +27,28 @@ function crb_load() {
 // если в шапке то пишем - Меню в шапке 
 // если 2 меню в шапке пишем  - Меню в шапке (верхняя часть)
 
-register_nav_menus( array(
-	'header_menu' => 'Главное меню'
-) );
+add_action( 'after_setup_theme', function(){
+	register_nav_menus( [
+		'menu_hot' => 'Меню актуальных предложений (рядом с каталогом)',
+		'menu_cat' => 'Меню каталога', 
+		'menu_main' => 'Меню основное',
+		'menu_corp' => 'Общекорпоративное меню (верхняя шапка)', 
+	] );
+} ); 
+
+add_filter( 'nav_menu_css_class', 'change_menu_item_css_classes', 10, 4 );
+
+function change_menu_item_css_classes( $classes, $item, $args, $depth ) {
+	if( 16 === $item->ID  && 'menu_corp' === $args->theme_location ){
+		$classes[] = 'link__drop-down';
+	}
+
+	// if( 3670 === $item->ID  && 'menu_main' === $args->theme_location ){
+	// 	$classes[] = 'menu__shares';
+	// }
+
+	return $classes;
+}
 
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 185, 185 ); 

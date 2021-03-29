@@ -1,6 +1,7 @@
 		<header class="header-top">
 			<div class="container">
-				<ul class="header-top__menu d-flex">
+
+<!-- 				<ul class="header-top__menu d-flex">
 					<li><a href="#">Каталог</a></li>
 					<li class="link__drop-down"><a href="#">О компании</a>
 						<ul class="menu-drop-down">
@@ -11,15 +12,16 @@
 						<li><a href="#">Оплата и доставка</a></li>
 						<li><a href="#">Сотрудничество</a></li>
 						<li><a href="contacts.html">Контакты</a></li>
-					</ul>
+					</ul> -->
+						<?php wp_nav_menu( array('theme_location' => 'menu_corp','menu_class' => 'header-top__menu','container_class' => 'header-top__menu','container' => false )); ?>
 				</div>
-			</header> 
+			</header>  
 
 			<header id="header" class="header">  
 				<div class="container">
 					<div class="header__row d-flex">
 						<div class="header__logo-block d-flex">
-							<a href="#" class="header__logo logo-icon"></a>
+							<a href="http://broczo.ru" class="header__logo logo-icon"></a>
 							<div class="header__tagline">
 								<h3>ULTRAKRESLA</h3>
 								<div class="header__tagline-tag d-flex">

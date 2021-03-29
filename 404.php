@@ -2,11 +2,15 @@
 
 <?php get_template_part('template-parts/header-section');?>
 
-	<div class = "content contentInPage centrElem">	
+	<main id="primary" class="page site-main">
+
+	<div class = "content contentInPage centrElem">	 
 		<div class="container">
 			<h1 class = "h404">404</h1>
 				Запрашиваемая страница не была найдена
 		</div>
 	</div>
+
+	</main>
 
 <?php get_footer(); ?>

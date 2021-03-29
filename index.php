@@ -18,7 +18,7 @@
 
 				<div class="benefit__item benefit__item_c">
 					<p>
-						ОДНАКО НЕЗАВИСИМОСТЬ <br> 
+						ОДНАКО НЕЗАВИСИМОСТЬ <br>   
 						ПОЗИЦИИ МЫСЛИТЕЛЯ 
 					</p>
 				</div>
@@ -38,7 +38,7 @@
 
 					<div class="info-img__three three-img d-flex">
 						<div class="three-img__one position">
-							<img src="img/info-card/card-01.jpg" alt="">
+							<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-01.jpg" alt="">
 							<div class="info-img__text color-t-01">
 								<p>
 									Спортивные <br>
@@ -48,7 +48,7 @@
 						</div>
 						<div class="three-img__two d-flex">
 							<div class="three-img__item position">
-								<img src="img/info-card/card-02.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-02.jpg" alt="">
 <!-- 										<div class="info-img__text color-t-02">
 											<p>
 												Кресла и диваны для 
@@ -57,7 +57,7 @@
 										</div> -->
 									</div>
 									<div class="three-img__item position">
-										<img src="img/info-card/card-03.jpg" alt="">
+										<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-03.jpg" alt="">
 										<div class="info-img__text color-t-03">
 											<p>
 												Игровые <br>
@@ -69,7 +69,7 @@
 							</div>
 
 							<div class="info-img__one position">
-								<img src="img/info-card/card-04.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-04.jpg" alt="">
 								<div class="info-img__text color-t-04">
 									<p>
 										Кресла и диваны для <br>
@@ -83,7 +83,7 @@
 						<div class="info-img__col">
 
 							<div class="info-img__one position">
-								<img src="img/info-card/card-05.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-05.jpg" alt="">
 								<div class="info-img__text color-t-05">
 									<p>
 										Кресла для <br>
@@ -95,7 +95,7 @@
 							<div class="info-img__three three-img d-flex">
 								<div class="three-img__two d-flex">
 									<div class="three-img__item position">
-										<img src="img/info-card/card-06.jpg" alt="">
+										<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-06.jpg" alt="">
 										<div class="info-img__text color-t-06">
 											<p>
 												Сидения для <br>
@@ -104,7 +104,7 @@
 										</div>
 									</div>
 									<div class="three-img__item position">
-										<img src="img/info-card/card-07.jpg" alt="">
+										<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-07.jpg" alt="">
 										<div class="info-img__text color-t-07">
 											<p>
 												Сидения для <br>
@@ -114,7 +114,7 @@
 									</div>
 								</div>
 								<div class="three-img__one position">
-									<img src="img/info-card/card-08.jpg" alt="">
+									<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-08.jpg" alt="">
 									<div class="info-img__text color-t-08">
 										<p>
 											Компьютерные <br>
@@ -190,7 +190,7 @@
 
 						<div class="prod-card__body d-flex">
 							<a href="#" class="prod-card__link">
-								<img src="img/product/pr-01.jpg" alt=""> 
+								<img src="<?php echo get_template_directory_uri();?>/img/product/pr-01.jpg" alt=""> 
 							</a>
 
 							<div class="prod-card__text d-flex">
@@ -206,7 +206,7 @@
 
 						<div class="prod-card__body d-flex">
 							<a href="#" class="prod-card__link">
-								<img src="img/product/pr-02.jpg" alt=""> 
+								<img src="<?php echo get_template_directory_uri();?>/img/product/pr-02.jpg" alt=""> 
 							</a>
 
 							<div class="prod-card__text d-flex">
@@ -222,7 +222,7 @@
 
 						<div class="prod-card__body d-flex">
 							<a href="#" class="prod-card__link">
-								<img src="img/product/pr-03.jpg" alt=""> 
+								<img src="<?php echo get_template_directory_uri();?>/img/product/pr-03.jpg" alt=""> 
 							</a>
 
 							<div class="prod-card__text d-flex">
@@ -237,7 +237,7 @@
 
 						<div class="prod-card__body d-flex">
 							<a href="#" class="prod-card__link">
-								<img src="img/product/pr-04.jpg" alt=""> 
+								<img src="<?php echo get_template_directory_uri();?>/img/product/pr-04.jpg" alt=""> 
 							</a>
 
 							<div class="prod-card__text d-flex">

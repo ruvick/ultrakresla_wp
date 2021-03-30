@@ -64,11 +64,11 @@ if (mobsearch) {
 if (document.body.clientWidth>1024){
 	function hideMenu() {
 		$('.mob-menu').slideUp(600);
-		$('.menu__link-cat').removeClass('active');
+		$('.menu__catalogy a').removeClass('active');
 	}
 	function showMenu() {
 		$('.mob-menu').slideDown(600);
-		$('.menu__link-cat').addClass('active');
+		$('.menu__catalogy a').addClass('active');
 	}
 	$(document).ready(function() {
 		$(".menu__catalogy").on("mouseover", showMenu);

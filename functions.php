@@ -39,13 +39,13 @@ add_action( 'after_setup_theme', function(){
 add_filter( 'nav_menu_css_class', 'change_menu_item_css_classes', 10, 4 );
 
 function change_menu_item_css_classes( $classes, $item, $args, $depth ) {
-	if( 16 === $item->ID  && 'menu_corp' === $args->theme_location ){
+	if( 30 === $item->ID  && 'menu_corp' === $args->theme_location ){
 		$classes[] = 'link__drop-down';
 	}
 
-	// if( 3670 === $item->ID  && 'menu_main' === $args->theme_location ){
-	// 	$classes[] = 'menu__shares';
-	// }
+	if( 34 === $item->ID  && 'menu_main' === $args->theme_location ){
+		$classes[] = 'menu__catalogy';
+	}
 
 	return $classes;
 }

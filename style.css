@@ -23,7 +23,7 @@ Version: 1.0.1
   src: url("fonts/Lato-Bold.eot");
   src: local("☺"), url("fonts/Lato-Bold.woff") format("woff"), url("fonts/Lato-Bold.ttf") format("truetype"), url("fonts/Lato-Bold.svg") format("svg");
   font-weight: 700;
-  font-style: normal; }
+  font-style: normal; } 
 
 @font-face {
   font-family: 'Stolzl';
@@ -1666,10 +1666,12 @@ body.ie .ibg img {
   box-shadow: 6px 23px 48px -28px #000000; }
 
 .menu__list {
+  display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+.menu__list a,
 .menu__link {
   min-height: 60px;
   display: -webkit-box;
@@ -1685,12 +1687,17 @@ body.ie .ibg img {
   font-size: 14px;
   font-weight: 400; }
 
+.menu__catalogy a:first-child {
+  width: 122px;
+  background: #1C6434;
+  color: #fff;
+}
 .menu__link-cat {
   width: 122px;
   background: #1C6434;
   color: #fff; }
 
-.menu__link-cat:before {
+.menu__catalogy a:before {
   content: '';
   float: left;
   width: 18px;
@@ -1700,7 +1707,7 @@ body.ie .ibg img {
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTgiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxOCAxMiI+DQogIDxpbWFnZSBpZD0ibWVudSIgd2lkdGg9IjE4IiBoZWlnaHQ9IjEyIiB4bGluazpocmVmPSJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUJJQUFBQU1DQVlBQUFCdkV1MjhBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBREZKUkVGVUtGTmpQSDcxOUg4R0tnQkdhaG9rUUFVSE1URCsvMDhWbjFIUklHcUdFVlg4Qm9xMTBjREduOXFvbHJJQmtKa2xVM2xhdHRjQUFBQUFTVVZPUks1Q1lJST0iLz4NCjwvc3ZnPg0K"); }
 
-.menu__link-cat.active:before {
+.menu__catalogy a.active:before {
   content: '';
   float: left;
   width: 14px;

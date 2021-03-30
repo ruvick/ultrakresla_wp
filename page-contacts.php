@@ -46,7 +46,7 @@ get_header(); ?>
 			}
 			?> 
 
-			<h1>Контакты</h1>
+			<h1><?php the_title();?></h1> 
 
 			<div class="contacts__row d-flex">
 				

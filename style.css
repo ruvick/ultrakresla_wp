@@ -839,6 +839,11 @@ body.ie .ibg img {
   margin: 0 5px 0 0;
   border-bottom: 1px solid #000; }
 
+.pagination {
+  display: flex;
+  /*margin-left: 37px;*/
+}
+.pagination,
 .pagination__nav-links {
   max-width: 232px;
   width: 100%;
@@ -847,6 +852,7 @@ body.ie .ibg img {
   align-items: center;
   min-height: 21px; }
 
+.pagination .prev,
 .pagination__back {
   height: 12px;
   display: -webkit-box;
@@ -860,15 +866,18 @@ body.ie .ibg img {
   align-items: center;
   margin-right: 37px;
   position: relative; }
+
+  .pagination .prev:before,
   .pagination__back:before {
     content: "";
     position: absolute;
     top: 0;
     width: 8px;
     height: 12px;
-    background: url("../img/icons/arrow-back.svg");
+    background: url("img/icons/arrow-back.svg");
     background-repeat: no-repeat; }
 
+.page-numbers,
 .pagination__numbers {
   margin-right: 20px;
   font-size: 18px;
@@ -885,6 +894,7 @@ body.ie .ibg img {
   display: block;
   font-size: 18px; }
 
+.pagination .next,
 .pagination__next {
   height: 12px;
   display: -webkit-box;
@@ -898,13 +908,15 @@ body.ie .ibg img {
   align-items: center;
   margin-left: 13px;
   position: relative; }
+
+  .pagination .next:after,
   .pagination__next:after {
     content: "";
     position: absolute;
     top: 0;
     width: 8px;
     height: 12px;
-    background: url("../img/icons/arrow-next.svg");
+    background: url("img/icons/arrow-next.svg");
     background-repeat: no-repeat; }
 
 .current {

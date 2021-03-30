@@ -51,7 +51,7 @@
 
 			</div>
 
-			<nav class="pagination d-flex">
+<!-- 			<nav class="pagination d-flex">
 				<div class="pagination__nav-links d-flex">
 					<a class="pagination__back" href="#"></a>
 					<span class="pagination__numbers">1</span>
@@ -68,7 +68,9 @@
 			</nav>
 
 			<nav class="navigation pagination" role="navigation">
-			</nav>
+			</nav>  -->
+
+			<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi(); ?>
 
 		</div>
 	</section>

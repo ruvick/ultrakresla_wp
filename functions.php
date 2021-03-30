@@ -19,7 +19,7 @@ add_action( 'after_setup_theme', 'crb_load' );
 function crb_load() {
 	require_once( 'carbon-fields/vendor/autoload.php' );
 	\Carbon_Fields\Carbon_Fields::boot();
-}
+} 
 
 //-----Блок описания вывода меню
 // 1. Осмысленные названия для алиаса и для описания на русском.
@@ -118,6 +118,22 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 			wp_die( 'НО-НО-НО!', '', 403 );
 		}
 	}
+	
+
+
+function wp_corenavi() {
+  global $wp_query;
+  $total = isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1;
+  $a['total'] = $total;
+  $a['mid_size'] = 3; // сколько ссылок показывать слева и справа от текущей
+  $a['end_size'] = 1; // сколько ссылок показывать в начале и в конце
+  $a['prev_text'] = ''; // текст ссылки "Предыдущая страница"
+  $a['next_text'] = ''; // текст ссылки "Следующая страница"
+
+  if ( $total > 1 ) echo '<nav class="pagination">';
+  echo paginate_links( $a );
+  if ( $total > 1 ) echo '</nav>';
+}
 	
 	
 	/* Отправка почты

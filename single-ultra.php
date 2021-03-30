@@ -26,7 +26,7 @@ get_header(); ?>
 
 				<div class="benefit__item benefit__item_c">
 					<p>
-						ОДНАКО НЕЗАВИСИМОСТЬ <br>
+						ОДНАКО НЕЗАВИСИМОСТЬ <br> 
 						ПОЗИЦИИ МЫСЛИТЕЛЯ  
 					</p>
 				</div>
@@ -551,7 +551,7 @@ get_header(); ?>
 
 			<div class="similar__row d-flex">
 				
-				<a href="#" class="three-img__one position">
+				<a href="<?php echo get_category_link(9);?>" class="three-img__one position">
 					<img src="<?php echo get_template_directory_uri();?>/img/similar-01.jpg" alt="">
 					<div class="info-img__text color-t-01">
 						<p>
@@ -561,7 +561,7 @@ get_header(); ?>
 					</div>
 				</a>
 
-				<a href="#" class="three-img__one position">
+				<a href="<?php echo get_category_link(12);?>" class="three-img__one position">
 					<img src="<?php echo get_template_directory_uri();?>/img/similar-02.jpg" alt="">
 					<div class="info-img__text color-t-03">
 						<p>
@@ -571,7 +571,7 @@ get_header(); ?>
 					</div>
 				</a>
 
-				<a href="#" class="three-img__one position">
+				<a href="<?php echo get_category_link(12);?>" class="three-img__one position">
 					<img src="<?php echo get_template_directory_uri();?>/img/similar-03.jpg" alt="">
 					<div class="info-img__text color-t-08">
 						<p>
@@ -581,7 +581,7 @@ get_header(); ?>
 					</div>
 				</a>
 
-				<a href="#" class="three-img__one position">
+				<a href="<?php echo get_category_link(12);?>" class="three-img__one position">
 					<img src="<?php echo get_template_directory_uri();?>/img/similar-04.jpg" alt="">
 					<div class="info-img__text color-t-05">
 						<p>

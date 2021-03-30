@@ -113,7 +113,7 @@ get_header(); ?>
 									<div class="availability-manuf">Производитель: <a href="#"><?echo carbon_get_post_meta(get_the_ID(),"offer_manufact"); ?></a></div>
 								</div>
 								<div class="actions-block__social d-flex">
-									<a href="#" class="actions-block__btn btn">Задать вопрос</a>
+									<a href="#" class="actions-block__btn popup-quest btn">Задать вопрос</a>
 									<div class="actions-block__share d-flex">
 										<p>Поделиться:</p>
 										<div class="actions-block__social-icon d-flex">

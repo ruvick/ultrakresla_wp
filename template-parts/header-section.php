@@ -40,7 +40,7 @@
 
 							<div class="header__callback callback d-flex">
 								<a href="#" class="callback__address">Адрес: г. Рязань, Пр-Пт: с 9:00-20:00</a>
-								<p><a href="tel:88007005667" class="callback__phone">8 (800) 700-56-67</a></p>
+								<p><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="callback__phone"><? echo $tel = carbon_get_theme_option("as_phones_1"); ?></a></p>
 								<a href="#" class="callback__popup">Заказать звонок</a>
 							</div>
 							<a href="tel:88007005667" class="mob-callback__phone"></a>

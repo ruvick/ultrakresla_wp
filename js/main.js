@@ -206,7 +206,7 @@ jQuery('.header__form button').click(function(e){
 });
 
 
-// $(".fancybox").fancybox();
+$(".fancybox").fancybox();
 
 //ZOOM
 if ($('.gallery').length > 0) {

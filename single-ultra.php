@@ -27,7 +27,7 @@ get_header(); ?>
 				<div class="benefit__item benefit__item_c">
 					<p>
 						ОДНАКО НЕЗАВИСИМОСТЬ <br>
-						ПОЗИЦИИ МЫСЛИТЕЛЯ 
+						ПОЗИЦИИ МЫСЛИТЕЛЯ  
 					</p>
 				</div>
 
@@ -53,26 +53,26 @@ get_header(); ?>
 					<div class="select-slider-big">
 
 						<div class="select-slider-big__item">
-							<a class="fancybox" data-fancybox="gallery" href="img/slider-product/sl-prod-01.jpg">
-								<img  src="img/slider-product/sl-prod-01.jpg" alt="">
+							<a class="fancybox" data-fancybox="gallery" href="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.jpg">
+								<img  src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.jpg" alt="">
 							</a>
 						</div>
 
 						<div class="select-slider-big__item">
-							<a class="fancybox" data-fancybox="gallery" href="img/slider-product/sl-prod-02.jpg">
-								<img  src="img/slider-product/sl-prod-02.jpg" alt="">
+							<a class="fancybox" data-fancybox="gallery" href="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-02.jpg">
+								<img  src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-02.jpg" alt="">
 							</a>
 						</div>
 
 						<div class="select-slider-big__item">
-							<a class="fancybox" data-fancybox="gallery" href="img/slider-product/sl-prod-03.jpg">
-								<img src="img/slider-product/sl-prod-03.jpg" alt="">
+							<a class="fancybox" data-fancybox="gallery" href="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-03.jpg">
+								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-03.jpg" alt="">
 							</a>
 						</div>
 
 						<div class="select-slider-big__item">
-							<a class="fancybox" data-fancybox="gallery" href="img/slider-product/sl-prod-04.jpg">
-								<img src="img/slider-product/sl-prod-04.jpg" alt="">
+							<a class="fancybox" data-fancybox="gallery" href="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-04.jpg">
+								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-04.jpg" alt="">
 							</a>
 						</div>
 
@@ -82,26 +82,26 @@ get_header(); ?>
 					<div class="select-prod-slider">
 
 						<div class="select-prod-slider__item">
-							<img src="img/slider-product/sl-prod-min-01.jpg" alt="">
+							<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-min-01.jpg" alt="">
 						</div>
 
 						<div class="select-prod-slider__item">
-							<img src="img/slider-product/sl-prod-min-02.jpg" alt="">
+							<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-min-02.jpg" alt="">
 						</div>
 
 						<div class="select-prod-slider__item">
-							<img src="img/slider-product/sl-prod-min-03.jpg" alt="">
+							<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-min-03.jpg" alt="">
 						</div>
 
 						<div class="select-prod-slider__item">
-							<img src="img/slider-product/sl-prod-min-04.jpg" alt="">
+							<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-min-04.jpg" alt="">
 						</div>
 
 					</div>
 				</div>
 
 				<div class="actions__wrap"> 
-					<h1>Спортивное сиденье Эксперт</h1>
+					<h1><?the_title();?></h1>
 					<div class="actions__row d-flex">
 
 						<div class="actions-block">
@@ -141,22 +141,22 @@ get_header(); ?>
 							<div class="analogs-block__flex-card d-flex">
 
 								<a href="#" class="analogs-block__item-card">
-									<img src="img/analogs-01.jpg" alt="">
+									<img src="<?php echo get_template_directory_uri();?>/img/analogs-01.jpg" alt="">
 									<p>12 400 руб.</p>
 								</a>
 
 								<a href="#" class="analogs-block__item-card">
-									<img src="img/analogs-02.jpg" alt="">
+									<img src="<?php echo get_template_directory_uri();?>/img/analogs-02.jpg" alt="">
 									<p>24 900 руб.</p>
 								</a>
 
 								<a href="#" class="analogs-block__item-card">
-									<img src="img/analogs-03.jpg" alt="">
+									<img src="<?php echo get_template_directory_uri();?>/img/analogs-03.jpg" alt="">
 									<p>9 900 руб.</p>
 								</a>
 
 								<a href="#" class="analogs-block__item-card">
-									<img src="img/analogs-04.jpg" alt="">
+									<img src="<?php echo get_template_directory_uri();?>/img/analogs-04.jpg" alt="">
 									<p>24 900 руб.</p>
 								</a>
 
@@ -519,67 +519,26 @@ get_header(); ?>
 
 			<div class="prod-card d-flex">
 
-				<div class="prod-card__body d-flex">
-					<a href="#" class="prod-card__link">
-						<img src="img/product/pr-01.jpg" alt=""> 
-					</a>
+				<?
+					$args = array(
+						'posts_per_page' => 4,
+						'post_type' => 'ultra',
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'ultracat',
+								'field' => 'id',
+								'terms' => array(8)
+							)
+						)
+					);
+					$query = new WP_Query($args);
 
-					<div class="prod-card__text d-flex">
-						<h4>
-							Спортивное сиденье <br>
-							Чемпион
-						</h4>
-						<p class="prod-card__price">15 400 руб.</p>
-					</div>
-					<a href="#" class="prod-card__btn btn">Подробнее</a>
-				</div>
-
-
-				<div class="prod-card__body d-flex">
-					<a href="#" class="prod-card__link">
-						<img src="img/product/pr-02.jpg" alt=""> 
-					</a>
-
-					<div class="prod-card__text d-flex">
-						<h4>
-							Кресло для аттракциона <br>
-							4Д Синема
-						</h4>
-						<p class="prod-card__price">17 800 руб.</p>
-					</div>
-					<a href="#" class="prod-card__btn btn">Подробнее</a>
-				</div>
-
-
-				<div class="prod-card__body d-flex">
-					<a href="#" class="prod-card__link">
-						<img src="img/product/pr-03.jpg" alt=""> 
-					</a>
-
-					<div class="prod-card__text d-flex">
-						<h4>
-							Кресло оператора S16
-						</h4>
-						<p class="prod-card__price">32 000 руб.</p>
-					</div>
-					<a href="#" class="prod-card__btn btn">Подробнее</a>
-				</div>
-
-
-				<div class="prod-card__body d-flex">
-					<a href="#" class="prod-card__link">
-						<img src="img/product/pr-04.jpg" alt=""> 
-					</a>
-
-					<div class="prod-card__text d-flex">
-						<h4>
-							Спортивное сиденье <br>
-							Чемпион
-						</h4>
-						<p class="prod-card__price">14 000 руб.</p>
-					</div>
-					<a href="#" class="prod-card__btn btn">Подробнее</a>
-				</div>
+					foreach( $query->posts as $post ){
+						$query->the_post();
+						get_template_part('template-parts/product-elem');
+					}  
+					wp_reset_postdata();
+				?>
 
 			</div>
 
@@ -593,7 +552,7 @@ get_header(); ?>
 			<div class="similar__row d-flex">
 				
 				<a href="#" class="three-img__one position">
-					<img src="img/similar-01.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri();?>/img/similar-01.jpg" alt="">
 					<div class="info-img__text color-t-01">
 						<p>
 							Спортивные <br>
@@ -603,7 +562,7 @@ get_header(); ?>
 				</a>
 
 				<a href="#" class="three-img__one position">
-					<img src="img/similar-02.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri();?>/img/similar-02.jpg" alt="">
 					<div class="info-img__text color-t-03">
 						<p>
 							Игровые <br>
@@ -613,7 +572,7 @@ get_header(); ?>
 				</a>
 
 				<a href="#" class="three-img__one position">
-					<img src="img/similar-03.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri();?>/img/similar-03.jpg" alt="">
 					<div class="info-img__text color-t-08">
 						<p>
 							Компьютерные <br>
@@ -623,7 +582,7 @@ get_header(); ?>
 				</a>
 
 				<a href="#" class="three-img__one position">
-					<img src="img/similar-04.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri();?>/img/similar-04.jpg" alt="">
 					<div class="info-img__text color-t-05">
 						<p>
 							Кресла для <br>

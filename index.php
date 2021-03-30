@@ -18,7 +18,7 @@
 
 				<div class="benefit__item benefit__item_c">
 					<p>
-						ОДНАКО НЕЗАВИСИМОСТЬ <br>   
+						ОДНАКО НЕЗАВИСИМОСТЬ <br>    
 						ПОЗИЦИИ МЫСЛИТЕЛЯ 
 					</p>
 				</div>
@@ -188,69 +188,26 @@
 
 					<div class="prod-card d-flex">
 
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/pr-01.jpg" alt=""> 
-							</a>
+					<?
+					$args = array(
+						'posts_per_page' => 4,
+						'post_type' => 'ultra',
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'ultracat',
+								'field' => 'id',
+								'terms' => array(7)
+							)
+						)
+					);
+					$query = new WP_Query($args);
 
-							<div class="prod-card__text d-flex">
-								<h4>
-									Спортивное сиденье <br>
-									Чемпион
-								</h4>
-								<p class="prod-card__price">15 400 руб.</p>
-							</div>
-							<a href="#" class="prod-card__btn btn">Подробнее</a>
-						</div>
-
-
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/pr-02.jpg" alt=""> 
-							</a>
-
-							<div class="prod-card__text d-flex">
-								<h4>
-									Кресло для аттракциона <br>
-									4Д Синема
-								</h4>
-								<p class="prod-card__price">17 800 руб.</p>
-							</div>
-							<a href="#" class="prod-card__btn btn">Подробнее</a>
-						</div>
-
-
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/pr-03.jpg" alt=""> 
-							</a>
-
-							<div class="prod-card__text d-flex">
-								<h4>
-									Кресло оператора S16
-								</h4>
-								<p class="prod-card__price">32 000 руб.</p>
-							</div>
-							<a href="#" class="prod-card__btn btn">Подробнее</a>
-						</div>
-
-
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/pr-04.jpg" alt=""> 
-							</a>
-
-							<div class="prod-card__text d-flex">
-								<h4>
-									Спортивное сиденье <br>
-									Чемпион
-								</h4>
-								<p class="prod-card__price">14 000 руб.</p>
-							</div>
-							<a href="#" class="prod-card__btn btn">Подробнее</a>
-						</div>
-
-					</div>
+					foreach( $query->posts as $post ){
+						$query->the_post();
+						get_template_part('template-parts/product-elem');
+					}  
+					wp_reset_postdata();
+					?>
 
 				</div>
 			</section>

@@ -806,6 +806,11 @@ body.ie .ibg img {
 .baloon-close {
   top: 18px !important; }
 
+#breadcrumbs {
+  margin-bottom: 30px;
+}
+
+#breadcrumbs,
 .breadcrumb ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -816,20 +821,22 @@ body.ie .ibg img {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
+#breadcrumbs .breadcrumb_last,
 .breadcrumb ul li {
   font-family: Lato;
   font-size: 14px;
   font-weight: 400;
   line-height: 164.28571%;
-  color: #727272;
-  margin: 0 5px; }
+  color: #727272; }
 
+#breadcrumbs a,
 .breadcrumb ul li a {
   font-family: Lato;
   font-size: 14px;
   font-weight: 400;
   line-height: 164.28571%;
   color: #000;
+  margin: 0 5px 0 0;
   border-bottom: 1px solid #000; }
 
 .pagination__nav-links {

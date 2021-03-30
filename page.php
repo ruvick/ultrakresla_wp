@@ -18,7 +18,7 @@ get_header(); ?>
 
 	<main id="primary" class="page site-main"> 
 
-		<section class="content page">
+		<section class="content"> 
 			<div class="container">
 
 					<div class="info__benefit benefit d-flex">

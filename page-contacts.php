@@ -19,7 +19,7 @@ get_header(); ?>
 
 						<div class="benefit__item benefit__item_l">
 							<p>
-								ПОЛУЧИТЕ КЕШБЕК ПРИ <br>
+								ПОЛУЧИТЕ КЕШБЕК ПРИ <br> 
 								СОВЕРШЕНИИ ЗАКАЗА
 							</p>
 						</div>
@@ -53,26 +53,26 @@ get_header(); ?>
 						
 						<div class="contacts__col contacts__col_l">
 							<ul class="contacts__list-address list-address">
-								<li><a href="tel:88007005667" class="list-address__phone contacts-list-icon">8 (800) 700-56-67</a></li>
-								<li class="list-address__addres contacts-list-icon">390037 г. Рязань, ул. Зубковой, д. 8а</li>
+								<li><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="list-address__phone contacts-list-icon"><? echo $tel = carbon_get_theme_option("as_phones_1"); ?></a></li>
+								<li class="list-address__addres contacts-list-icon"><? echo carbon_get_theme_option("as_address"); ?></li>
 								<li class="list-address__email contacts-list-icon">
 									<p>
 										Для оформления заказа просим направлять заявки в свободной 
-										форме на электронную почту  <a href="mailto:info@ultrakresla.ru">info@ultrakresla.ru</a>
+										форме на электронную почту  <a href="mailto:<? echo $mail = carbon_get_theme_option("as_email"); ?>"><? echo $mail; ?></a>
 									</p>
 								</li>
 							</ul>
 
 							<h3>Реквизиты</h3>
 							<ul class="contacts__list-requisites">
-								<li>ООО «АВТОМОБИЛЬНЫЕ СИДЕНЬЯ»</li>
-								<li>Юр. Адрес: 117152 г. Москва, ул. Загородное шоссе дом 7, корпус 1, пом. 49.</li>
-								<li>ИНН 7726460603</li>
-								<li>КПП 772601001</li>
-								<li>ОГРН 1197746722029</li>
-								<li>Расчетный счет: 40702810902020001522 в АО «АЛЬФА-БАНК»</li>
-								<li>БИК 044525593</li>
-								<li>Корреспондентский счет 30101810200000000593</li>
+								<li> <? echo carbon_get_theme_option("as_company"); ?></li>
+								<li> <? echo carbon_get_theme_option("as_ur-address"); ?></li>
+								<li>ИНН <? echo carbon_get_theme_option("as_inn"); ?></li>
+								<li>КПП <? echo carbon_get_theme_option("as_kpp"); ?></li>
+								<li>ОГРН <? echo carbon_get_theme_option("as_orgn"); ?></li>
+								<li>Расчетный счет: <? echo carbon_get_theme_option("as_rs"); ?></li>
+								<li>БИК <? echo carbon_get_theme_option("as_bik"); ?></li>
+								<li>Корреспондентский счет <? echo carbon_get_theme_option("as_ks"); ?></li>
 							</ul>
 						</div>
 
@@ -99,7 +99,7 @@ get_header(); ?>
 							function init () {
     						var myMap = new ymaps.Map("map", {
         				// Координаты центра карты
-        					center:[54.607263, 39.785126],
+        					center:[<?php echo carbon_get_theme_option('map_point') ?>],
         				// Масштаб карты
         					zoom: 17,
         				// Выключаем все управление картой
@@ -109,12 +109,12 @@ get_header(); ?>
     									var myGeoObjects = [];
     
     						// Указываем координаты метки
-    							myGeoObjects = new ymaps.Placemark([54.607263, 39.785126],{
+    							myGeoObjects = new ymaps.Placemark([<?php echo carbon_get_theme_option('map_point') ?>],{
                     balloonContentBody: 'ООО «АВТОМОБИЛЬНЫЕ СИДЕНЬЯ»',
                     },{
                     iconLayout: 'default#image',
                     // Путь до нашей картинки
-                    iconImageHref: 'img/icons/map.png',  
+                    iconImageHref: '<?php bloginfo("template_url"); ?>/img/icons/map.png',  
                     // Размеры иконки
                     iconImageSize: [23, 34],
                     // Смещение верхнего угла относительно основания иконки

@@ -12,7 +12,36 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
-		->add_fields( array(
-			Field::make( 'text', 'crb_text', 'Text Field' ),
-        ) );
+    ->add_tab('Контакты', array(
+        Field::make( 'text', 'as_company', __( 'Название' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_phones_1', __( 'Телефон' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_address', __( 'Адрес' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_ur-address', __( 'Юридический Адрес' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_email', __( 'Email' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_email_send', __( 'Email для отправки' ) )
+          ->set_width(50),
+        // Field::make( 'text', 'as_phone_2', __( 'Телефон дополнительный' ) )
+        //   ->set_width(50),
+        Field::make( 'text', 'as_inn', __( 'ИНН' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_kpp', __( 'КПП' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_orgn', __( 'ОРГН' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_rs', __( 'Р/С' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_bik', __( 'БИК' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_ks', __( 'К/С' ) )
+          ->set_width(50),
+        Field::make('text', 'map_point', 'Координаты карты')
+          ->set_width(50),
+        Field::make('text', 'text_map', 'Текст метки карты')
+          ->set_width(50),
+    ) );
 ?>

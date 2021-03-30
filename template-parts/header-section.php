@@ -21,7 +21,7 @@
 				<div class="container">
 					<div class="header__row d-flex">
 						<div class="header__logo-block d-flex">
-							<a href="http://broczo.ru" class="header__logo logo-icon"></a>
+							<a href="http://broczo.ru" class="header__logo logo-icon"></a> 
 							<div class="header__tagline">
 								<h3>ULTRAKRESLA</h3>
 								<div class="header__tagline-tag d-flex">

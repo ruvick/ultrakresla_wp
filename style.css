@@ -896,7 +896,7 @@ body.ie .ibg img {
 
 .pagination .next,
 .pagination__next {
-  height: 12px;
+  height: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

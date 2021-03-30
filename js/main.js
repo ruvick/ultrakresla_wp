@@ -16,7 +16,7 @@ $(document).ready(function() {
 		$('body').addClass('ie');
 	}
 	if(isMobile.any()){
-		$('body').addClass('touch');
+		$('body').addClass('touch'); 
 	}
 
 // ===============================================================================================================================================================
@@ -208,12 +208,24 @@ jQuery('.header__form button').click(function(e){
 
 $(".fancybox").fancybox();
 
+
+
+$(".actions-block__btn").on('click', function(e) {
+	e.preventDefault();
+	jQuery(".windows_form h2").html(jQuery(this).data("winheader"));
+	jQuery(".windows_form .subtitle").html(jQuery(this).data("winsubheader"));
+	jQuery("#question").arcticmodal();
+}); 
+
+
+
+
 //ZOOM
-if ($('.gallery').length > 0) {
-	baguetteBox.run('.gallery', {
-		// Custom options
-	});
-}
+// if ($('.gallery').length > 0) {
+// 	baguetteBox.run('.gallery', {
+// 		// Custom options
+// 	});
+// }
 /*
 CLOUD-ZOOM
 <a rel="position:'right',adjustX:25,adjustY:0,Width: 432" href="img/product/zoom.jpg" class="cloud-zoom product-main-mainimage__item">
@@ -449,25 +461,25 @@ if (navigator.appVersion.indexOf("Mac") != -1) {
 
 
 
-if ($('.t,.tip').length > 0) {
-	tip();
-}
-function tip() {
-	$('.t,.tip').webuiPopover({
-		placement: 'top',
-		trigger: 'hover',
-		backdrop: false,
-		//selector:true,
-		animation: 'fade',
-		dismissible: true,
-		padding: false,
-		//hideEmpty: true
-		onShow: function ($element) { },
-		onHide: function ($element) { },
-	}).on('show.webui.popover hide.webui.popover', function (e) {
-		$(this).toggleClass('active');
-	});
-}
+// if ($('.t,.tip').length > 0) {
+// 	tip();
+// }
+// function tip() {
+// 	$('.t,.tip').webuiPopover({
+// 		placement: 'top',
+// 		trigger: 'hover',
+// 		backdrop: false,
+// 		//selector:true,
+// 		animation: 'fade',
+// 		dismissible: true,
+// 		padding: false,
+// 		//hideEmpty: true
+// 		onShow: function ($element) { },
+// 		onHide: function ($element) { },
+// 	}).on('show.webui.popover hide.webui.popover', function (e) {
+// 		$(this).toggleClass('active');
+// 	});
+// }
 
 //scrollToFixed Фиксовая шапка
   // $(".header").scrollToFixed({

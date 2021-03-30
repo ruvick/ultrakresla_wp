@@ -17,10 +17,10 @@ get_header(); ?>
 
 			<div class="info__benefit benefit d-flex">
 
-				<div class="benefit__item benefit__item_l">
+				<div class="benefit__item benefit__item_l"> 
 					<p>
 						ПОЛУЧИТЕ КЕШБЕК ПРИ <br>
-						СОВЕРШЕНИИ ЗАКАЗА
+						СОВЕРШЕНИИ ЗАКАЗА 
 					</p>
 				</div>
 
@@ -51,53 +51,53 @@ get_header(); ?>
 				<div class="select-prod-sl">
 					<!-- Большой слайдер -->
 					<div class="select-slider-big">
+						<?
+						$pict = carbon_get_the_post_meta('offer_picture');
+						if($pict) {
+							$pictIndex = 0;
+							foreach($pict as $item) {
+								?>
+								<div class="select-slider-big__item">
+									<a class="fancybox" data-fancybox="gallery" href="<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>">
+										<img
+										id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
+										alt = "<? echo $item['gal_img_alt']; ?>"
+										title = "<? echo $item['gal_img_alt']; ?>"
+										src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />
 
-						<div class="select-slider-big__item">
-							<a class="fancybox" data-fancybox="gallery" href="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.jpg">
-								<img  src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.jpg" alt="">
-							</a>
-						</div>
+									</a>
+								</div>
 
-						<div class="select-slider-big__item">
-							<a class="fancybox" data-fancybox="gallery" href="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-02.jpg">
-								<img  src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-02.jpg" alt="">
-							</a>
-						</div>
-
-						<div class="select-slider-big__item">
-							<a class="fancybox" data-fancybox="gallery" href="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-03.jpg">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-03.jpg" alt="">
-							</a>
-						</div>
-
-						<div class="select-slider-big__item">
-							<a class="fancybox" data-fancybox="gallery" href="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-04.jpg">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-04.jpg" alt="">
-							</a>
-						</div>
-
+								<?
+								$pictIndex++;
+							}
+						}
+						?>
 					</div>
 
 					<!-- Малый слайдер -->
 					<div class="select-prod-slider">
-
-						<div class="select-prod-slider__item">
-							<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-min-01.jpg" alt="">
-						</div>
-
-						<div class="select-prod-slider__item">
-							<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-min-02.jpg" alt="">
-						</div>
-
-						<div class="select-prod-slider__item">
-							<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-min-03.jpg" alt="">
-						</div>
-
-						<div class="select-prod-slider__item">
-							<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-min-04.jpg" alt="">
-						</div>
-
+					<?
+						$pict = carbon_get_the_post_meta('offer_picture');
+						if($pict) {
+							$pictIndex = 0;
+							foreach($pict as $item) {
+								?>
+								<div class="select-prod-slider__item">
+									<img 
+									data-indexelem = "<?echo $i;?>"
+									id = "<? echo $item['gal_img_sku']; ?>" 
+									alt = "<? echo $item['gal_img_alt']; ?>"
+									title = "<? echo $item['gal_img_alt']; ?>"
+									src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'thumbnail')[0];?>" />
+								</div>
+								<?
+								$pictIndex++;
+							}
+						}
+					?>
 					</div>
+					
 				</div>
 
 				<div class="actions__wrap"> 
@@ -108,9 +108,9 @@ get_header(); ?>
 
 							<div class="actions-block__availability">
 								<div class="availability-flex d-flex">
-									<div class="actions-block__price">Цена: <span class="price-summ">14 400</span> руб.</div>
+									<div class="actions-block__price">Цена: <span class="price-summ"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?></span> руб.</div>
 									<div class="availability-order">ПОД ЗАКАЗ</div>
-									<div class="availability-manuf">Производитель: <a href="#">ULTRA</a></div>
+									<div class="availability-manuf">Производитель: <a href="#"><?echo carbon_get_post_meta(get_the_ID(),"offer_manufact"); ?></a></div>
 								</div>
 								<div class="actions-block__social d-flex">
 									<a href="#" class="actions-block__btn btn">Задать вопрос</a>
@@ -128,9 +128,7 @@ get_header(); ?>
 
 							<div class="actions-block__text">
 								<p>
-									Сидения, которые устанавливаются в салон серийного авто 
-									на сборочном конвейере, представляют собой минимум во 
-									всем комфорте, в безопасности и, что наиболее важно.
+									<?echo carbon_get_post_meta(get_the_ID(),"offer_smile_descr"); ?>
 								</p>
 							</div>
 
@@ -267,10 +265,11 @@ get_header(); ?>
 
 					</div>
 					<div class="block__item tab__item">
-						<div class="tab__item_col">
+						<?php the_content(); ?>
+<!-- 						<div class="tab__item_col">
 							<div class="tech-text__block d-flex">
 								<div class="tech-text__item tech-text__item_left">
-									Артикул	 
+									Артикул	 55
 								</div>
 								<div class="tech-text__item">
 									200314
@@ -344,7 +343,7 @@ get_header(); ?>
 								</div>
 							</div>
 
-						</div>
+						</div> -->
 					</div>
 					<div class="block__item tab__item">
 						<div class="tab__item_col">
@@ -520,24 +519,24 @@ get_header(); ?>
 			<div class="prod-card d-flex">
 
 				<?
-					$args = array(
-						'posts_per_page' => 4,
-						'post_type' => 'ultra',
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'ultracat',
-								'field' => 'id',
-								'terms' => array(8)
-							)
+				$args = array(
+					'posts_per_page' => 4,
+					'post_type' => 'ultra',
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'ultracat',
+							'field' => 'id',
+							'terms' => array(8)
 						)
-					);
-					$query = new WP_Query($args);
+					)
+				);
+				$query = new WP_Query($args);
 
-					foreach( $query->posts as $post ){
-						$query->the_post();
-						get_template_part('template-parts/product-elem');
-					}  
-					wp_reset_postdata();
+				foreach( $query->posts as $post ){
+					$query->the_post();
+					get_template_part('template-parts/product-elem');
+				}  
+				wp_reset_postdata();
 				?>
 
 			</div>

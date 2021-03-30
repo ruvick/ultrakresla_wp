@@ -9,14 +9,18 @@
 
 			<div class="info__benefit benefit d-flex">
 
-				<div class="benefit__item benefit__item_l">
-					<p>
-						ПОЛУЧИТЕ КЕШБЕК ПРИ <br>
-						СОВЕРШЕНИИ ЗАКАЗА
-					</p>
-				</div>
 
-				<div class="benefit__item benefit__item_c">
+				<div class="benefit__item benefit__item_l">
+					<img src="<?php echo wp_get_attachment_image_src($tour['img_benefit'], 'large')[0];?>" alt="">
+
+					<p>
+						<?php echo $tour['text_benefit']?>
+						ПОЛУЧИТЕ КЕШБЕК ПРИ <br>
+						СОВЕРШЕНИИ ЗАКАЗА  
+					</p>
+				</div> 
+
+				<div class="benefit__item benefit__item_c"> 
 					<p>
 						ОДНАКО НЕЗАВИСИМОСТЬ <br>    
 						ПОЗИЦИИ МЫСЛИТЕЛЯ 
@@ -188,153 +192,153 @@
 
 					<div class="prod-card d-flex">
 
-					<?
-					$args = array(
-						'posts_per_page' => 4,
-						'post_type' => 'ultra',
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'ultracat',
-								'field' => 'id',
-								'terms' => array(7)
+						<?
+						$args = array(
+							'posts_per_page' => 4,
+							'post_type' => 'ultra',
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'ultracat',
+									'field' => 'id',
+									'terms' => array(7)
+								)
 							)
-						)
-					);
-					$query = new WP_Query($args);
+						);
+						$query = new WP_Query($args);
 
-					foreach( $query->posts as $post ){
-						$query->the_post();
-						get_template_part('template-parts/product-elem');
-					}  
-					wp_reset_postdata();
-					?>
+						foreach( $query->posts as $post ){
+							$query->the_post();
+							get_template_part('template-parts/product-elem');
+						}  
+						wp_reset_postdata();
+						?>
 
+					</div>
+				</section>
+
+				<section id="useful" class="useful">
+					<div class="container">
+						<h2>Полезные материалы</h2>
+
+						<div class="useful__row d-flex">
+							<a href="#" class="useful__item-img-item useful__item-img_01">
+								<!-- <img src="img/useful/useful-01.jpg" alt=""> -->
+								<p>
+									Размеры автокресел в 
+									условиях модерна, 
+									лишённого традиционных 
+									и религиозных связей
+								</p>
+							</a>
+							<div class="useful__item-img d-flex">
+								<a href="#" class="useful__item-img-item useful__item-img_02">
+									<!-- <img src="img/useful/useful-02.jpg" alt=""> -->
+									<p>
+										Наше производство желало видеть
+										социологию широко признанной, 
+										полноценной научной областью
+									</p>
+								</a>
+								<a href="#" class="useful__item-img-item useful__item-img_03">
+									<!-- <img src="img/useful/useful-03.jpg" alt=""> -->
+									<p>
+										Эксклюзивные работы на гуманитарном 
+										факультете стала символом признания 
+									</p>
+								</a>
+							</div>
+							<div class="useful__item-img d-flex">
+								<a href="#" class="useful__item-img-item useful__item-img_04">
+									<!-- <img src="img/useful/useful-04.jpg" alt=""> -->
+									<p>
+										Использование новейших материалов привело к 
+										негативной реакции в отношении нового и светского 
+									</p>
+								</a>
+								<a href="#" class="useful__item-img-item useful__item-img_05">
+									<!-- <img src="img/useful/useful-05.jpg" alt=""> -->
+									<p>
+										Степени защиты кресла своего рода манифест науки
+									</p>
+								</a>
+							</div>
+						</div>
+						<a href="#" class="useful__btn btn">Смотреть все материалы</a>
+
+					</div>
+				</section>
+
+				<section id="questions" class="questions">
+					<div class="container">
+						<h2>Часто задаваемые вопросы</h2>
+
+						<div class="spollers__col">
+
+							<div class="block__spollers spollers">
+
+								<div class="spollers__item">
+									<div class="spollers__title spoller closeall">На какие автомобили устанавливаются кресла?</div>
+									<div class="spollers__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									</div>
+								</div>
+
+								<div class="spollers__item">
+									<div class="spollers__title spoller closeall">Доставите кресло в любой город?</div>
+									<div class="spollers__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									</div>
+								</div>
+
+								<div class="spollers__item">
+									<div class="spollers__title spoller closeall">Можно ли сделать на внешней части кресла вышивку логотипа?</div>
+									<div class="spollers__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									</div>
+								</div>
+							</div>
+
+							<div class="block__spollers spollers">
+
+								<div class="spollers__item">
+									<div class="spollers__title spoller closeall">Можно ли выбрать цвет и материал кресла?</div>
+									<div class="spollers__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									</div>
+								</div>
+
+								<div class="spollers__item">
+									<div class="spollers__title spoller closeall">Осуществляете ли установку сидений?</div>
+									<div class="spollers__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									</div>
+								</div>
+
+								<div class="spollers__item">
+									<div class="spollers__title spoller closeall">Можно ли перешить заднее сиденье в цвет передних кресел?</div>
+									<div class="spollers__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<section id="useful" class="useful">
-				<div class="container">
-					<h2>Полезные материалы</h2>
+		</main>
 
-					<div class="useful__row d-flex">
-						<a href="#" class="useful__item-img-item useful__item-img_01">
-							<!-- <img src="img/useful/useful-01.jpg" alt=""> -->
-							<p>
-								Размеры автокресел в 
-								условиях модерна, 
-								лишённого традиционных 
-								и религиозных связей
-							</p>
-						</a>
-						<div class="useful__item-img d-flex">
-							<a href="#" class="useful__item-img-item useful__item-img_02">
-								<!-- <img src="img/useful/useful-02.jpg" alt=""> -->
-								<p>
-									Наше производство желало видеть
-									социологию широко признанной, 
-									полноценной научной областью
-								</p>
-							</a>
-							<a href="#" class="useful__item-img-item useful__item-img_03">
-								<!-- <img src="img/useful/useful-03.jpg" alt=""> -->
-								<p>
-									Эксклюзивные работы на гуманитарном 
-									факультете стала символом признания 
-								</p>
-							</a>
-						</div>
-						<div class="useful__item-img d-flex">
-							<a href="#" class="useful__item-img-item useful__item-img_04">
-								<!-- <img src="img/useful/useful-04.jpg" alt=""> -->
-								<p>
-									Использование новейших материалов привело к 
-									негативной реакции в отношении нового и светского 
-								</p>
-							</a>
-							<a href="#" class="useful__item-img-item useful__item-img_05">
-								<!-- <img src="img/useful/useful-05.jpg" alt=""> -->
-								<p>
-									Степени защиты кресла своего рода манифест науки
-								</p>
-							</a>
-						</div>
-					</div>
-					<a href="#" class="useful__btn btn">Смотреть все материалы</a>
-
-				</div>
-			</section>
-
-			<section id="questions" class="questions">
-				<div class="container">
-					<h2>Часто задаваемые вопросы</h2>
-
-					<div class="spollers__col">
-
-						<div class="block__spollers spollers">
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">На какие автомобили устанавливаются кресла?</div>
-								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								</div>
-							</div>
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Доставите кресло в любой город?</div>
-								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								</div>
-							</div>
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Можно ли сделать на внешней части кресла вышивку логотипа?</div>
-								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								</div>
-							</div>
-						</div>
-
-						<div class="block__spollers spollers">
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Можно ли выбрать цвет и материал кресла?</div>
-								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								</div>
-							</div>
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Осуществляете ли установку сидений?</div>
-								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								</div>
-							</div>
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Можно ли перешить заднее сиденье в цвет передних кресел?</div>
-								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-	</main>
-
-	<?php get_footer(); ?> 
+		<?php get_footer(); ?> 

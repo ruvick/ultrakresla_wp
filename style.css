@@ -23,7 +23,7 @@ Version: 1.0.1
   src: url("fonts/Lato-Bold.eot");
   src: local("☺"), url("fonts/Lato-Bold.woff") format("woff"), url("fonts/Lato-Bold.ttf") format("truetype"), url("fonts/Lato-Bold.svg") format("svg");
   font-weight: 700;
-  font-style: normal; } 
+  font-style: normal; }  
 
 @font-face { 
   font-family: 'Stolzl';
@@ -2858,6 +2858,90 @@ body.ie .ibg img {
   width: 14px;
   height: 20px;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTQiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxNCAyMCI+DQogIDxpbWFnZSBpZD0ib2Rub2tsYXNzbmlraSIgd2lkdGg9IjE0IiBoZWlnaHQ9IjIwIiB4bGluazpocmVmPSJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUE0QUFBQVVDQVlBQUFDOUJRd3NBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBZHRKUkVGVU9FOTFrMHVJam1FVWdKL2ZKWmV4TUZiVXZDRmx3VWJUZkN1N1dVaUd2Y1VnNW4rVGtvMk1KczJPa3NsR1VqcURYQllXZGk1cEZuWldwNlRFd3NLbFkwRkpGc1lRK25YK3p2ZDcvMDl6VnVjOTMzbk8vV3QxT2gxS1Nia2FCMDRBTzhMK0hMaGtvbmRLdjFZTnBseTFBQUVtK2lMOWUxd0Rzb2wyTTVYZ0VjQS91dndDSG9ZK0Jpd1BmY0pFcnpmQmw4QTI0QWV3MDBTZnVVUEsxVER3RkZnSnZETFI3VDB3NVdvVjhEMmkzakxSUTQyK2J3SUh3N2JhUkJlNnBhWmNEUURmNHNPc2llWUc2TDIzdzdiR1JPZkxIdDhDbTRDdlBsRVRmUitsYmdSOHNtdUJkeWE2dWRuaktlQkNSUDBDM0E3OUFMQXU5RWtUbldtQ3k0RDd3TzVGMXZFWTJHZWl2L3ZBS012SFBna2NCOVpIZ0kvQVphL0dSSDFOWGFtSGN3UFlCWndEcmdLKzVCTDA0emdLbkFIbVRQUndhNmc5c2hTWUIxWkVzQS9BSStCMXZMY0NlNENoZVA4RUJ1cU0rNEZaTnl6U1gyMzJCRzBUdlZ1dUl3RW5nYjNBbGlLQWwvMEdlQUJjTkZIN2J6aTFjOHBWdVpxekpqcmRyS1NYc1lDT0FWY2FqbE1tZXI2MDlZRXBWeVcwRUk1K3h5NTljTmxqRS9KZVhieTNHajV0b3QzcnFxYzZDSHdHbHNSdk5XYWlUK0lvUmd2WUI3WEJSRC9Wb085eURoZ0J4azNVVDY4bktWY08zd05lQUtNbSt1Y3ZzRjNVa3g1bnR1WUFBQUFBU1VWT1JLNUNZSUk9Ii8+DQo8L3N2Zz4NCg=="); }
+
+
+
+.box-modal-new {
+    max-width: 600px;
+    width: 100%;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    overflow: hidden;
+    background: #fff;
+}
+.box-modal_close_new {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 23px;
+}
+#question img {
+    width: 36%;
+}
+.mod-zagr-tur h2 {
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+.mod-zagr-tur p {
+    margin-bottom: 35px;
+    line-height: 1.2;
+}
+.mod-zagr-tur .SendetMsg {
+    margin-bottom: 60px;
+}
+.SendetMsg {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.SendetMsg:before {
+    content: "";
+    width: 100%;
+    height: 70px;
+    background-image: url(data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 507.2 507.2' style='enable-background:new 0 0 507.2 507.2;' xml:space='preserve'%3E%3Ccircle style='fill:%2332BA7C;' cx='253.6' cy='253.6' r='253.6'/%3E%3Cpath style='fill:%230AA06E;' d='M188.8,368l130.4,130.4c108-28.8,188-127.2,188-244.8c0-2.4,0-4.8,0-7.2L404.8,152L188.8,368z'/%3E%3Cg%3E%3Cpath style='fill:%23FFFFFF;' d='M260,310.4c11.2,11.2,11.2,30.4,0,41.6l-23.2,23.2c-11.2,11.2-30.4,11.2-41.6,0L93.6,272.8 c-11.2-11.2-11.2-30.4,0-41.6l23.2-23.2c11.2-11.2,30.4-11.2,41.6,0L260,310.4z'/%3E%3Cpath style='fill:%23FFFFFF;' d='M348.8,133.6c11.2-11.2,30.4-11.2,41.6,0l23.2,23.2c11.2,11.2,11.2,30.4,0,41.6l-176,175.2 c-11.2,11.2-30.4,11.2-41.6,0l-23.2-23.2c-11.2-11.2-11.2-30.4,0-41.6L348.8,133.6z'/%3E%3C/g%3E%3C/svg%3E%0A);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    margin: 10px 0;
+}
+.formArctikBlk {
+  padding: 35px 25px 20px 25px;
+}
+.formArctikBlk input[type=text] {
+    max-width: 300px;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ECECEC;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.mod-zagr-tur__note {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.newButton {
+    width: 155px;
+    height: 45px;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 @media (max-width: 1200px) {
   .slick-prev {

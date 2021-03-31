@@ -73,7 +73,7 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
       // Field::make('text', 'offer_siries', 'Серия (для сопутствующих)')->set_width(30),
 
       // Field::make('text', 'offer_sku', 'Артикул (Базовый)')->set_width(50),
-      Field::make('text', 'offer_nal', 'Наличие на складе')->set_default_value( 'В наличии')->set_width(50), 
+      Field::make('text', 'offer_nal', 'Наличие на складе')->set_default_value( '0')->set_width(50), 
         // Field::make('select', 'rev_reiting', 'Оценка' )->add_options( array(
         //   '0' => '0',
         //   '1' => '1',

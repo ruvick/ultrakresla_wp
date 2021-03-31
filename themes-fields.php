@@ -14,6 +14,7 @@ use Carbon_Fields\Field;
 Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
     ->add_tab('Главная', array(
   Field::make('complex', 'complex_benefit', 'Верхние блоки на главной')
+  ->set_max(3) // Можно будет выбрать только 5 постов
   ->add_fields(array(
     Field::make('image', 'img_benefit', 'Фото')
     ->set_width(30),
@@ -47,6 +48,14 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         Field::make( 'text', 'as_bik', __( 'БИК' ) )
           ->set_width(50),
         Field::make( 'text', 'as_ks', __( 'К/С' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_face', __( 'facebook' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_twiter', __( 'twiter' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_vk', __( 'Вконтакте' ) )
+          ->set_width(50),
+        Field::make( 'text', 'as_classmates', __( 'Одноклассники' ) )
           ->set_width(50),
         Field::make('text', 'map_point', 'Координаты карты')
           ->set_width(50),

@@ -15,83 +15,79 @@ get_header(); ?>
 	<section class="contacts"> 
 		<div class="container">
 
-			<div class="info__benefit benefit d-flex">
+            <div class="info__benefit benefit d-flex">
 
-				<div class="benefit__item benefit__item_l">
-					<p>
-						ПОЛУЧИТЕ КЕШБЕК ПРИ <br> 
-						СОВЕРШЕНИИ ЗАКАЗА
-					</p>
-				</div>
+                <?  $picts = carbon_get_theme_option('complex_benefit');
+                if($picts) {
+                    $pictsIndex = 0;
+                    foreach($picts as $items) {
+                        ?>
 
-				<div class="benefit__item benefit__item_c">
-					<p>
-						ОДНАКО НЕЗАВИСИМОСТЬ <br>
-						ПОЗИЦИИ МЫСЛИТЕЛЯ 
-					</p>
-				</div>
+                        <div class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
+                            <p>
+                                <? echo $items['text_benefit']; ?>
+                            </p>
+                        </div>
+                        <?
+                        $pictIndex++;
+                    }
+                }
+                ?>
 
-				<div class="benefit__item benefit__item_r">
-					<p>
-						ПОЗИЦИИ МЫСЛИТЕЛЯ <br>
-						ЕГО КАТОЛИЧЕСКИМ ТЕОЛОГАМ 
-					</p>
-				</div>
+            </div>
 
-			</div>
+            <?php
+            if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+            }
+            ?> 
 
-			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-			}
-			?> 
+            <h1><?php the_title();?></h1> 
 
-			<h1><?php the_title();?></h1> 
+            <div class="contacts__row d-flex">
+                
+                <div class="contacts__col contacts__col_l">
+                   <ul class="contacts__list-address list-address">
+                      <li><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="list-address__phone contacts-list-icon"><? echo $tel = carbon_get_theme_option("as_phones_1"); ?></a></li>
+                      <li class="list-address__addres contacts-list-icon"><? echo carbon_get_theme_option("as_address"); ?></li>
+                      <li class="list-address__email contacts-list-icon">
+                         <p>
+                            Для оформления заказа просим направлять заявки в свободной 
+                            форме на электронную почту  <a href="mailto:<? echo $mail = carbon_get_theme_option("as_email"); ?>"><? echo $mail; ?></a>
+                        </p>
+                    </li>
+                </ul>
 
-			<div class="contacts__row d-flex">
-				
-				<div class="contacts__col contacts__col_l">
-					<ul class="contacts__list-address list-address">
-						<li><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="list-address__phone contacts-list-icon"><? echo $tel = carbon_get_theme_option("as_phones_1"); ?></a></li>
-						<li class="list-address__addres contacts-list-icon"><? echo carbon_get_theme_option("as_address"); ?></li>
-						<li class="list-address__email contacts-list-icon">
-							<p>
-								Для оформления заказа просим направлять заявки в свободной 
-								форме на электронную почту  <a href="mailto:<? echo $mail = carbon_get_theme_option("as_email"); ?>"><? echo $mail; ?></a>
-							</p>
-						</li>
-					</ul>
+                <h3>Реквизиты</h3>
+                <ul class="contacts__list-requisites">
+                  <li> <? echo carbon_get_theme_option("as_company"); ?></li>
+                  <li> <? echo carbon_get_theme_option("as_ur-address"); ?></li>
+                  <li>ИНН <? echo carbon_get_theme_option("as_inn"); ?></li>
+                  <li>КПП <? echo carbon_get_theme_option("as_kpp"); ?></li>
+                  <li>ОГРН <? echo carbon_get_theme_option("as_orgn"); ?></li>
+                  <li>Расчетный счет: <? echo carbon_get_theme_option("as_rs"); ?></li>
+                  <li>БИК <? echo carbon_get_theme_option("as_bik"); ?></li>
+                  <li>Корреспондентский счет <? echo carbon_get_theme_option("as_ks"); ?></li>
+              </ul>
+          </div>
 
-					<h3>Реквизиты</h3>
-					<ul class="contacts__list-requisites">
-						<li> <? echo carbon_get_theme_option("as_company"); ?></li>
-						<li> <? echo carbon_get_theme_option("as_ur-address"); ?></li>
-						<li>ИНН <? echo carbon_get_theme_option("as_inn"); ?></li>
-						<li>КПП <? echo carbon_get_theme_option("as_kpp"); ?></li>
-						<li>ОГРН <? echo carbon_get_theme_option("as_orgn"); ?></li>
-						<li>Расчетный счет: <? echo carbon_get_theme_option("as_rs"); ?></li>
-						<li>БИК <? echo carbon_get_theme_option("as_bik"); ?></li>
-						<li>Корреспондентский счет <? echo carbon_get_theme_option("as_ks"); ?></li>
-					</ul>
-				</div>
+          <div class="contacts__col">
+           <form action="#" class="contacts__form form">
+              <div class="form__input-block d-flex">
+                 <input type="text" placeholder="Имя" class="form__input input">
+                 <input type="tel" placeholder="Телефон" class="form__input input__phone">
+             </div>
+             <textarea placeholder="Сообщение" name="" id="" cols="30" rows="10"></textarea>
+             <button type="submit" class="form__btn btn">Отправить</button>
+         </form>
+     </div>
 
-				<div class="contacts__col">
-					<form action="#" class="contacts__form form">
-						<div class="form__input-block d-flex">
-							<input type="text" placeholder="Имя" class="form__input input">
-							<input type="tel" placeholder="Телефон" class="form__input input__phone">
-						</div>
-						<textarea placeholder="Сообщение" name="" id="" cols="30" rows="10"></textarea>
-						<button type="submit" class="form__btn btn">Отправить</button>
-					</form>
-				</div>
+ </div>
 
-			</div>
+ <div class="block__map" id="map"></div>
+ <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 
-			<div class="block__map" id="map"></div>
-			<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-
-			<script>
+ <script>
 					// Яндекс карта
 					ymaps.ready(init);
 
@@ -118,7 +114,7 @@ get_header(); ?>
                     iconImageSize: [23, 34],
                     // Смещение верхнего угла относительно основания иконки
                     iconImageOffset: [-5, -40]
-                  });
+                });
     						
     						var clusterer = new ymaps.Clusterer({
     							clusterDisableClickZoom: false,

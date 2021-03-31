@@ -1962,6 +1962,8 @@ body.ie .ibg img {
     font-size: 14px;
     line-height: 1.2;
     font-weight: 400;
+    max-width: 228px;
+    width: 100%;
     color: #1C6434; }
   .benefit__item_l {
     background-repeat: no-repeat;

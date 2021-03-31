@@ -17,26 +17,23 @@ get_header(); ?>
 
 			<div class="info__benefit benefit d-flex">
 
-				<div class="benefit__item benefit__item_l"> 
-					<p>
-						ПОЛУЧИТЕ КЕШБЕК ПРИ <br>
-						СОВЕРШЕНИИ ЗАКАЗА 
-					</p>
-				</div>
+				<?	$picts = carbon_get_theme_option('complex_benefit');
+				$limit = $count-3; 
+					if($picts) {
+						$pictsIndex = 0;
+						foreach($picts as $items) {
+							?>
 
-				<div class="benefit__item benefit__item_c">
-					<p>
-						ОДНАКО НЕЗАВИСИМОСТЬ <br> 
-						ПОЗИЦИИ МЫСЛИТЕЛЯ  
-					</p>
-				</div>
-
-				<div class="benefit__item benefit__item_r">
-					<p>
-						ПОЗИЦИИ МЫСЛИТЕЛЯ <br>
-						ЕГО КАТОЛИЧЕСКИМ ТЕОЛОГАМ 
-					</p>
-				</div>
+							<div class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
+								<p>
+									<? echo $items['text_benefit']; ?>
+								</p>
+							</div>
+						<?
+							$pictIndex++;
+						}
+					}
+				?>
 
 			</div>
 
@@ -77,7 +74,7 @@ get_header(); ?>
 
 					<!-- Малый слайдер -->
 					<div class="select-prod-slider">
-					<?
+						<?
 						$pict = carbon_get_the_post_meta('offer_picture');
 						if($pict) {
 							$pictIndex = 0;
@@ -95,7 +92,7 @@ get_header(); ?>
 								$pictIndex++;
 							}
 						}
-					?>
+						?>
 					</div>
 					
 				</div>
@@ -117,10 +114,10 @@ get_header(); ?>
 									<div class="actions-block__share d-flex">
 										<p>Поделиться:</p>
 										<div class="actions-block__social-icon d-flex">
-											<a href="#" class="social-icon icon-factbook"></a>
-											<a href="#" class="social-icon icon-twiter"></a>
-											<a href="#" class="social-icon icon-vk"></a>
-											<a href="#" class="social-icon icon-ok"></a>
+											<a href="<? echo carbon_get_theme_option("as_face"); ?>" class="social-icon icon-factbook"></a>
+											<a href="<? echo carbon_get_theme_option("as_twiter"); ?>" class="social-icon icon-twiter"></a>
+											<a href="<? echo carbon_get_theme_option("as_vk"); ?>" class="social-icon icon-vk"></a>
+											<a href="<? echo carbon_get_theme_option("as_classmates"); ?>" class="social-icon icon-ok"></a>
 										</div>
 									</div>
 								</div>

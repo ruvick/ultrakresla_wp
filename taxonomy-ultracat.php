@@ -9,26 +9,22 @@
 
 			<div class="info__benefit benefit d-flex">
 
-				<div class="benefit__item benefit__item_l">
-					<p>
-						ПОЛУЧИТЕ КЕШБЕК ПРИ <br>
-						СОВЕРШЕНИИ ЗАКАЗА
-					</p>
-				</div>
+				<?	$picts = carbon_get_theme_option('complex_benefit');
+				if($picts) {
+					$pictsIndex = 0;
+					foreach($picts as $items) {
+						?>
 
-				<div class="benefit__item benefit__item_c">
-					<p>
-						ОДНАКО НЕЗАВИСИМОСТЬ <br>
-						ПОЗИЦИИ МЫСЛИТЕЛЯ 
-					</p>
-				</div>
-
-				<div class="benefit__item benefit__item_r">
-					<p>
-						ПОЗИЦИИ МЫСЛИТЕЛЯ <br>
-						ЕГО КАТОЛИЧЕСКИМ ТЕОЛОГАМ 
-					</p>
-				</div> 
+						<div class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
+							<p>
+								<? echo $items['text_benefit']; ?>
+							</p>
+						</div>
+						<?
+						$pictIndex++;
+					}
+				}
+				?>
 
 			</div>
 

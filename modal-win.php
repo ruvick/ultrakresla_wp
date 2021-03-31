@@ -20,18 +20,18 @@
 			<img src = "<?php bloginfo("template_url")?>/img/similar-01.jpg" loading="lazy"/>
 			<div class = "formArctikBlk mod-zagr-tur">
 				<h2>Задать вопрос <span class = 'tkName'></span></h2>
-				<p>Наши специалисты свяжутся с Вами в течение 15 минут</p>
+				<p>Наши специалисты свяжутся с Вами в течение 15 минут</p> 
 
-				<form>
+				<form class="form-question">
 					<div class = "SendetMsg" style = "display:none"> 
 						Ваше сообщение успешно отправлено.
 					</div>
 					<div class="headen_form_blk">
-						<input type = "text" name = "clname" placeholder = "Имя*" id = "clnamezt" value = "" >
-						<input type = "text" name = "clphone" placeholder = "Телефон*" class = "phoneMasc" id = "clphonezt"  value = "" ><br/>
+						<input type = "text" name = "name" placeholder = "Имя*" class = "form-question__input input">
+						<input type = "tel" name = "phone" placeholder = "Телефон*" class = "form-question__input input">
 					</div>
 					<div class="callback-note mod-zagr-tur__note">Нажимая на кнопку "Отправить", вы соглашаетесь с <a class="tdu" href="<?php echo get_permalink(1312);?>">условиями обработки персональных данных</a>.</div>
-					<input onclick="yaCounter29416892.reachGoal('doZ');" type = "button" class = "newButton btn" id = "azFormSubmitZt"  value = "Отправить">
+					<button type="submit" class="newButton btn">Отправить</button>
 				</form>
 
 			</div>

@@ -21,7 +21,7 @@ get_header(); ?>
 				$limit = $count-3; 
 				if($picts) {
 					$pictsIndex = 0;
-					foreach($picts as $items) {
+					foreach($picts as $items) { 
 						?>
 
 						<div class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
@@ -86,7 +86,7 @@ get_header(); ?>
 									id = "<? echo $item['gal_img_sku']; ?>" 
 									alt = "<? echo $item['gal_img_alt']; ?>"
 									title = "<? echo $item['gal_img_alt']; ?>"
-									src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'thumbnail')[0];?>" />
+									src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0];?>" />
 								</div>
 								<?
 								$pictIndex++;
@@ -141,7 +141,7 @@ get_header(); ?>
 										?>
 
 										<a href="<? echo $items['link_analogs']; ?>" class="analogs-block__item-card">
-											<img src="<?php echo wp_get_attachment_image_src($items['img_analogs'], 'thumbnail')[0];?>" alt="">
+											<img src="<?php echo wp_get_attachment_image_src($items['img_analogs'], 'large')[0];?>" alt="">
 											<p><? echo $items['price_analogs']; ?> руб.</p>
 										</a>
 

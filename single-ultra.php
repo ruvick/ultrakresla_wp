@@ -194,7 +194,30 @@ get_header(); ?>
 					<div class="block__item tab__item active">
 
 						<div class="tab__item_col">
+
+								<?	$tab = carbon_get_the_post_meta('offer_cherecter');
+								if($tab) {
+									$tabIndex = 0;
+									foreach($tab as $tabs) {
+										?>
+
 							<div class="tech-text__block d-flex">
+								<div class="tech-text__item tech-text__item_left"> 
+									<? echo $tabs['tab_name']; ?>
+								</div>
+								<div class="tech-text__item">
+									<? echo $tabs['tab_val']; ?>
+								</div>
+							</div>
+
+										<?
+										$tabIndex++;
+									}
+								}
+								?>
+
+
+<!-- 							<div class="tech-text__block d-flex">
 								<div class="tech-text__item tech-text__item_left">
 									Артикул	 
 								</div>
@@ -228,13 +251,34 @@ get_header(); ?>
 								<div class="tech-text__item">
 									Интегрированный
 								</div>
-							</div>
+							</div> -->
 
 						</div>
 
 						<div class="tab__item_col">
 
+								<?	$tab = carbon_get_the_post_meta('offer_cherecter-r');
+								if($tab) {
+									$tabIndex = 0;
+									foreach($tab as $tabs) {
+										?>
+
 							<div class="tech-text__block d-flex">
+								<div class="tech-text__item tech-text__item_left">
+									<? echo $tabs['tab_name-r']; ?>
+								</div>
+								<div class="tech-text__item">
+									<? echo $tabs['tab_val-r']; ?>
+								</div>
+							</div>
+
+										<?
+										$tabIndex++;
+									}
+								}
+								?>
+
+<!-- 							<div class="tech-text__block d-flex">
 								<div class="tech-text__item tech-text__item_left">
 									Регулировка спинки
 								</div>
@@ -268,171 +312,16 @@ get_header(); ?>
 								<div class="tech-text__item">
 									Нижнее, боковое
 								</div>
-							</div>
+							</div> -->
 
 						</div>
 
 					</div>
-					<div class="block__item tab__item">
+					<div class="block__item block__item-descrip tab__item">
 						<?php the_content(); ?>
-<!-- 						<div class="tab__item_col">
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Артикул	 55
-								</div>
-								<div class="tech-text__item">
-									200314
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Тип сиденья
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Спортивное
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Назначение
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Тюнинг, Спорт, Автосимулятор, Аттракцион
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Подголовник
-								</div>
-								<div class="tech-text__item">
-									Интегрированный
-								</div>
-							</div>
-
-						</div>
-
-						<div class="tab__item_col">
-							
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Регулировка спинки
-								</div>
-								<div class="tech-text__item">
-									Нет
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Материал наполнителя
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Пенополиуретан
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Материал обивки
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Велюр, твид, кожзам, натуральная кожа
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Тип крепления
-								</div>
-								<div class="tech-text__item">
-									Нижнее, боковое
-								</div>
-							</div>
-
-						</div> -->
 					</div>
 					<div class="block__item tab__item">
-						<div class="tab__item_col">
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Артикул	 
-								</div>
-								<div class="tech-text__item">
-									200314
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Тип сиденья
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Спортивное
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Назначение
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Тюнинг, Спорт, Автосимулятор, Аттракцион
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Подголовник
-								</div>
-								<div class="tech-text__item">
-									Интегрированный
-								</div>
-							</div>
-
-						</div>
-
-						<div class="tab__item_col">
-							
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Регулировка спинки
-								</div>
-								<div class="tech-text__item">
-									Нет
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Материал наполнителя
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Пенополиуретан
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Материал обивки
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Велюр, твид, кожзам, натуральная кожа
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Тип крепления
-								</div>
-								<div class="tech-text__item">
-									Нижнее, боковое
-								</div>
-							</div>
-
-						</div>
+						<?echo carbon_get_post_meta(get_the_ID(),"options_text"); ?>
 					</div>
 					<div class="block__item tab__item">
 						<div class="tab__item_col">

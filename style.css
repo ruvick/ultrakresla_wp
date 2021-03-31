@@ -2609,6 +2609,13 @@ body.ie .ibg img {
   justify-content: space-between;
   padding-top: 35px; }
 
+.block__item-descrip {
+  flex-direction: column;
+}
+.block__item-descrip p {
+  line-height: 1.6;
+}
+
 .recommended {
   padding: 30px 0 35px 0; }
   .recommended h2 {

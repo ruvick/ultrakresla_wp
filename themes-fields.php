@@ -86,23 +86,27 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
       // Field::make('text', 'offer_sticker', 'Стикер')->set_width(50),
       // Field::make('text', 'offer_benefit', 'Выгода')->set_width(50),
-      
-      Field::make( 'complex', 'offer_cherecter', "Характеристики товара" )
+      Field::make( 'complex', 'offer_cherecter', "Характеристики товара табы, левая колонка" )
       ->add_fields( array(
-        Field::make( 'text', 'c_name', 'Наименование параметра' )->set_width(50),
-        Field::make( 'text', 'c_val',  'Значение' )->set_width(50),
+        Field::make( 'text', 'tab_name', 'Наименование параметра' )->set_width(50),
+        Field::make( 'text', 'tab_val',  'Значение' )->set_width(50),
       ) ),
-
+      Field::make( 'complex', 'offer_cherecter-r', "Характеристики товара табы, правая колонка" )
+      ->add_fields( array(
+        Field::make( 'text', 'tab_name-r', 'Наименование параметра' )->set_width(50),
+        Field::make( 'text', 'tab_val-r',  'Значение' )->set_width(50),
+      ) ),
+      Field::make('rich_text', 'options_text', 'Дополнительные опции')->set_width(100),
       // Field::make('text', 'offer_old_price', 'Старая цена (Базовая)')->set_width(50),
       
-      Field::make( 'complex', 'offer_modification', "Модификация товара" )
-      ->add_fields( array(
-        Field::make('text', 'mod_name', 'Наименование модификации' )->set_width(20),
-        Field::make('text', 'mod_sku', 'Артикул модификации')->set_width(20),
-        Field::make('text', 'mod_price', 'Цена модификации')->set_width(20),
-        Field::make('text', 'mod_old_price', 'Старая цена модификации')->set_width(20),
-        Field::make('text', 'mod_picture_id', 'Изображения модификации')->set_width(20),
-      ) ),
+      // Field::make( 'complex', 'offer_modification', "Модификация товара" )
+      // ->add_fields( array(
+      //   Field::make('text', 'mod_name', 'Наименование модификации' )->set_width(20),
+      //   Field::make('text', 'mod_sku', 'Артикул модификации')->set_width(20),
+      //   Field::make('text', 'mod_price', 'Цена модификации')->set_width(20),
+      //   Field::make('text', 'mod_old_price', 'Старая цена модификации')->set_width(20),
+      //   Field::make('text', 'mod_picture_id', 'Изображения модификации')->set_width(20),
+      // ) ),
         
       Field::make( 'complex', 'offer_picture', "Галерея товара" )
       ->add_fields( array(

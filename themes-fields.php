@@ -104,6 +104,17 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
         Field::make('text', 'gal_img_alt', 'alt и title')->set_width(30)        
       ) ),
 
+      Field::make('complex', 'complex_analogs', 'Ближайшие аналоги')
+        ->set_max(4) // Можно будет выбрать только 5 постов
+      ->add_fields(array(
+        Field::make('image', 'img_analogs', 'Фото')
+          ->set_width(33),
+        Field::make('text', 'price_analogs', 'Цена') 
+          ->set_width(33),
+        Field::make('text', 'link_analogs', 'Ссылка на товар') 
+          ->set_width(33),
+    ))
+
       // Field::make('rich_text', 'offer_fulltext', 'Полное описание (SEO)')->set_width(50),
 
       // Field::make( 'complex', 'offer_rev', "Отзывы о товаре" )

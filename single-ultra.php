@@ -19,20 +19,20 @@ get_header(); ?>
 
 				<?	$picts = carbon_get_theme_option('complex_benefit');
 				$limit = $count-3; 
-					if($picts) {
-						$pictsIndex = 0;
-						foreach($picts as $items) {
-							?>
+				if($picts) {
+					$pictsIndex = 0;
+					foreach($picts as $items) {
+						?>
 
-							<div class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
-								<p>
-									<? echo $items['text_benefit']; ?>
-								</p>
-							</div>
+						<div class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
+							<p>
+								<? echo $items['text_benefit']; ?>
+							</p>
+						</div>
 						<?
-							$pictIndex++;
-						}
+						$pictIndex++;
 					}
+				}
 				?>
 
 			</div>
@@ -134,27 +134,22 @@ get_header(); ?>
 						<div class="actions__analogs-block analogs-block">
 							<p>Ближайшие аналоги:</p>
 							<div class="analogs-block__flex-card d-flex">
+								<?	$picts = carbon_get_the_post_meta('complex_analogs');
+								if($picts) {
+									$pictsIndex = 0;
+									foreach($picts as $items) {
+										?>
 
-								<a href="#" class="analogs-block__item-card">
-									<img src="<?php echo get_template_directory_uri();?>/img/analogs-01.jpg" alt="">
-									<p>12 400 руб.</p>
-								</a>
+										<a href="<? echo $items['link_analogs']; ?>" class="analogs-block__item-card">
+											<img src="<?php echo wp_get_attachment_image_src($items['img_analogs'], 'thumbnail')[0];?>" alt="">
+											<p><? echo $items['price_analogs']; ?> руб.</p>
+										</a>
 
-								<a href="#" class="analogs-block__item-card">
-									<img src="<?php echo get_template_directory_uri();?>/img/analogs-02.jpg" alt="">
-									<p>24 900 руб.</p>
-								</a>
-
-								<a href="#" class="analogs-block__item-card">
-									<img src="<?php echo get_template_directory_uri();?>/img/analogs-03.jpg" alt="">
-									<p>9 900 руб.</p>
-								</a>
-
-								<a href="#" class="analogs-block__item-card">
-									<img src="<?php echo get_template_directory_uri();?>/img/analogs-04.jpg" alt="">
-									<p>24 900 руб.</p>
-								</a>
-
+										<?
+										$pictIndex++;
+									}
+								}
+								?>
 							</div>
 						</div>
 

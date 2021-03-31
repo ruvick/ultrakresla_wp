@@ -30,7 +30,7 @@ Version: 1.0.1
   src: url("fonts/Stolzl-Regular.eot");
   src: local("☺"), url("fonts/Stolzl-Regular.woff") format("woff"), url("fonts/Stolzl-Regular.ttf") format("truetype"), url("fonts/Stolzl-Regular.svg") format("svg");
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal; } 
 
 * {
   padding: 0px;
@@ -1125,7 +1125,7 @@ body.ie .ibg img {
 .select-slider-big__item {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex !important;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1954,9 +1954,14 @@ body.ie .ibg img {
   align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex !important;
   padding: 0px 10px 0 22px;
   overflow: hidden; }
+
+.info__benefit.slick-slider .slick-track {
+    justify-content: space-between;
+}
+
   .benefit__item p {
     font-family: Lato;
     font-size: 14px;

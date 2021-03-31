@@ -105,19 +105,33 @@ $('.info-sl__slider').slick({
 	adaptiveHeight: true
 });
 
-
-// Slider вертикальный
-$('.sidebar-slider').slick({
-	arrows: true,
+$('.info__benefit').slick({
+	arrows: false,
 	dots: false,
 	infinite: true,
 	speed: 1000,
-	slidesToShow: 1,
-	autoplay: true,
-	// autoplaySpeed: 1800,
-	adaptiveHeight: true,
-	vertical: true
+	slidesToShow: 3,
+	slidesPerRow: 3,
+	slidesToScroll: 3,
+	variableWidth: false, 
+	centerMode: false,
+	autoplay: false,
+	autoplaySpeed: 1800,
+	adaptiveHeight: true
 });
+
+// Slider вертикальный
+// $('.sidebar-slider').slick({
+// 	arrows: true,
+// 	dots: false,
+// 	infinite: true,
+// 	speed: 1000,
+// 	slidesToShow: 1,
+// 	autoplay: true,
+// 	// autoplaySpeed: 1800,
+// 	adaptiveHeight: true,
+// 	vertical: true
+// });
 
 
 // Slider Товара

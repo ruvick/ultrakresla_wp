@@ -14,7 +14,7 @@ use Carbon_Fields\Field;
 Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
     ->add_tab('Главная', array(
   Field::make('complex', 'complex_benefit', 'Верхние блоки на главной')
-  ->set_max(3) // Можно будет выбрать только 5 постов
+  // ->set_max(3) // Можно будет выбрать только 5 постов
   ->add_fields(array(
     Field::make('image', 'img_benefit', 'Фото')
     ->set_width(30),
@@ -74,6 +74,14 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
 
       // Field::make('text', 'offer_sku', 'Артикул (Базовый)')->set_width(50),
       Field::make('text', 'offer_nal', 'Наличие на складе')->set_default_value( 'В наличии')->set_width(50), 
+        // Field::make('select', 'rev_reiting', 'Оценка' )->add_options( array(
+        //   '0' => '0',
+        //   '1' => '1',
+        //   '2' => '2',
+        //   '3' => '3',
+        //   '4' => '4',
+        //   '5' => '5'
+        // ) )->set_width(20),
 
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
       // Field::make('text', 'offer_sticker', 'Стикер')->set_width(50),
@@ -84,7 +92,6 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
         Field::make( 'text', 'c_name', 'Наименование параметра' )->set_width(50),
         Field::make( 'text', 'c_val',  'Значение' )->set_width(50),
       ) ),
-
 
       // Field::make('text', 'offer_old_price', 'Старая цена (Базовая)')->set_width(50),
       

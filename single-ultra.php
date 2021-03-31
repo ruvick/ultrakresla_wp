@@ -106,7 +106,24 @@ get_header(); ?>
 							<div class="actions-block__availability">
 								<div class="availability-flex d-flex">
 									<div class="actions-block__price">Цена: <span class="price-summ"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?></span> руб.</div>
-									<div class="availability-order">ПОД ЗАКАЗ</div>
+
+								<?php
+									$jachejka = carbon_get_the_post_meta('offer_nal');
+
+									if( strlen($jachejka) == 0 ) {
+
+										echo 'Не установлено';
+
+									} else if ( $jachejka === 0 || $jachejka === '0' ) {
+
+										echo '<div class="availability-order">ПОД ЗАКАЗ</div>';
+
+									} else {
+
+										echo '<div class="availability-order">10 НА СКЛАДЕ</div>';
+									}
+								?>
+
 									<div class="availability-manuf">Производитель: <a href="#"><?echo carbon_get_post_meta(get_the_ID(),"offer_manufact"); ?></a></div>
 								</div>
 								<div class="actions-block__social d-flex">

@@ -16,7 +16,7 @@ $(document).ready(function() {
 		$('body').addClass('ie');
 	}
 	if(isMobile.any()){
-		$('body').addClass('touch'); 
+		$('body').addClass('touch');  
 	}
 
 // ===============================================================================================================================================================
@@ -184,39 +184,43 @@ jQuery("input[type=tel]").inputmask(inputmask_phone);
 
 
 //Валидация телефона + Отправщик
-jQuery('.header__form button').click(function(e){ 
-	e.preventDefault();
+$('.newButton').click(function(e){ 
 
-	let persPhone = jQuery('.header__form input[name=tel]').val(); 
-	if ((persPhone == "")||(persPhone.indexOf("_")>0)) { 
-		$(this).siblings('input[name=tel]').css("background-color","#ff91a4")
+	e.preventDefault();
+	var name = $("#form-question-name").val();
+	var tel = $("#form-question-tel").val();
+
+	if (jQuery("#form-question-tel").val() == "") {
+		jQuery("#form-question-tel").css("border","1px solid red");
 		return;
 	}
 
-	var  jqXHR = jQuery.post(
-		"../sender/send.php",
-		{
-			phone: jQuery('.header__form input[name=tel]').val(),    
-			name: jQuery('.header__form input[name=name]').val(),
-			mail: jQuery('.header__form textarea[name=text]').val(),
-		}
+	// if (jQuery("#sig-inp-e").val() == ""){
+	// 	jQuery("#sig-inp-e").css("border","1px solid red");
+	// 	return;
+	// }
 
-		);
+	else {
+		var  jqXHR = jQuery.post(
+			allAjax.ajaxurl,
+			{
+				action: 'sendphone',        
+				nonce: allAjax.nonce,
+				name: name,
+				tel: tel,
+			}   
+			);
 
+				jqXHR.done(function (responce) {
+					jQuery(".headen_form_blk").hide();
+					jQuery('.SendetMsg').show();
+				});
 
-	jqXHR.done(function (responce) {
-		console.log(responce);
-		document.location.href = "../thank-you.html"; 
-		jQuery('.header__form input[name=tel]').val("");  
-		jQuery('.header__form input[name=name]').val("");
-		jQuery('.header__form textarea[name=text]').val("");
-	});
+            jqXHR.fail(function (responce) {
+            	alert("Произошла ошибка. Попробуйте позднее."); 
+        }); 
 
-	jqXHR.fail(function (responce) {
-		console.log(responce);
-		alert("Произошла ошибка попробуйте позднее!");
-	});
-
+     }
 });
 
 

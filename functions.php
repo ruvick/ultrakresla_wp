@@ -102,22 +102,22 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 
 	// Заготовка для вызова ajax
 	
-	add_action( 'wp_ajax_aj_fnc', 'aj_fnc' );
-	add_action( 'wp_ajax_nopriv_aj_fnc', 'aj_fnc' );
+	// add_action( 'wp_ajax_aj_fnc', 'aj_fnc' );
+	// add_action( 'wp_ajax_nopriv_aj_fnc', 'aj_fnc' );
 
-	function aj_fnc() {
-		if ( empty( $_REQUEST['nonce'] ) ) {
-			wp_die( '0' );
-		}
+	// function aj_fnc() {
+	// 	if ( empty( $_REQUEST['nonce'] ) ) {
+	// 		wp_die( '0' );
+	// 	}
 		
-		if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
+	// 	if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
 
 
 			
-		} else {
-			wp_die( 'НО-НО-НО!', '', 403 );
-		}
-	}
+	// 	} else {
+	// 		wp_die( 'НО-НО-НО!', '', 403 );
+	// 	}
+	// }
 	
 
 
@@ -299,7 +299,30 @@ function posts_custom_columns($column_name, $id){
 	
 }
 
+add_action( 'wp_ajax_sendphone', 'sendphone' );
+add_action( 'wp_ajax_nopriv_sendphone', 'sendphone' );
 
+  function sendphone() {
+    if ( empty( $_REQUEST['nonce'] ) ) {
+      wp_die( '0' );
+    }
+    
+    if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
+      
+      $headers = array(
+        'From: Сайт АВТОМОБИЛЬНЫЕ СИДЕНЬЯ <noreply@ultrakresla.ru>', 
+        'content-type: text/html',
+      );
+    
+      add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+      if (wp_mail(array('rudikov-web@ya.ru,asmi046@gmail.com'), 'Задать вопрос', '<strong>Имя:</strong> '.$_REQUEST["name"]. ' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"], $headers))
+        wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
+      else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>"); 
+      
+    } else {
+      wp_die( 'НО-НО-НО!', '', 403 );
+    }
+  }
 
 
 

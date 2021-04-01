@@ -22,7 +22,7 @@
 				<h2>Задать вопрос <span class = 'tkName'></span></h2>
 				<p>Наши специалисты свяжутся с Вами в течение 15 минут</p> 
 
-				<form class="form-question">
+				<form action="#" class="form-question">
 					<div class = "SendetMsg" style = "display:none"> 
 						Ваше сообщение успешно отправлено.
 					</div>

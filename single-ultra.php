@@ -131,12 +131,6 @@ get_header(); ?>
 									<a href="#" class="actions-block__btn popup-quest btn">Задать вопрос</a>
 									<div class="actions-block__share d-flex">
 										<p>Поделиться:</p>
-<!-- 										<div class="actions-block__social-icon d-flex">
-											<a href="<? echo carbon_get_theme_option("as_face"); ?>" class="social-icon icon-factbook"></a>
-											<a href="<? echo carbon_get_theme_option("as_twiter"); ?>" class="social-icon icon-twiter"></a>
-											<a href="<? echo carbon_get_theme_option("as_vk"); ?>" class="social-icon icon-vk"></a>
-											<a href="<? echo carbon_get_theme_option("as_classmates"); ?>" class="social-icon icon-ok"></a>
-										</div> -->
 										<div class="actions-block__social-icon d-flex share42init" data-url="<?php the_permalink() ?>" data-title="<?php the_title() ?>"></div>
 										<script type="text/javascript" src="share42.js"></script>
 									</div>

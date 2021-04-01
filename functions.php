@@ -316,7 +316,7 @@ add_action( 'wp_ajax_nopriv_sendphone', 'sendphone' );
       );
     
       add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
-      if (wp_mail(array('rudikov-web@ya.ru,asmi046@gmail.com'), 'Задать вопрос', '<strong>Имя:</strong> '.$_REQUEST["name"]. ' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"], $headers))
+       if (wp_mail(carbon_get_theme_option( 'as_email_send' ), 'Заявка с сайта «АВТОМОБИЛЬНЫЕ СИДЕНЬЯ»', '<strong>Имя:</strong> '.$_REQUEST["name"]. ' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"], $headers))
         wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
       else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>"); 
       

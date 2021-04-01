@@ -1,7 +1,7 @@
 <?php
 
-define("COMPANY_NAME", "<Вписываем имя компании>");
-define("MAIL_RESEND", "<Вписываем почтовый ящик который подставляется в шапку письма>");
+define("COMPANY_NAME", "АВТОМОБИЛЬНЫЕ СИДЕНЬЯ");
+define("MAIL_RESEND", "noreply@ultrakresla.ru");
 
 //----Подключене carbon fields
 //----Инструкции по подключению полей см. в комментариях themes-fields.php
@@ -310,7 +310,7 @@ add_action( 'wp_ajax_nopriv_sendphone', 'sendphone' );
     if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
       
       $headers = array(
-        'From: Сайт АВТОМОБИЛЬНЫЕ СИДЕНЬЯ <noreply@ultrakresla.ru>', 
+        'From: Сайт '.COMPANY_NAME.' <'.MAIL_RESEND.'>', 
         'content-type: text/html',
       );
     

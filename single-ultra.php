@@ -30,7 +30,7 @@ get_header(); ?>
 							</p>
 						</div>
 						<?
-						$pictIndex++;
+						$pictIndex++; 
 					}
 				}
 				?>
@@ -107,7 +107,7 @@ get_header(); ?>
 								<div class="availability-flex d-flex">
 									<div class="actions-block__price">Цена: <span class="price-summ"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?></span> руб.</div>
 
-								<?php
+									<?php
 									$jachejka = carbon_get_the_post_meta('offer_nal');
 
 									if( strlen($jachejka) == 0 ) {
@@ -122,7 +122,7 @@ get_header(); ?>
 
 										echo '<div class="availability-order">10 НА СКЛАДЕ</div>';
 									}
-								?>
+									?>
 
 									<div class="availability-manuf">Производитель: <a href="#"><?echo carbon_get_post_meta(get_the_ID(),"offer_manufact"); ?></a></div>
 									<div class="vendor">Артикул: <?echo carbon_get_post_meta(get_the_ID(),"mod_vendor"); ?></div>
@@ -131,12 +131,14 @@ get_header(); ?>
 									<a href="#" class="actions-block__btn popup-quest btn">Задать вопрос</a>
 									<div class="actions-block__share d-flex">
 										<p>Поделиться:</p>
-										<div class="actions-block__social-icon d-flex">
+<!-- 										<div class="actions-block__social-icon d-flex">
 											<a href="<? echo carbon_get_theme_option("as_face"); ?>" class="social-icon icon-factbook"></a>
 											<a href="<? echo carbon_get_theme_option("as_twiter"); ?>" class="social-icon icon-twiter"></a>
 											<a href="<? echo carbon_get_theme_option("as_vk"); ?>" class="social-icon icon-vk"></a>
 											<a href="<? echo carbon_get_theme_option("as_classmates"); ?>" class="social-icon icon-ok"></a>
-										</div>
+										</div> -->
+										<div class="actions-block__social-icon d-flex share42init" data-url="<?php the_permalink() ?>" data-title="<?php the_title() ?>"></div>
+										<script type="text/javascript" src="share42.js"></script>
 									</div>
 								</div>
 							</div>
@@ -196,26 +198,26 @@ get_header(); ?>
 
 						<div class="tab__item_col">
 
-								<?	$tab = carbon_get_the_post_meta('offer_cherecter');
-								if($tab) {
-									$tabIndex = 0;
-									foreach($tab as $tabs) {
-										?>
+							<?	$tab = carbon_get_the_post_meta('offer_cherecter');
+							if($tab) {
+								$tabIndex = 0;
+								foreach($tab as $tabs) {
+									?>
 
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left"> 
-									<? echo $tabs['tab_name']; ?>
-								</div>
-								<div class="tech-text__item">
-									<? echo $tabs['tab_val']; ?>
-								</div>
-							</div>
+									<div class="tech-text__block d-flex">
+										<div class="tech-text__item tech-text__item_left"> 
+											<? echo $tabs['tab_name']; ?>
+										</div>
+										<div class="tech-text__item">
+											<? echo $tabs['tab_val']; ?>
+										</div>
+									</div>
 
-										<?
-										$tabIndex++;
-									}
+									<?
+									$tabIndex++;
 								}
-								?>
+							}
+							?>
 
 
 <!-- 							<div class="tech-text__block d-flex">
@@ -258,26 +260,26 @@ get_header(); ?>
 
 						<div class="tab__item_col">
 
-								<?	$tab = carbon_get_the_post_meta('offer_cherecter-r');
-								if($tab) {
-									$tabIndex = 0;
-									foreach($tab as $tabs) {
-										?>
+							<?	$tab = carbon_get_the_post_meta('offer_cherecter-r');
+							if($tab) {
+								$tabIndex = 0;
+								foreach($tab as $tabs) {
+									?>
 
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									<? echo $tabs['tab_name-r']; ?>
-								</div>
-								<div class="tech-text__item">
-									<? echo $tabs['tab_val-r']; ?>
-								</div>
-							</div>
+									<div class="tech-text__block d-flex">
+										<div class="tech-text__item tech-text__item_left">
+											<? echo $tabs['tab_name-r']; ?>
+										</div>
+										<div class="tech-text__item">
+											<? echo $tabs['tab_val-r']; ?>
+										</div>
+									</div>
 
-										<?
-										$tabIndex++;
-									}
+									<?
+									$tabIndex++;
 								}
-								?>
+							}
+							?>
 
 <!-- 							<div class="tech-text__block d-flex">
 								<div class="tech-text__item tech-text__item_left">

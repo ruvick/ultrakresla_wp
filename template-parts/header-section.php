@@ -53,14 +53,15 @@
 
 						<nav class="mob-menu">
 							<div class="mob-menu__df d-flex">
-								<ul class="mob-menu__list">
+								<?php wp_nav_menu( array('theme_location' => 'menu_cat','menu_class' => 'mob-menu__list','container_class' => 'mob-menu__list','container' => false )); ?>
+<!-- 								<ul class="mob-menu__list">
 									<li><a href="#">Спортивные сидения</a></li>
 									<li><a href="#">Анатомические сидения</a></li>
 									<li><a href="#">Компьютерные сидения</a></li>
 									<li><a href="#">Игровые кресла для автосимуляторов</a></li>
 									<li><a href="#">Кресла для аттракционов</a></li>
-								</ul>
-								<ul>
+								</ul> -->
+<!-- 								<ul>
 									<li><a href="#">Спортивные сидения</a></li>
 									<li><a href="#">Анатомические сидения</a></li>
 									<li><a href="#">Компьютерные сидения</a></li>
@@ -87,7 +88,7 @@
 									<li><a href="#">Оплата и доставка</a></li>
 									<li><a href="#">Сотрудничество</a></li>
 									<li><a href="#">Контакты</a></li>
-								</ul>
+								</ul> -->
 							</div>
 						</nav>
 					</div>

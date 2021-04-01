@@ -33,7 +33,7 @@
 				<div class="info-img__col">
 
 					<div class="info-img__three three-img d-flex">
-						<div class="three-img__one position">
+						<a href="#" class="three-img__one position">
 							<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-01.jpg" alt="">
 							<div class="info-img__text color-t-01">
 								<p>
@@ -41,9 +41,9 @@
 									сидения
 								</p>
 							</div>
-						</div>
+						</a>
 						<div class="three-img__two d-flex">
-							<div class="three-img__item position">
+							<a href="#" class="three-img__item position">
 								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-02.jpg" alt="">
 <!-- 										<div class="info-img__text color-t-02">
 											<p>
@@ -51,8 +51,8 @@
 												микроавтобусов
 											</p>
 										</div> -->
-									</div>
-									<div class="three-img__item position">
+									</a>
+									<a href="#" class="three-img__item position">
 										<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-03.jpg" alt="">
 										<div class="info-img__text color-t-03">
 											<p>
@@ -60,11 +60,11 @@
 												кресла
 											</p>
 										</div>
-									</div>
+									</a>
 								</div>
 							</div>
 
-							<div class="info-img__one position">
+							<a href="#" class="info-img__one position">
 								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-04.jpg" alt="">
 								<div class="info-img__text color-t-04">
 									<p>
@@ -72,13 +72,13 @@
 										микроавтобусов
 									</p>
 								</div>
-							</div>
+							</a>
 
 						</div>
 
 						<div class="info-img__col">
 
-							<div class="info-img__one position">
+							<a href="#" class="info-img__one position">
 								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-05.jpg" alt="">
 								<div class="info-img__text color-t-05">
 									<p>
@@ -86,11 +86,11 @@
 										автосимуляторов 
 									</p>
 								</div>
-							</div>
+							</a>
 
 							<div class="info-img__three three-img d-flex">
 								<div class="three-img__two d-flex">
-									<div class="three-img__item position">
+									<a href="#" class="three-img__item position">
 										<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-06.jpg" alt="">
 										<div class="info-img__text color-t-06">
 											<p>
@@ -98,8 +98,8 @@
 												спецтехники
 											</p>
 										</div>
-									</div>
-									<div class="three-img__item position">
+									</a>
+									<a href="#" class="three-img__item position">
 										<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-07.jpg" alt="">
 										<div class="info-img__text color-t-07">
 											<p>
@@ -107,9 +107,9 @@
 												катеров и лодок
 											</p>
 										</div>
-									</div>
+									</a>
 								</div>
-								<div class="three-img__one position">
+								<a href="#" class="three-img__one position">
 									<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-08.jpg" alt="">
 									<div class="info-img__text color-t-08">
 										<p>
@@ -117,7 +117,7 @@
 											кресла
 										</p>
 									</div>
-								</div>
+								</a>
 							</div>
 
 						</div>

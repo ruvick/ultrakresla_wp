@@ -468,9 +468,9 @@ get_header(); ?>
 					</div>
 				</a>
 
-				<a href="<?php echo get_category_link(12);?>" class="three-img__one position">
+				<a href="<?php echo get_category_link(14);?>" class="three-img__one position">
 					<img src="<?php echo get_template_directory_uri();?>/img/similar-03.jpg" alt="">
-					<div class="info-img__text color-t-08">
+					<div class="info-img__text color-t-08"> 
 						<p>
 							Компьютерные <br>
 							кресла

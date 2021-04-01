@@ -21,7 +21,7 @@
 								</p>
 							</div>
 						<?
-							$pictIndex++;
+							$pictIndex++; 
 						}
 					}
 				?>
@@ -33,17 +33,17 @@
 				<div class="info-img__col">
 
 					<div class="info-img__three three-img d-flex">
-						<a href="#" class="three-img__one position">
+						<a href="<?php echo get_category_link(9);?>" class="three-img__one position">
 							<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-01.jpg" alt="">
 							<div class="info-img__text color-t-01">
 								<p>
-									Спортивные <br>
+									Спортивные <br> 
 									сидения
 								</p>
 							</div>
 						</a>
 						<div class="three-img__two d-flex">
-							<a href="#" class="three-img__item position">
+							<a href="<?php echo get_category_link(31);?>" class="three-img__item position">
 								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-02.jpg" alt="">
 <!-- 										<div class="info-img__text color-t-02">
 											<p>
@@ -52,7 +52,7 @@
 											</p>
 										</div> -->
 									</a>
-									<a href="#" class="three-img__item position">
+									<a href="<?php echo get_category_link(12);?>" class="three-img__item position">
 										<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-03.jpg" alt="">
 										<div class="info-img__text color-t-03">
 											<p>
@@ -64,7 +64,7 @@
 								</div>
 							</div>
 
-							<a href="#" class="info-img__one position">
+							<a href="<?php echo get_category_link(17);?>" class="info-img__one position">
 								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-04.jpg" alt="">
 								<div class="info-img__text color-t-04">
 									<p>
@@ -78,7 +78,7 @@
 
 						<div class="info-img__col">
 
-							<a href="#" class="info-img__one position">
+							<a href="<?php echo get_category_link(12);?>" class="info-img__one position">
 								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-05.jpg" alt="">
 								<div class="info-img__text color-t-05">
 									<p>
@@ -90,7 +90,7 @@
 
 							<div class="info-img__three three-img d-flex">
 								<div class="three-img__two d-flex">
-									<a href="#" class="three-img__item position">
+									<a href="<?php echo get_category_link(15);?>" class="three-img__item position">
 										<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-06.jpg" alt="">
 										<div class="info-img__text color-t-06">
 											<p>
@@ -99,7 +99,7 @@
 											</p>
 										</div>
 									</a>
-									<a href="#" class="three-img__item position">
+									<a href="<?php echo get_category_link(19);?>" class="three-img__item position">
 										<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-07.jpg" alt="">
 										<div class="info-img__text color-t-07">
 											<p>
@@ -109,7 +109,7 @@
 										</div>
 									</a>
 								</div>
-								<a href="#" class="three-img__one position">
+								<a href="<?php echo get_category_link(14);?>" class="three-img__one position">
 									<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-08.jpg" alt="">
 									<div class="info-img__text color-t-08">
 										<p>

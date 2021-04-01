@@ -140,7 +140,7 @@ $('.select-prod-slider').slick({
 	dots: false,
 	infinite: true,
 	speed: 1000,
-	slidesToShow: 4,
+	slidesToShow: 10,
 	slidesToScroll: 1,
 	centerMode: true,
 	focusOnSelect: true,

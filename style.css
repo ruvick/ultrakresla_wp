@@ -23,7 +23,7 @@ Version: 1.0.1
   src: url("fonts/Lato-Bold.eot");
   src: local("☺"), url("fonts/Lato-Bold.woff") format("woff"), url("fonts/Lato-Bold.ttf") format("truetype"), url("fonts/Lato-Bold.svg") format("svg");
   font-weight: 700;
-  font-style: normal; }  
+  font-style: normal; }   
 
 @font-face { 
   font-family: 'Stolzl';

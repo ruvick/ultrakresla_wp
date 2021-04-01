@@ -84,7 +84,7 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
         // ) )->set_width(20),
 
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
-      // Field::make('text', 'offer_sticker', 'Стикер')->set_width(50),
+      Field::make('text', 'mod_vendor', 'Артикул')->set_width(50),
       // Field::make('text', 'offer_benefit', 'Выгода')->set_width(50),
       Field::make( 'complex', 'offer_cherecter', "Характеристики товара табы, левая колонка" )
       ->add_fields( array(

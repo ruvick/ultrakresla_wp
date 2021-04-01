@@ -21,7 +21,7 @@ get_header(); ?>
 				$limit = $count-3; 
 				if($picts) {
 					$pictsIndex = 0;
-					foreach($picts as $items) { 
+					foreach($picts as $items) {  
 						?>
 
 						<div class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
@@ -125,6 +125,7 @@ get_header(); ?>
 								?>
 
 									<div class="availability-manuf">Производитель: <a href="#"><?echo carbon_get_post_meta(get_the_ID(),"offer_manufact"); ?></a></div>
+									<div class="vendor">Артикул: <?echo carbon_get_post_meta(get_the_ID(),"mod_vendor"); ?></div>
 								</div>
 								<div class="actions-block__social d-flex">
 									<a href="#" class="actions-block__btn popup-quest btn">Задать вопрос</a>

@@ -227,15 +227,12 @@ $('.newButton').click(function(e){
 $(".fancybox").fancybox();
 
 
-
 $(".popup-quest").on('click', function(e) {
 	e.preventDefault();
 	jQuery(".windows_form h2").html(jQuery(this).data("winheader"));
 	jQuery(".windows_form .subtitle").html(jQuery(this).data("winsubheader"));
 	jQuery("#question").arcticmodal();
 }); 
-
-
 
 
 //ZOOM

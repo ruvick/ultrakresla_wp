@@ -43,9 +43,9 @@
 							</div>
 						</a>
 						<div class="three-img__two d-flex">
-							<a href="<?php echo get_category_link(31);?>" class="three-img__item position">
-								<video width="262" height="262" controls="controls" loop autoplay muted poster="<?php echo get_template_directory_uri();?>/img/info-card/card-02.jpg">
-									<source src="<?php echo get_template_directory_uri();?>/img/ultra-video.mp4" type='video/ogg; codecs="theora, vorbis"'> 
+								<a href="<?php echo get_template_directory_uri();?>/img/ultra-video.mp4" data-rel="media" class="fancybox three-img__item position">
+									<video class="info-img__video" controls="controls" loop autoplay muted poster="<?php echo get_template_directory_uri();?>/img/info-card/card-02.jpg">
+										<source src="<?php echo get_template_directory_uri();?>/img/ultra-video.mp4" type='video/ogg; codecs="theora, vorbis"'> 
 									</video>
 								</a>
 								<a href="<?php echo get_category_link(12);?>" class="three-img__item position">

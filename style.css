@@ -1913,6 +1913,12 @@ body.ie .ibg img {
   color: #fff;
   margin-bottom: 15px; }
 
+.footer__menu-r .menu__catalogy,
+.footer__menu .link__drop-down:after,
+.footer__menu .sub-menu {
+  display: none !important;
+}
+
 .footer-menu ul li a:last-child,
 .footer-menu ul li:last-child {
   margin-bottom: 0; }

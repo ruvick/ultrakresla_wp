@@ -224,7 +224,87 @@ $('.newButton').click(function(e){
 });
 
 
-$(".fancybox").fancybox();
+
+$('.cashButton').click(function(e){ 
+
+	e.preventDefault();
+	var name = $("#form-cashbackM-name").val();
+	var tel = $("#form-cashbackM-tel").val();
+
+	if (jQuery("#form-cashbackM-tel").val() == "") {
+		jQuery("#form-cashbackM-tel").css("border","1px solid red");
+		return;
+	}
+
+	// if (jQuery("#sig-inp-e").val() == ""){
+	// 	jQuery("#sig-inp-e").css("border","1px solid red");
+	// 	return;
+	// }
+
+	else {
+		var  jqXHR = jQuery.post(
+			allAjax.ajaxurl,
+			{
+				action: 'sendcashB',        
+				nonce: allAjax.nonce,
+				name: name,
+				tel: tel,
+			}   
+			);
+
+				jqXHR.done(function (responce) {
+					jQuery(".cashbackM .headen_form_blk").hide();
+					jQuery('.cashbackM .SendetMsg').show();
+				});
+
+            jqXHR.fail(function (responce) {
+            	alert("Произошла ошибка. Попробуйте позднее."); 
+        }); 
+
+     }
+});
+
+
+$('.form__btn').click(function(e){ 
+
+	e.preventDefault();
+	var name = $("#contactsName").val();
+	var tel = $("#contactsTel").val();
+	var msg = $("#contactsMsg").val();
+
+	if (jQuery("#contactsTel").val() == "") {
+		jQuery("#contactsTel").css("border","1px solid red");
+		return;
+	}
+
+	if (jQuery("#contactsMsg").val() == ""){
+		jQuery("#contactsMsg").css("border","1px solid red");
+		return;
+	}
+
+	else {
+		var  jqXHR = jQuery.post(
+			allAjax.ajaxurl,
+			{
+				action: 'sendcontacts',        
+				nonce: allAjax.nonce,
+				name: name,
+				tel: tel,
+				msg: msg,
+			}   
+			);
+
+				jqXHR.done(function (responce) {
+					jQuery(".contacts__form .headen_form_blk").hide();
+					jQuery('.contacts__form .SendetMsg').show();
+				});
+
+            jqXHR.fail(function (responce) {
+            	alert("Произошла ошибка. Попробуйте позднее."); 
+        }); 
+
+     }
+});
 
 
 $(".popup-quest").on('click', function(e) {
@@ -233,6 +313,19 @@ $(".popup-quest").on('click', function(e) {
 	jQuery(".windows_form .subtitle").html(jQuery(this).data("winsubheader"));
 	jQuery("#question").arcticmodal();
 }); 
+
+$(".cashback__btn").on('click', function(e) {
+	e.preventDefault();
+	jQuery(".windows_form h2").html(jQuery(this).data("winheader"));
+	jQuery(".windows_form .subtitle").html(jQuery(this).data("winsubheader"));
+	jQuery("#cashbackM").arcticmodal();
+}); 
+
+
+
+
+$(".fancybox").fancybox();
+
 
 
 //ZOOM

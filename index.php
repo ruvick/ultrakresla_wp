@@ -43,9 +43,9 @@
 							</div>
 						</a>
 						<div class="three-img__two d-flex">
-								<a href="<?php echo get_template_directory_uri();?>/img/ultra-video.mp4" data-rel="media" class="fancybox three-img__item position">
-									<video class="info-img__video" controls="controls" loop autoplay muted poster="<?php echo get_template_directory_uri();?>/img/info-card/card-02.jpg">
-										<source src="<?php echo get_template_directory_uri();?>/img/ultra-video.mp4" type='video/ogg; codecs="theora, vorbis"'> 
+							<a href="<?php echo get_template_directory_uri();?>/img/ultra-video.mp4" data-rel="media" class="fancybox three-img__item position">
+								<video class="info-img__video" controls="controls" loop autoplay muted poster="<?php echo get_template_directory_uri();?>/img/info-card/card-02.jpg">
+									<source src="<?php echo get_template_directory_uri();?>/img/ultra-video.mp4" type='video/ogg; codecs="theora, vorbis"'> 
 									</video>
 								</a>
 								<a href="<?php echo get_category_link(12);?>" class="three-img__item position">
@@ -267,27 +267,30 @@
 							<div class="spollers__item">
 								<div class="spollers__title spoller closeall">На какие автомобили устанавливаются кресла?</div>
 								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Кресла универсальные, устанавливаются на любые автомобили при помощи 
+									установочных переходных кронштейнов.
 								</div>
 							</div>
 
 							<div class="spollers__item">
 								<div class="spollers__title spoller closeall">Доставите кресло в любой город?</div>
 								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Мы осуществляем доставку по всей России транспортными компаниями. Доставка 
+									до ТК бесплатная. Кресла упаковываются в целлофан и картонную коробку.
 								</div>
 							</div>
 
 							<div class="spollers__item">
 								<div class="spollers__title spoller closeall">Можно ли сделать на внешней части кресла вышивку логотипа?</div>
 								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Мы можем нанести логотип Вашей компании методом машинной вышивки.
+								</div>
+							</div>
+
+							<div class="spollers__item">
+								<div class="spollers__title spoller closeall">Есть ли скидки при оптовых заказах?</div>
+								<div class="spollers__text">
+									Да, мы делаем скидки при оптовых заказах - от 10 шт.
 								</div>
 							</div>
 						</div>
@@ -297,27 +300,24 @@
 							<div class="spollers__item">
 								<div class="spollers__title spoller closeall">Можно ли выбрать цвет и материал кресла?</div>
 								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									У нас большой ассортимент автомобильных тканей и экокожи различных цветов и 
+									фактур. Можем изготовить кресло нужного цвета или скомбинировать несколько 
+									материалов и цветов по Вашему желанию.
 								</div>
 							</div>
 
 							<div class="spollers__item">
 								<div class="spollers__title spoller closeall">Осуществляете ли установку сидений?</div>
 								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Нет, но поставляем установочные кронштейны для монтажа кресел в российских авто.
 								</div>
 							</div>
 
 							<div class="spollers__item">
 								<div class="spollers__title spoller closeall">Можно ли перешить заднее сиденье в цвет передних кресел?</div>
 								<div class="spollers__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Да, мы можем перетянуть Ваше заднее сиденье (диван) или изготовить на него 
+									съемный чехол под цвет передних кресел. Также возможна перетяжка дверных вставок.
 								</div>
 							</div>
 

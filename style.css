@@ -23,7 +23,7 @@ Version: 1.0.1
   src: url("fonts/Lato-Bold.eot");
   src: local("☺"), url("fonts/Lato-Bold.woff") format("woff"), url("fonts/Lato-Bold.ttf") format("truetype"), url("fonts/Lato-Bold.svg") format("svg");
   font-weight: 700;
-  font-style: normal; }   
+  font-style: normal; }    
 
 @font-face {  
   font-family: 'Stolzl';
@@ -1977,6 +1977,7 @@ body.ie .ibg img {
 }
 
   .benefit__item p {
+    margin: 0 !important;
     font-family: Lato;
     font-size: 14px;
     line-height: 1.2;
@@ -2990,8 +2991,13 @@ body.ie .ibg img {
     color: #fff;
 }
 
-
-
+.content h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 30px;
+}
+.content p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
 
 
 

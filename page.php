@@ -18,33 +18,27 @@ get_header(); ?>
 
 	<main id="primary" class="page site-main"> 
 
-		<section class="content"> 
+		<section class="content">  
 			<div class="container">
 
-					<div class="info__benefit benefit d-flex">
-
-						<div class="benefit__item benefit__item_l">
+			<div class="info__benefit benefit d-flex">
+				<?	$picts = carbon_get_theme_option('complex_benefit');
+				$limit = $count-3; 
+				if($picts) {
+					$pictsIndex = 0;
+					foreach($picts as $items) {  
+						?>
+						<div class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
 							<p>
-								ПОЛУЧИТЕ КЕШБЕК ПРИ <br>
-								СОВЕРШЕНИИ ЗАКАЗА
+								<? echo $items['text_benefit']; ?>
 							</p>
 						</div>
-
-						<div class="benefit__item benefit__item_c">
-							<p>
-								ОДНАКО НЕЗАВИСИМОСТЬ <br>
-								ПОЗИЦИИ МЫСЛИТЕЛЯ 
-							</p>
-						</div>
-
-						<div class="benefit__item benefit__item_r">
-							<p>
-								ПОЗИЦИИ МЫСЛИТЕЛЯ <br>
-								ЕГО КАТОЛИЧЕСКИМ ТЕОЛОГАМ 
-							</p>
-						</div>
-
-					</div>
+						<?
+						$pictIndex++; 
+					}
+				}
+				?>
+			</div>
 
 			<?php
 			if ( function_exists('yoast_breadcrumb') ) {

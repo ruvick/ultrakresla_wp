@@ -251,7 +251,7 @@
 							</a>
 						</div>
 					</div>
-					<a href="#" class="useful__btn btn">Смотреть все материалы</a>
+					<a href="<?php echo get_category_link(20);?>" class="useful__btn btn">Смотреть все материалы</a>
 
 				</div>
 			</section>

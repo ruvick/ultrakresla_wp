@@ -2344,24 +2344,30 @@ body.ie .ibg img {
   justify-content: space-between; }
 
 .block__spollers {
-  max-width: 555px;
+  /*max-width: 555px;*/
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+/*  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;*/
+ }
 
 .spollers__item {
   border: 2px solid #ECECEC;
   border-radius: 5px;
   margin-bottom: 20px;
-  cursor: pointer; }
+  cursor: pointer;
+  flex: 0 1 49%;
+ }
 
-.spollers__item:last-child {
-  margin-bottom: 0; }
+/*.spollers__item:last-child {
+  margin-bottom: 0; }*/
 
 .spollers__title {
   padding: 13px 21px;
@@ -3425,7 +3431,10 @@ body.ie .ibg img {
   .actions__wrap {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 100%;
-    flex: 0 1 100%; } }
+    flex: 0 1 100%; }
+  .spollers__item {
+    flex: 0 1 100%; }
+ }
 
 @media (max-width: 680px) {
   .prod-card__body {

@@ -22,8 +22,15 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
     ->set_width(70),
     ))
   ))
+    ->add_tab('Часто задаваемы вопросы', array(
+      Field::make( 'complex', 'questions_complex', "Вопрос - Ответ" )
+      ->add_fields( array(
+        Field::make( 'text', 'questions_spoiler', 'Вопрос' )->set_width(50),
+        Field::make( 'text', 'questions_answer',  'Ответ' )->set_width(50),
+    ) ),
+) )
     ->add_tab('Контакты', array(
-        Field::make( 'text', 'as_company', __( 'Название' ) )
+        Field::make( 'text', 'as_company', __( 'Название' ) ) 
           ->set_width(50),
         Field::make( 'text', 'as_phones_1', __( 'Телефон' ) )
           ->set_width(50),

@@ -260,73 +260,26 @@
 				<div class="container">
 					<h2>Часто задаваемые вопросы</h2>
 
-					<div class="spollers__col">
-
-						<div class="block__spollers spollers">
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">На какие автомобили устанавливаются кресла?</div>
-								<div class="spollers__text">
-									Кресла универсальные, устанавливаются на любые автомобили при помощи 
-									установочных переходных кронштейнов.
+					<div class="block__spollers spollers">
+						<?	$quest = carbon_get_theme_option('questions_complex');
+						if($quest) {
+							$questIndex = 0;
+							foreach($quest as $itemQ) {
+								?>
+								<div class="spollers__item">
+									<div class="spollers__title spoller closeall"><? echo $itemQ['questions_spoiler']; ?></div>
+									<div class="spollers__text">
+										<? echo $itemQ['questions_answer']; ?>
+									</div>
 								</div>
-							</div>
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Доставите кресло в любой город?</div>
-								<div class="spollers__text">
-									Мы осуществляем доставку по всей России транспортными компаниями. Доставка 
-									до ТК бесплатная. Кресла упаковываются в целлофан и картонную коробку.
-								</div>
-							</div>
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Можно ли сделать на внешней части кресла вышивку логотипа?</div>
-								<div class="spollers__text">
-									Мы можем нанести логотип Вашей компании методом машинной вышивки.
-								</div>
-							</div>
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Есть ли скидки при оптовых заказах?</div>
-								<div class="spollers__text">
-									Да, мы делаем скидки при оптовых заказах - от 10 шт.
-								</div>
-							</div>
-						</div>
-
-						<div class="block__spollers spollers">
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Можно ли выбрать цвет и материал кресла?</div>
-								<div class="spollers__text">
-									У нас большой ассортимент автомобильных тканей и экокожи различных цветов и 
-									фактур. Можем изготовить кресло нужного цвета или скомбинировать несколько 
-									материалов и цветов по Вашему желанию.
-								</div>
-							</div>
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Осуществляете ли установку сидений?</div>
-								<div class="spollers__text">
-									Нет, но поставляем установочные кронштейны для монтажа кресел в российских авто.
-								</div>
-							</div>
-
-							<div class="spollers__item">
-								<div class="spollers__title spoller closeall">Можно ли перешить заднее сиденье в цвет передних кресел?</div>
-								<div class="spollers__text">
-									Да, мы можем перетянуть Ваше заднее сиденье (диван) или изготовить на него 
-									съемный чехол под цвет передних кресел. Также возможна перетяжка дверных вставок.
-								</div>
-							</div>
-
-						</div>
+								<?
+								$questIndex++;
+							}
+						}
+						?>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</main>
 
-	</main>
-
-	<?php get_footer(); ?> 
+		<?php get_footer(); ?> 

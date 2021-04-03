@@ -38,13 +38,11 @@
 
 			<div class="useful__row d-flex">
 			<?php if (have_posts()) { while (have_posts()) { the_post(); ?>
-				<a href="<?php echo get_permalink();?>" class="useful__item-img-item useful__item-img_01">
+				<a href="<?php echo get_category_link(54);?>" class="useful__item-img-item useful__item-img_01" style="background-image: url(<?php echo get_the_post_thumbnail( $post->ID, "turImg", array("alt" => $post->post_title, "title" => $post->post_title));?>);">
 					<!-- <img src="img/useful/useful-01.jpg" alt=""> -->
 					<p>
 						<?php 
-						$maxchar = 200;
-						$text = strip_tags( get_the_excerpt() );
-						echo mb_substr( $text, 0, $maxchar );
+						$excerpt = get_the_excerpt( $post );
 						?>
 					</p>
 				</a>

@@ -3004,6 +3004,11 @@ body.ie .ibg img {
   margin-bottom: 15px;
   line-height: 1.5;
 }
+.content ul li, 
+.content ol li {
+  font-family: Lato;
+  margin-bottom: 18px;
+}
 
 
 

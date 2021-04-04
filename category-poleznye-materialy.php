@@ -36,9 +36,11 @@
 
 			<h1><?php single_cat_title( '', true );?></h1>
 
+
+
 			<div class="useful__row d-flex">
-			<?php if (have_posts()) { while (have_posts()) { the_post(); ?>
-				<a href="<?php echo get_category_link(54);?>" class="useful__item-img-item useful__item-img_01" style="background-image: url(<?php echo get_the_post_thumbnail( $post->ID, "turImg", array("alt" => $post->post_title, "title" => $post->post_title));?>);">
+
+				<a href="<?php echo get_permalink(548);?>" class="useful__item-img-item useful__item-img_01">
 					<!-- <img src="img/useful/useful-01.jpg" alt=""> -->
 					<p>
 						<?php 
@@ -47,7 +49,7 @@
 					</p>
 				</a>
 				<div class="useful__item-img d-flex">
-					<a href="<?php echo get_permalink();?>" class="useful__item-img-item useful__item-img_02">
+					<a href="#" class="useful__item-img-item useful__item-img_02">
 						<!-- <img src="img/useful/useful-02.jpg" alt=""> -->
 						<p>
 							<?php 
@@ -57,7 +59,7 @@
 							?>
 						</p>
 					</a>
-					<a href="<?php echo get_permalink();?>" class="useful__item-img-item useful__item-img_03">
+					<a href="#" class="useful__item-img-item useful__item-img_03">
 						<!-- <img src="img/useful/useful-03.jpg" alt=""> -->
 						<p>
 							<?php 
@@ -69,7 +71,7 @@
 					</a>
 				</div>
 				<div class="useful__item-img d-flex">
-					<a href="<?php echo get_permalink();?>" class="useful__item-img-item useful__item-img_04">
+					<a href="#" class="useful__item-img-item useful__item-img_04">
 						<!-- <img src="img/useful/useful-04.jpg" alt=""> -->
 						<p>
 							<?php 
@@ -79,7 +81,7 @@
 							?>
 						</p>
 					</a>
-					<a href="<?php echo get_permalink();?>" class="useful__item-img-item useful__item-img_05">
+					<a href="#" class="useful__item-img-item useful__item-img_05">
 						<!-- <img src="img/useful/useful-05.jpg" alt=""> -->
 						<p>
 							<?php 
@@ -90,8 +92,7 @@
 						</p>
 					</a>
 				</div>
-			<?php 	} //конец while
-		} //конец if ?>
+
 			</div>
 
 			<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi(); ?>

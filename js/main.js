@@ -312,7 +312,7 @@ $(".cashback__btn").on('click', function(e) {
 
 $(".fancybox").fancybox();
 
-// $('figure img').parent('a').attr("data-lightbox", 'gallery');
+$('figure img').parent('a').attr("data-lightbox", 'gallery');
 
 
 

@@ -1478,12 +1478,14 @@ body.ie .ibg img {
   left: 0px;
   z-index: 50;
   width: 142px;
-  height: 80px;
+  height: 95px;
   background: #E8E8E8;
   padding: 19px 10px 19px 19px; }
 
 .sub-menu li {
   margin: 0 0 8px 0; }
+.sub-menu li:last-child {
+  margin: 0; }
 
 .header {
   background: #F5F5F5;
@@ -2998,8 +3000,16 @@ body.ie .ibg img {
     color: #fff;
 }
 
-.content h1, h2, h3, h4, h5, h6 {
+.content h1, 
+.content h2, 
+.content h3, 
+.content h4, 
+.content h5, 
+.content h6 {
   margin-bottom: 30px;
+}
+.content img {
+  margin-bottom: 10px;
 }
 .content p {
   margin-bottom: 15px;
@@ -3008,6 +3018,7 @@ body.ie .ibg img {
 .content ul li, 
 .content ol li {
   font-family: Lato;
+  line-height: 1.5;
   margin-bottom: 18px;
 }
 

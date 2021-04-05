@@ -208,49 +208,86 @@
 				<div class="container">
 					<h2>Полезные материалы</h2>
 
-					<div class="useful__row d-flex">
-						<a href="#" class="useful__item-img-item useful__item-img_01">
-							<!-- <img src="img/useful/useful-01.jpg" alt=""> -->
-							<p>
-								Размеры автокресел в 
-								условиях модерна, 
-								лишённого традиционных 
-								и религиозных связей
-							</p>
-						</a>
-						<div class="useful__item-img d-flex">
-							<a href="#" class="useful__item-img-item useful__item-img_02">
-								<!-- <img src="img/useful/useful-02.jpg" alt=""> -->
-								<p>
-									Наше производство желало видеть
-									социологию широко признанной, 
-									полноценной научной областью
-								</p>
-							</a>
-							<a href="#" class="useful__item-img-item useful__item-img_03">
-								<!-- <img src="img/useful/useful-03.jpg" alt=""> -->
-								<p>
-									Эксклюзивные работы на гуманитарном 
-									факультете стала символом признания 
-								</p>
-							</a>
-						</div>
-						<div class="useful__item-img d-flex">
-							<a href="#" class="useful__item-img-item useful__item-img_04">
-								<!-- <img src="img/useful/useful-04.jpg" alt=""> -->
-								<p>
-									Использование новейших материалов привело к 
-									негативной реакции в отношении нового и светского 
-								</p>
-							</a>
-							<a href="#" class="useful__item-img-item useful__item-img_05">
-								<!-- <img src="img/useful/useful-05.jpg" alt=""> -->
-								<p>
-									Степени защиты кресла своего рода манифест науки
-								</p>
-							</a>
-						</div>
-					</div>
+					<?php 
+					$posts = get_posts( array(
+						'numberposts' => 1,
+						'category'    => 20,
+						'orderby'     => 'date',
+						'orderby'     => '548,604,608,612',
+						'order'       => 'DESC',
+						'include'     => '548,604,608,612',
+						'include'     => array(),
+						'exclude'     => array(),
+						'meta_key'    => '',
+						'meta_value'  =>'',
+						'post_type'   => 'post',
+						'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+			) );
+
+					$result = wp_get_recent_posts( $args );
+
+					foreach( $posts as $post ){
+						?>
+			<div class="useful__row d-flex">
+
+				<a href="<?php echo get_permalink(548);?>" class="useful__item-img-item useful__item-img_01">
+					<!-- <img src="img/useful/useful-01.jpg" alt=""> -->
+					<p>
+						<?php
+						$the_post = get_post( 548 );
+						echo get_the_title( $the_post );
+						?>
+					</p> 
+				</a>
+
+				<div class="useful__item-img d-flex">
+					<a href="<?php echo get_permalink(604);?>" class="useful__item-img-item useful__item-img_02">
+						<!-- <img src="img/useful/useful-02.jpg" alt=""> -->
+						<p>
+							<?php
+							$the_post = get_post( 604 );
+							echo get_the_title( $the_post );
+							?>
+						</p> 
+					</a>
+					<a href="<?php echo get_permalink(608);?>" class="useful__item-img-item useful__item-img_03">
+						<!-- <img src="img/useful/useful-03.jpg" alt=""> -->
+						<p>
+							<?php
+							$the_post = get_post( 608 );
+							echo get_the_title( $the_post );
+							?>
+						</p> 
+					</a>
+				</div>
+
+				<div class="useful__item-img d-flex">
+
+					<a href="<?php echo get_permalink(612);?>" class="useful__item-img-item useful__item-img_04">
+						<!-- <img src="img/useful/useful-04.jpg" alt=""> -->
+						<p>
+							<?php
+								$the_post = get_post( 612 );
+								echo get_the_title( $the_post );
+							?>
+						</p> 
+					</a>
+
+					<a href="<?php echo get_permalink(616);?>" class="useful__item-img-item useful__item-img_05">
+						<!-- <img src="img/useful/useful-05.jpg" alt=""> -->
+						<p>
+							<?php
+								$the_post = get_post( 616 );
+								echo get_the_title( $the_post );
+							?>
+						</p> 
+					</a>
+				</div>
+
+			</div>
+						<?php 
+					} 
+					?>
 					<a href="<?php echo get_category_link(20);?>" class="useful__btn btn">Смотреть все материалы</a>
 
 				</div>

@@ -120,20 +120,6 @@ $('.info__benefit').slick({
 	adaptiveHeight: true
 });
 
-// Slider вертикальный
-// $('.sidebar-slider').slick({
-// 	arrows: true,
-// 	dots: false,
-// 	infinite: true,
-// 	speed: 1000,
-// 	slidesToShow: 1,
-// 	autoplay: true,
-// 	// autoplaySpeed: 1800,
-// 	adaptiveHeight: true,
-// 	vertical: true
-// });
-
-
 // Slider Товара
 $('.select-prod-slider').slick({
 	arrows: false,
@@ -326,20 +312,8 @@ $(".cashback__btn").on('click', function(e) {
 
 $(".fancybox").fancybox();
 
+// $('figure img').parent('a').attr("data-lightbox", 'gallery');
 
-
-//ZOOM
-// if ($('.gallery').length > 0) {
-// 	baguetteBox.run('.gallery', {
-// 		// Custom options
-// 	});
-// }
-/*
-CLOUD-ZOOM
-<a rel="position:'right',adjustX:25,adjustY:0,Width: 432" href="img/product/zoom.jpg" class="cloud-zoom product-main-mainimage__item">
-	<img class="cloudzoom-gallery" src="img/product/zoom.jpg" alt="" />
-</a>
-*/
 
 
 //POPUP

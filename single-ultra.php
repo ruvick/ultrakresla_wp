@@ -189,7 +189,7 @@ get_header(); ?>
 						
 						if (!empty($options_text)) {
 					?>
-						<div class="block__navitem block__navitem-3 tab__navitem">Дополнительные опции1</div>
+						<div class="block__navitem block__navitem-3 tab__navitem">Дополнительные опции</div>
 					<?
 						}
 						if (!empty($acses_text)) {	

@@ -183,8 +183,19 @@ get_header(); ?>
 				<nav class="block__nav">
 					<div class="block__navitem block__navitem-1 tab__navitem active">Параметры</div>
 					<div class="block__navitem block__navitem-2 tab__navitem">Описание</div>
-					<div class="block__navitem block__navitem-3 tab__navitem">Дополнительные опции</div>
-					<div class="block__navitem block__navitem-4 tab__navitem">Аксессуары</div>
+					<? 
+						$options_text = carbon_get_post_meta(get_the_ID(),"options_text");
+						$acses_text = carbon_get_post_meta(get_the_ID(),"acses_text");
+						
+						if (!empty($options_text)) {
+					?>
+						<div class="block__navitem block__navitem-3 tab__navitem">Дополнительные опции</div>
+					<?
+						}
+						if (!empty($acses_text)) {	
+					?>
+						<div class="block__navitem block__navitem-4 tab__navitem">Аксессуары</div>
+					<?}?>
 				</nav>
 
 				<div class="block__items">
@@ -241,92 +252,22 @@ get_header(); ?>
 						</div>
 
 					</div>
+
 					<div class="block__item block__item-descrip tab__item">
 						<?php the_content(); ?>
 					</div>
-					<div class="block__item tab__item tab__item-3">
-						<?echo carbon_get_post_meta(get_the_ID(),"options_text"); ?>
-					</div>
-<!-- 					<div class="block__item tab__item tab__item-4">
-						<div class="tab__item_col">
-							<div class="tech-text__block tech-text__block-4 d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Артикул	 
-								</div>
-								<div class="tech-text__item">
-									200314
-								</div>
-							</div>
 
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Тип сиденья
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Спортивное
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Назначение
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Тюнинг, Спорт, Автосимулятор, Аттракцион
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Подголовник
-								</div>
-								<div class="tech-text__item">
-									Интегрированный
-								</div>
-							</div>
-
+					<? if (!empty($options_text)) {?>
+						<div class="block__item tab__item tab__item-3">
+							<?echo carbon_get_post_meta(get_the_ID(),"options_text"); ?>
 						</div>
+					<?}?>
 
-						<div class="tab__item_col">
-							
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Регулировка спинки
-								</div>
-								<div class="tech-text__item">
-									Нет
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Материал наполнителя
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Пенополиуретан
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Материал обивки
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Велюр, твид, кожзам, натуральная кожа
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Тип крепления
-								</div>
-								<div class="tech-text__item">
-									Нижнее, боковое
-								</div>
-							</div>
-
+					<? if (!empty($acses_text)) {?>
+						<div class="block__item tab__item tab__item-4">
+							<?echo carbon_get_post_meta(get_the_ID(),"acses_text"); ?>
 						</div>
-					</div> -->
+					<?}?>
 				</div>
 
 			</div>

@@ -104,6 +104,8 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
         Field::make( 'text', 'tab_val-r',  'Значение' )->set_width(50),
       ) ),
       Field::make('rich_text', 'options_text', 'Дополнительные опции')->set_width(100),
+      Field::make('rich_text', 'acses_text', 'Аксесуары')->set_width(100),
+      
       // Field::make('text', 'offer_old_price', 'Старая цена (Базовая)')->set_width(50),
       
       // Field::make( 'complex', 'offer_modification', "Модификация товара" )

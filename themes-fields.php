@@ -135,23 +135,6 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
           ->set_width(33),
     ))
 
-      // Field::make('rich_text', 'offer_fulltext', 'Полное описание (SEO)')->set_width(50),
-
-      // Field::make( 'complex', 'offer_rev', "Отзывы о товаре" )
-      // ->add_fields( array(
-      //   Field::make('text', 'rev_name', 'Имя' )->set_width(20),
-      //   Field::make('text', 'rev_mail', 'e-mail' )->set_width(20),
-      //   Field::make('date', 'rev_date', 'Дата отзыва' )->set_width(20),
-      //   Field::make('select', 'rev_reiting', 'Оценка' )->add_options( array(
-      //     '1' => '1',
-      //     '2' => '2',
-      //     '3' => '3',
-      //     '4' => '4',
-      //     '5' => '5'
-      //   ) )->set_width(20),
-      //   Field::make('rich_text', 'rev_text', 'Текст отзыва')->set_width(100),
-      //   Field::make('rich_text', 'rev_otv', 'Ответ')->set_width(100)        
-      // ) ),
   ));
 
 ?>

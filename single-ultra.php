@@ -21,7 +21,7 @@ get_header(); ?>
 				$limit = $count-3; 
 				if($picts) {
 					$pictsIndex = 0;
-					foreach($picts as $items) {  
+					foreach($picts as $items) {   
 						?>
 
 						<div class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
@@ -30,7 +30,7 @@ get_header(); ?>
 							</p>
 						</div>
 						<?
-						$pictIndex++; 
+						$pictIndex++;  
 					}
 				}
 				?>
@@ -181,10 +181,10 @@ get_header(); ?>
 			<div class="block__tabs tabs">
 
 				<nav class="block__nav">
-					<div class="block__navitem tab__navitem active">Параметры</div>
-					<div class="block__navitem tab__navitem">Описание</div>
-					<div class="block__navitem tab__navitem">Дополнительные опции</div>
-					<div class="block__navitem tab__navitem">Аксессуары</div>
+					<div class="block__navitem block__navitem-1 tab__navitem active">Параметры</div>
+					<div class="block__navitem block__navitem-2 tab__navitem">Описание</div>
+					<div class="block__navitem block__navitem-3 tab__navitem">Дополнительные опции</div>
+					<div class="block__navitem block__navitem-4 tab__navitem">Аксессуары</div>
 				</nav>
 
 				<div class="block__items">
@@ -198,7 +198,7 @@ get_header(); ?>
 								foreach($tab as $tabs) {
 									?>
 
-									<div class="tech-text__block d-flex">
+									<div class="tech-text__block tech-text__block-1 d-flex">
 										<div class="tech-text__item tech-text__item_left"> 
 											<? echo $tabs['tab_name']; ?>
 										</div>
@@ -212,43 +212,6 @@ get_header(); ?>
 								}
 							}
 							?>
-
-
-<!-- 							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Артикул	 
-								</div>
-								<div class="tech-text__item">
-									200314
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Тип сиденья
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Спортивное
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Назначение
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Тюнинг, Спорт, Автосимулятор, Аттракцион
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Подголовник
-								</div>
-								<div class="tech-text__item">
-									Интегрированный
-								</div>
-							</div> -->
 
 						</div>
 
@@ -275,54 +238,18 @@ get_header(); ?>
 							}
 							?>
 
-<!-- 							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Регулировка спинки
-								</div>
-								<div class="tech-text__item">
-									Нет
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Материал наполнителя
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Пенополиуретан
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex">
-								<div class="tech-text__item tech-text__item_left">
-									Материал обивки
-								</div>
-								<div class="tech-text__item tech-text__item_cold">
-									Велюр, твид, кожзам, натуральная кожа
-								</div>
-							</div>
-
-							<div class="tech-text__block d-flex tgrey">
-								<div class="tech-text__item tech-text__item_left">
-									Тип крепления
-								</div>
-								<div class="tech-text__item">
-									Нижнее, боковое
-								</div>
-							</div> -->
-
 						</div>
 
 					</div>
 					<div class="block__item block__item-descrip tab__item">
 						<?php the_content(); ?>
 					</div>
-					<div class="block__item tab__item">
+					<div class="block__item tab__item tab__item-3">
 						<?echo carbon_get_post_meta(get_the_ID(),"options_text"); ?>
 					</div>
-					<div class="block__item tab__item">
+<!-- 					<div class="block__item tab__item tab__item-4">
 						<div class="tab__item_col">
-							<div class="tech-text__block d-flex">
+							<div class="tech-text__block tech-text__block-4 d-flex">
 								<div class="tech-text__item tech-text__item_left">
 									Артикул	 
 								</div>
@@ -399,7 +326,7 @@ get_header(); ?>
 							</div>
 
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 			</div>

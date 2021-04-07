@@ -18,7 +18,7 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
   ->add_fields(array(
     Field::make('image', 'img_benefit', 'Фото')
     ->set_width(30),
-    Field::make('text', 'text_benefit', 'Текст') 
+    Field::make('text', 'text_benefit', 'Текст')  
     ->set_width(70),
     ))
   ))

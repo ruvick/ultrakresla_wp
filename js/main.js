@@ -16,7 +16,7 @@ $(document).ready(function() {
 		$('body').addClass('ie');
 	}
 	if(isMobile.any()){
-		$('body').addClass('touch');  
+		$('body').addClass('touch');   
 	}
 
 // ===============================================================================================================================================================
@@ -313,6 +313,29 @@ $(".cashback__btn").on('click', function(e) {
 $(".fancybox").fancybox();
 
 $('figure img').parent('a').attr("data-lightbox", 'gallery');
+
+
+// Выключение пустых табов
+if($(".tech-text__block-1, .block__item-descrip p, .tab__item-3 p, .tab__item-4").text() == "") {
+	$(".block__tabs").hide();
+};
+
+if($(".tech-text__block-1").text() == "") {
+	$(".block__navitem-1").hide();
+};
+
+if($(".block__item-descrip p").text() == "") {
+	$(".block__navitem-2").hide();
+};
+
+if($(".tab__item-3").text() == "") {
+	$(".block__navitem-3").hide();
+};
+
+if($(".tab__item-4").text() == "") {
+	$(".block__navitem-4").hide();
+};
+
 
 
 

@@ -8,7 +8,6 @@
 		<div class="container">
 
 			<div class="info__benefit benefit d-flex">
-
 				<?	$picts = carbon_get_theme_option('complex_benefit');
 				if($picts) {
 					$pictsIndex = 0;
@@ -25,7 +24,6 @@
 					}
 				}
 				?>
-
 			</div>
 
 			<div class="info-img d-flex">

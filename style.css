@@ -1982,7 +1982,7 @@ body.ie .ibg img {
     margin: 0 !important;
     font-family: Lato;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.2 !important;
     font-weight: 400;
     max-width: 228px;
     width: 100%;

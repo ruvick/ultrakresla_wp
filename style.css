@@ -1986,10 +1986,12 @@ body.ie .ibg img {
     font-weight: 400;
     max-width: 228px;
     width: 100%;
-    color: #1C6434; }
+    color: #1C6434;
+    text-transform: uppercase; }
   .benefit__item_l {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
     background-image: url("img/bn-01.jpg"); }
   .benefit__item_c {
     background-repeat: no-repeat;

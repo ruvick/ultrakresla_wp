@@ -109,14 +109,14 @@ $('.info__benefit').slick({
 	arrows: false,
 	dots: false,
 	infinite: true,
-	speed: 1000,
+	speed: 3000,
 	slidesToShow: 3,
 	slidesPerRow: 3,
-	slidesToScroll: 3,
+	slidesToScroll: 1,
 	variableWidth: false, 
 	centerMode: false,
-	autoplay: false,
-	autoplaySpeed: 1800,
+	autoplay: true,
+	autoplaySpeed: 3000,
 	adaptiveHeight: true
 });
 

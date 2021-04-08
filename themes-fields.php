@@ -18,8 +18,10 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
   ->add_fields(array(
     Field::make('image', 'img_benefit', 'Фото')
     ->set_width(30),
-    Field::make('text', 'text_benefit', 'Текст')  
-    ->set_width(70),
+    Field::make('text', 'text_benefit', 'Текст')   
+    ->set_width(30),
+    Field::make('text', 'link_benefit', 'Ссылка')   
+    ->set_width(30),
     ))
   ))
     ->add_tab('Часто задаваемы вопросы', array(

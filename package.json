@@ -14,6 +14,7 @@
 
     "send_index": "scp -C index.php u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
 
+    "send_one": "scp -C archive-ultra.php u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
     "send_func": "scp -C functions.php u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
     "send_futt": "scp -C footer.php u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
 

@@ -1,4 +1,9 @@
 <?php
+/*
+Template Name: Шаблон страницы Оплата и доставка
+WP Post Template: Шаблон страницы Оплата и доставка
+Template Post Type: page
+*/
 
 get_header(); ?>
 
@@ -26,6 +31,8 @@ get_header(); ?>
 					}
 				}
 				?>
+
+				
 			</div>
 
 			<?php
@@ -33,19 +40,15 @@ get_header(); ?>
 				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 			}
 			?> 
-				<div class="text_blk">
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-							<h1><?php the_title();?></h1>
-							
-							<?php the_content();?>
 
-							<picture>
-								<?php echo get_the_post_thumbnail( $post->ID, "turImg", array("alt" => $post->post_title, "title" => $post->post_title));?>
-							</picture>
-						<?php endwhile;?> 
-					<?php endif; ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<h1><?php the_title();?></h1>
+					<?php the_content();?>
+					<?php endwhile;?>
+				<?php endif; ?> 
+				<div class="ec-delivery"></div>
 
-				</div>
+				
 			</div>
 		</section>
 	</main>

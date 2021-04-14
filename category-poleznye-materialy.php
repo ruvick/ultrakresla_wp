@@ -34,16 +34,20 @@
 
 			<h1><?php single_cat_title( '', true );?></h1>
 
-			<?php
-				get_template_part('template-parts/product-useful');  
-			?>
+			<div class = "cat_inform_wrapper">
+				<?php
+					while(have_posts()):
+						the_post();
+						get_template_part('template-parts/material-elem');  
+					endwhile;
+				?>
+			</div>
 
 			<section class="category-description"> 
 				<div class="container">
-					<div class="category-description__text">
-						<p>
+					<div class="category-description__text text_blk">
+				
 							<?php echo category_description(); ?>
-						</p>
 					</div>
 				</div>
 			</section>

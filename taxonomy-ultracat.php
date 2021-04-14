@@ -54,12 +54,8 @@
 
 	<section class="category-description"> 
 		<div class="container">
-			<div class="category-description__text">
-				
-				<p>
+			<div class="category-description__text text_blk">
 					<?php echo category_description(); ?>
-				</p>
-
 			</div>
 		</div>
 	</section>

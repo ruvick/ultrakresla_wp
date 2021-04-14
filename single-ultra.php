@@ -279,6 +279,10 @@ get_header(); ?>
 			<div class="prod-card d-flex">
 
 				<?
+
+				$cats = wp_get_object_terms( $post->ID, "ultracat" );
+		
+
 				$args = array(
 					'posts_per_page' => 4,
 					'post_type' => 'ultra',
@@ -286,7 +290,7 @@ get_header(); ?>
 						array(
 							'taxonomy' => 'ultracat',
 							'field' => 'id',
-							'terms' => array(8)
+							'terms' => $cats[0]->term_id
 						)
 					)
 				);

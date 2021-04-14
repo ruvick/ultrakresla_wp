@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri();?>/img/favicons/fav.svg" sizes="any">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
+  <script id="dcsbl" src="https://dostavka.sbl.su/api/delivery.js?comp=0&startCt=Рязань&startCntr=RU&btn=no&dopLathing=1&dopInsure=1&innerDeliv=1"></script>
   <?php wp_head();?>  
 
 </head>

@@ -52,11 +52,11 @@
 
 	<section class="category-description"> 
 		<div class="container">
-			<div class="category-description__text">
+			<div class="category-description__text text_blk">
 				
-				<p>
+				
 					<?php echo category_description(); ?>
-				</p>
+				
 
 			</div>
 		</div>

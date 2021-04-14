@@ -41,7 +41,7 @@
 							<button class="mob-search"></button>
 
 							<div class="header__callback callback d-flex">
-								<a href="#" class="callback__address">Адрес: г. Рязань, Пр-Пт: с 9:00-20:00</a>
+								<a href="#" class="callback__address">Адрес: <? echo carbon_get_theme_option("as_address_head"); ?></a>
 								<p><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="callback__phone"><? echo $tel = carbon_get_theme_option("as_phones_1"); ?></a></p>
 								<a href="#" class="callback__popup popup-quest">Заказать звонок</a>
 							</div>

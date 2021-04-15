@@ -208,23 +208,15 @@
 
 					<?php 
 					$posts = get_posts( array(
-						'numberposts' => 1,
+						'numberposts' => 5,
 						'category'    => 20,
 						'orderby'     => 'date',
-						'orderby'     => '548,604,608,612',
 						'order'       => 'DESC',
-						'include'     => '548,604,608,612',
-						'include'     => array(),
-						'exclude'     => array(),
-						'meta_key'    => '',
-						'meta_value'  =>'',
 						'post_type'   => 'post',
 						'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
 			) );
 
-					$result = wp_get_recent_posts( $args );
-
-					foreach( $posts as $post ){
+					
 						?>
 			<div class="useful__row d-flex">
 
@@ -239,12 +231,11 @@
 				</a>
 
 				<div class="useful__item-img d-flex">
-					<a href="<?php echo get_permalink(604);?>" class="useful__item-img-item useful__item-img_02">
+					<a href="<?php echo get_permalink($posts[0]->ID);?>" class="useful__item-img-item useful__item-img_02">
 						<!-- <img src="img/useful/useful-02.jpg" alt=""> -->
 						<p>
 							<?php
-							$the_post = get_post( 604 );
-							echo get_the_title( $the_post );
+							echo get_the_title( $posts[0]->ID );
 							?>
 						</p> 
 					</a>
@@ -283,9 +274,7 @@
 				</div>
 
 			</div>
-						<?php 
-					} 
-					?>
+
 					<a href="<?php echo get_category_link(20);?>" class="useful__btn btn">Смотреть все материалы</a>
 
 				</div>

@@ -1452,7 +1452,7 @@ body.ie .ibg img {
 
 .link__drop-down {
   position: relative;
-  z-index: 500000; }
+  z-index: 5; }
 
 .link__drop-down:after {
   content: '';

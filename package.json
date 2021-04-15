@@ -14,18 +14,25 @@
 
     "send_index": "scp -C index.php u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
 
-    "send_one": "scp -C archive-ultra.php u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
+    "send_one": "scp -C archive-ultra.php u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/", 
     "send_func": "scp -C functions.php u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
     "send_futt": "scp -C footer.php u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
 
-    "mk_part_carbon": "ssh u1336766@37.140.192.158 \"mkdir -p www/broczo.ru/wp-content/themes/broczo/inc\"",
+    "mk_part_carbon": "ssh u1336766@37.140.192.158 \"mkdir -p www/broczo.ru/wp-content/themes/broczo/inc\"", 
     "send_carbon": "scp -C -r inc u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
     "send_carbon_fild": "scp -C -r inc/custom-fields-options u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/inc/",
+
+    "mk_part_css": "ssh u1336766@37.140.192.158 \"mkdir -p www/broczo.ru/wp-content/themes/broczo/css\"",
+    "send_css": "scp -C -r css u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
     
     "mk_part_dir": "ssh u1336766@37.140.192.158 \"mkdir -p www/broczo.ru/wp-content/themes/broczo/template-parts\"",
     "send_part": "scp -C -r template-parts u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
     "mk_part_img": "ssh u1336766@37.140.192.158 \"mkdir -p www/broczo.ru/wp-content/themes/broczo/img\"",
     "send_img": "scp -r img u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
+
+    "mk_part_images": "ssh u1336766@37.140.192.158 \"mkdir -p www/broczo.ru/wp-content/themes/broczo/images\"",
+    "send_images": "scp -r images u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
+
     "mk_part_js": "ssh u1336766@37.140.192.158 \"mkdir -p www/broczo.ru/wp-content/themes/broczo/js\"",
     "send_js": "scp -r js u1336766@37.140.192.158:www/broczo.ru/wp-content/themes/broczo/",
     "mk_part_fonts": "ssh u1336766@37.140.192.158 \"mkdir -p www/broczo.ru/wp-content/themes/broczo/fonts\"",

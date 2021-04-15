@@ -3117,6 +3117,22 @@ body.ie .ibg img {
   font-size: 16px;
 }
 
+.blocks-gallery-item {
+    border: 2px solid #bcbdbf;
+    padding: 5px;
+    transition: all .4s ease;
+    border-radius: 5px;
+}
+.blocks-gallery-item:hover {
+    border-color: #1C6434;
+}
+
+
+
+
+
+
+
 @media (max-width: 1200px) {
   .slick-prev {
     left: 0%; }

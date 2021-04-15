@@ -16,7 +16,7 @@
 
 						<a href="<? echo $items['link_benefit']; ?>" class="benefit__item benefit__item_l" style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_benefit'], 'full')[0];?>);"> 
 							<p>
-								<? echo $items['text_benefit']; ?> 
+								<? echo $items['text_benefit']; ?>  
 							</p>
 						</a>
 						<?
@@ -214,66 +214,72 @@
 						'order'       => 'DESC',
 						'post_type'   => 'post',
 						'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-			) );
+					) );
 
 					
-						?>
-			<div class="useful__row d-flex">
+					?>
+					<div class="useful__row d-flex">
 
-				<a href="<?php echo get_permalink(548);?>" class="useful__item-img-item useful__item-img_01">
-					<!-- <img src="img/useful/useful-01.jpg" alt=""> -->
-					<p>
-						<?php
-						$the_post = get_post( 548 );
-						echo get_the_title( $the_post );
-						?>
-					</p> 
-				</a>
+						<a href="<?php echo get_permalink($posts[0]->ID);?>" class="useful__item-img-item useful__item-img_01" 
+							style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[0]->ID, 'full' );?>);">
+							<!-- <img src="img/useful/useful-01.jpg" alt=""> -->
+							<p>
+								<?php
+								echo get_the_title( $posts[0]->ID );
+								?>
+							</p> 
+							<div class="nuar_blk"></div>
+						</a>
 
-				<div class="useful__item-img d-flex">
-					<a href="<?php echo get_permalink($posts[0]->ID);?>" class="useful__item-img-item useful__item-img_02">
-						<!-- <img src="img/useful/useful-02.jpg" alt=""> -->
-						<p>
-							<?php
-							echo get_the_title( $posts[0]->ID );
-							?>
-						</p> 
-					</a>
-					<a href="<?php echo get_permalink(608);?>" class="useful__item-img-item useful__item-img_03">
-						<!-- <img src="img/useful/useful-03.jpg" alt=""> -->
-						<p>
-							<?php
-							$the_post = get_post( 608 );
-							echo get_the_title( $the_post );
-							?>
-						</p> 
-					</a>
-				</div>
+						<div class="useful__item-img d-flex">
+							<a href="<?php echo get_permalink($posts[1]->ID);?>" class="useful__item-img-item useful__item-img_02"
+								style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[1]->ID, 'full' );?>);">
+								<!-- <img src="img/useful/useful-02.jpg" alt=""> -->
+								<p>
+									<?php
+									echo get_the_title( $posts[1]->ID );
+									?>
+								</p> 
+								<div class="nuar_blk"></div>
+							</a>
+							<a href="<?php echo get_permalink($posts[2]->ID);?>" class="useful__item-img-item useful__item-img_03" 
+								style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[2]->ID, 'full' );?>);">
+								<!-- <img src="img/useful/useful-03.jpg" alt=""> -->
+								<p>
+									<?php
+									echo get_the_title( $posts[2]->ID );
+									?>
+								</p> 
+								<div class="nuar_blk"></div>
+							</a>
+						</div>
 
-				<div class="useful__item-img d-flex">
+						<div class="useful__item-img d-flex">
 
-					<a href="<?php echo get_permalink(612);?>" class="useful__item-img-item useful__item-img_04">
-						<!-- <img src="img/useful/useful-04.jpg" alt=""> -->
-						<p>
-							<?php
-								$the_post = get_post( 612 );
-								echo get_the_title( $the_post );
-							?>
-						</p> 
-					</a>
+							<a href="<?php echo get_permalink($posts[3]->ID);?>" class="useful__item-img-item useful__item-img_04" 
+								style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[3]->ID, 'full' );?>);">
+								<!-- <img src="img/useful/useful-04.jpg" alt=""> -->
+								<p>
+									<?php
+									echo get_the_title( $posts[3]->ID );
+									?>
+								</p> 
+								<div class="nuar_blk"></div>
+							</a>
 
-					<a href="<?php echo get_permalink(616);?>" class="useful__item-img-item useful__item-img_05">
-						<!-- <img src="img/useful/useful-05.jpg" alt=""> -->
-						<p>
-							<?php
-								$the_post = get_post( 616 );
-								echo get_the_title( $the_post );
-							?>
-						</p> 
-					</a>
-				</div>
+							<a href="<?php echo get_permalink($posts[4]->ID);?>" class="useful__item-img-item useful__item-img_05" 
+								style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[4]->ID, 'full' );?>);">
+								<!-- <img src="img/useful/useful-05.jpg" alt=""> -->
+								<p>
+									<?php
+									echo get_the_title( $posts[4]->ID );
+									?>
+								</p> 
+								<div class="nuar_blk"></div>
+							</a>
+						</div>
 
-			</div>
+					</div>
 
 					<a href="<?php echo get_category_link(20);?>" class="useful__btn btn">Смотреть все материалы</a>
 

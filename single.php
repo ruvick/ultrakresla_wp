@@ -36,12 +36,7 @@ get_header(); ?>
 				<div class="text_blk">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 							<h1><?php the_title();?></h1>
-							
 							<?php the_content();?>
-
-							<picture>
-								<?php echo get_the_post_thumbnail( $post->ID, "turImg", array("alt" => $post->post_title, "title" => $post->post_title));?>
-							</picture>
 						<?php endwhile;?> 
 					<?php endif; ?>
 

@@ -36,18 +36,19 @@
 
 			<div class = "cat_inform_wrapper">
 				<?php
-					while(have_posts()):
-						the_post();
-						get_template_part('template-parts/material-elem');  
-					endwhile;
+				while(have_posts()):
+					the_post();
+					get_template_part('template-parts/material-elem');  
+				endwhile;
 				?>
 			</div>
+
+			<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi(); ?>
 
 			<section class="category-description"> 
 				<div class="container">
 					<div class="category-description__text text_blk">
-				
-							<?php echo category_description(); ?>
+						<?php echo category_description(); ?>
 					</div>
 				</div>
 			</section>

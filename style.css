@@ -3083,7 +3083,7 @@ body.ie .ibg img {
   position: relative;
   display: block;
   margin-bottom: 30px;
-  
+  border-radius: 5px;
 }
 
 .cat_elem img{ 

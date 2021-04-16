@@ -3588,6 +3588,10 @@ body.ie .ibg img {
   border-color: #1c6434;
 }
 
+.mob-menu__df .header-top__menu {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .slick-prev {
     left: 0%;
@@ -4701,6 +4705,9 @@ body.ie .ibg img {
   .menu-item-91 {
     display: none;
   }
+  .card-text {
+    padding: 10px 0 15px 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -4822,6 +4829,15 @@ body.ie .ibg img {
     left: 18%;
     width: 230px;
     height: 45px;
+  }
+  .actions-block__share {
+    margin-top: 20px;
+  }
+  .block__nav {
+    flex-direction: column;
+  }
+  .tab__navitem.active {
+    border-bottom: none;
   }
 }
 

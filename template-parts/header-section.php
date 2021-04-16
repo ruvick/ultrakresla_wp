@@ -1,18 +1,5 @@
 		<header class="header-top">
 			<div class="container">
-
-<!-- 				<ul class="header-top__menu d-flex">
-					<li><a href="#">Каталог</a></li>
-					<li class="link__drop-down"><a href="#">О компании</a>
-						<ul class="menu-drop-down">
-							<li ><a href="#">Реквизиты</a></li>
-							<li><a href="#">Сотрудничество</a>
-							</ul>
-						</li>
-						<li><a href="#">Оплата и доставка</a></li>
-						<li><a href="#">Сотрудничество</a></li>
-						<li><a href="contacts.html">Контакты</a></li>
-					</ul> -->
 					<?php wp_nav_menu( array('theme_location' => 'menu_corp','menu_class' => 'header-top__menu','container_class' => 'header-top__menu','container' => false )); ?>
 				</div>
 			</header>  
@@ -56,41 +43,7 @@
 						<nav class="mob-menu">
 							<div class="mob-menu__df d-flex">
 								<?php wp_nav_menu( array('theme_location' => 'menu_cat','menu_class' => 'mob-menu__list','container_class' => 'mob-menu__list','container' => false )); ?>
-<!-- 								<ul class="mob-menu__list">
-									<li><a href="#">Спортивные сидения</a></li>
-									<li><a href="#">Анатомические сидения</a></li>
-									<li><a href="#">Компьютерные сидения</a></li>
-									<li><a href="#">Игровые кресла для автосимуляторов</a></li>
-									<li><a href="#">Кресла для аттракционов</a></li>
-								</ul> -->
-<!-- 								<ul>
-									<li><a href="#">Спортивные сидения</a></li>
-									<li><a href="#">Анатомические сидения</a></li>
-									<li><a href="#">Компьютерные сидения</a></li>
-									<li><a href="#">Игровые кресла для автосимуляторов</a></li>
-									<li><a href="#">Кресла для аттракционов</a></li>
-								</ul>
-								<ul class="mob-menu__list">
-									<li><a href="#">Спортивные сидения</a></li>
-									<li><a href="#">Анатомические сидения</a></li>
-									<li><a href="#">Компьютерные сидения</a></li>
-									<li><a href="#">Игровые кресла для автосимуляторов</a></li>
-									<li><a href="#">Кресла для аттракционов</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Спортивные сидения</a></li>
-									<li><a href="#">Анатомические сидения</a></li>
-									<li><a href="#">Компьютерные сидения</a></li>
-									<li><a href="#">Игровые кресла для автосимуляторов</a></li>
-									<li><a href="#">Кресла для аттракционов</a></li>
-								</ul>
-								<ul class="mob-menu__addit">
-									<li><a href="#">Каталог</a></li>
-									<li><a href="#">О компании</a></li>
-									<li><a href="#">Оплата и доставка</a></li>
-									<li><a href="#">Сотрудничество</a></li>
-									<li><a href="#">Контакты</a></li>
-								</ul> -->
+								<?php wp_nav_menu( array('theme_location' => 'menu_corp','menu_class' => 'header-top__menu','container_class' => 'header-top__menu','container' => false )); ?>
 							</div>
 						</nav>
 					</div>
@@ -101,15 +54,6 @@
 			<header class="header-bottom">
 				<div class="container">
 					<div class="menu__body">
-
-<!-- 						<ul class="menu__list d-flex">
-							<li class="menu__catalogy"><a href="#" class="menu__link menu__link-cat">Каталог</a></li>
-							<li><a href="category.html" class="menu__link">Спортивные сидения</a></li>
-							<li><a href="product.html" class="menu__link">Анатомические сидения</a></li>
-							<li><a href="#" class="menu__link">Компьютерные сидения</a></li>
-							<li><a href="#" class="menu__link">Игровые кресла для автосимуляторов</a></li> 
-							<li><a href="#" class="menu__link">Кресла для аттракционов</a></li>
-						</ul> -->
 						<?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'menu__list','container_class' => 'menu__list','container' => false )); ?>
 					</div>
 

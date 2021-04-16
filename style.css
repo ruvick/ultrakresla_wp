@@ -3592,6 +3592,10 @@ body.ie .ibg img {
   display: none;
 }
 
+#cashbackM img {
+  width: 45%;
+}
+
 @media (max-width: 1200px) {
   .slick-prev {
     left: 0%;
@@ -4426,6 +4430,9 @@ body.ie .ibg img {
     padding-bottom: 0;
     border-bottom: 3px solid white;
   }
+  #cashbackM img {
+    width: 42%;
+  }
 }
 
 @media (max-width: 580px) {
@@ -4459,6 +4466,15 @@ body.ie .ibg img {
   }
   .tab__navitem:nth-child(2) {
     margin-right: 0;
+  }
+  #cashbackM img {
+    display: none;
+  }
+  .box-modal-new {
+    min-height: auto;
+  }
+  #cashbackM .form-question__input {
+    max-width: 100%;
   }
 }
 
@@ -4708,6 +4724,21 @@ body.ie .ibg img {
   .card-text {
     padding: 10px 0 15px 0;
   }
+  #question img {
+    display: none;
+  }
+  .box-modal-new {
+    min-height: auto;
+  }
+  .form-question__input {
+    max-width: 100%;
+  }
+  .newButton {
+    width: 100%;
+  }
+  .formArctikBlk {
+    padding: 30px 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -4941,5 +4972,8 @@ body.ie .ibg img {
   }
   .mob-menu__df {
     padding: 10px;
+  }
+  .box-modal-new {
+    top: 30px;
   }
 }

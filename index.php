@@ -57,6 +57,7 @@
 								</a>
 							</div>
 						</div>
+					
 
 						<a href="<?php echo get_category_link(17);?>" class="info-img__one position">
 							<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-04.jpg" alt="">

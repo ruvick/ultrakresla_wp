@@ -139,4 +139,16 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
 
   ));
 
+  Container::make('post_meta', 'single-galery', 'Характеристики записи')
+  ->show_on_template(array('single-galery.php'))
+      ->add_fields(array(   
+      Field::make( 'complex', 'galery_works', "Галерея наших работ" )
+      ->add_fields( array(
+        Field::make('image', 'galery_works_img', 'Изображение' )->set_width(30),
+        Field::make('text', 'galery_works_img_sku', 'ID для модификации')->set_width(30),
+        Field::make('text', 'galery_works_img_alt', 'alt и title')->set_width(30)        
+      ) ),
+
+  ));
+
 ?>

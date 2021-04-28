@@ -2786,9 +2786,9 @@ body.ie .ibg img {
   padding: 13px 21px;
 }
 
-.category .benefit {
+/* .category .benefit {
   margin-bottom: 26px;
-}
+} */
 
 .category .breadcrumb {
   margin-bottom: 29px;
@@ -3595,6 +3595,65 @@ body.ie .ibg img {
 #cashbackM img {
   width: 45%;
 }
+
+.galery-single h1 {
+  margin-bottom: 30px;
+}
+
+.galery-block {
+
+}
+
+.galery-block__menu {
+  margin-bottom: 25px;
+}
+
+.menu-galery {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+.menu-galery li {
+  font-size: 20px;
+  /* font-weight: 700;
+  color: #727272; */
+  margin-bottom: 15px;
+  margin-right: 37px;
+}
+.menu-galery li:last-child {
+  margin-right: 0px;
+}
+.menu-galery__link {
+
+}
+
+.galery-block__galery-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.galery-block__galery-img {
+  flex: 0 1 370px;
+  height: 400px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.galery-block__galery-img:last-child {
+  margin-bottom: 0;
+}
+.galery-block__galery-img img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
 
 @media (max-width: 1200px) {
   .slick-prev {

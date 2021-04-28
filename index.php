@@ -177,7 +177,7 @@
 			<div class="container">
 				<h2>Новинки</h2>
 
-				<div class="prod-card d-flex">
+				<div class="prod-card d-flex"> 
 
 					<?
 					$args = array(

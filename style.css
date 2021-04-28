@@ -3618,7 +3618,10 @@ body.ie .ibg img {
   /* font-weight: 700;
   color: #727272; */
   margin-bottom: 15px;
-  margin-right: 37px;
+  margin-right: 38px;
+}
+.menu-galery li:nth-child(6) {
+  margin-right: 0px;
 }
 .menu-galery li:last-child {
   margin-right: 0px;

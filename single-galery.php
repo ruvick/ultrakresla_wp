@@ -42,16 +42,21 @@ get_header(); ?>
 				<div class="galery-block">
 					<h1><?php the_title();?></h1>
 
-						<ul class="galery-block__menu menu-galery">
-							<li><a href="<?php echo get_permalink(690);?>" class="menu-galery__link">УАЗ(16)</a></li>
-							<li><a href="<?php echo get_permalink(715);?>" class="menu-galery__link">Reno Logan(32)</a></li>
-							<li><a href="<?php echo get_permalink(719);?>" class="menu-galery__link">Лада Ларгус Кросс(24)</a></li>
-							<li><a href="<?php echo get_permalink(723);?>" class="menu-galery__link">AUDI TT(11)</a></li>
-							<li><a href="<?php echo get_permalink(726);?>" class="menu-galery__link">JEEP Wrangler(17)</a></li>
-							<li><a href="<?php echo get_permalink(728);?>" class="menu-galery__link">НИВА ВАЗ(25)</a></li>
-							<li><a href="<?php echo get_permalink(730);?>" class="menu-galery__link">БАГГИ(13)</a></li>
-							<li><a href="<?php echo get_permalink(732);?>" class="menu-galery__link">AUDI rs q3(16)</a></li>
-						</ul>
+					<ul class="galery-block__menu menu-galery">
+						<?php
+  						global $post;
+  							$args = array( 'numberposts' => -1, 'order' => 'ASC', 'offset'=> 1, 'category' => 21 );
+  							$myposts = get_posts( $args );
+  						foreach( $myposts as $post ){
+    					setup_postdata($post);
+    				?>
+							<li><a href="<?php the_permalink(); ?>" 
+								class="menu-galery__link"><?php the_title(); ?> (<?php echo carbon_get_post_meta(get_the_ID(),"number_img"); ?>)</a></li>
+    				<?php 
+ 					 		}
+  						wp_reset_postdata();
+  					?>
+					</ul>
 
 						<div class="galery-block__galery-row">
 						<?
@@ -72,31 +77,6 @@ get_header(); ?>
 							}
 						}
 						?>
-
-							<!-- <div class="galery-block__galery-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/useful/useful-02.jpg" alt="">
-							</div>
-
-							<div class="galery-block__galery-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/useful/useful-03.jpg" alt="">
-							</div>
-
-							<div class="galery-block__galery-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/useful/useful-02.jpg" alt="">
-							</div>
-
-							<div class="galery-block__galery-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/useful/useful-02.jpg" alt="">
-							</div>
-
-							<div class="galery-block__galery-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/useful/useful-03.jpg" alt="">
-							</div>
-
-							<div class="galery-block__galery-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/useful/useful-02.jpg" alt="">
-							</div> -->
-
 						</div>
 
 				</div>

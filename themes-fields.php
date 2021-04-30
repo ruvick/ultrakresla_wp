@@ -144,6 +144,14 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
       ->add_fields(array(   
       Field::make('text', 'number_img', 'Колличество изображений') 
         ->set_width(33),
+      Field::make( 'complex', 'galery_prod_complex', "Сопутствующие товары" )
+        ->set_max(2) // Можно будет выбрать только 2 поста
+        ->add_fields( array(
+          Field::make('image', 'galery_works_img', 'Изображение' )->set_width(30),
+          Field::make('text', 'galery_prod_title', 'Название товара')->set_width(30),
+          Field::make('text', 'galery_prod_price', 'Стоимость товара')->set_width(50),
+          Field::make('text', 'galery_prod_link', 'Ссылка на товар')->set_width(50)      
+      ) ),
       Field::make( 'complex', 'galery_works', "Галерея наших работ" )
       ->add_fields( array(
         Field::make('image', 'galery_works_img', 'Изображение' )->set_width(30),

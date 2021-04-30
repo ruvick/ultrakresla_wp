@@ -126,7 +126,7 @@ $(document).ready(function () {
 		dots: false,
 		infinite: true,
 		speed: 1000,
-		slidesToShow: 10,
+		slidesToShow: 12,
 		slidesToScroll: 1,
 		centerMode: true,
 		focusOnSelect: true,
@@ -147,29 +147,29 @@ $(document).ready(function () {
 
 
 	// Slider Модального окна
-	$('.galary-sl-small').slick({
-		arrows: false,
-		dots: false,
-		infinite: true,
-		speed: 1000,
-		slidesToShow: 6,
-		slidesToScroll: 1,
-		centerMode: true,
-		focusOnSelect: true,
-		autoplaySpeed: 1800,
-		asNavFor: ".galary-sl-big",
-		adaptiveHeight: true,
-		vertical: true
-	});
-	$('.galary-sl-big').slick({
-		arrows: false,
-		dots: false,
-		fade: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		draggable: false,
-		asNavFor: ".galary-sl-small"
-	});
+	// $('.galary-sl-small').slick({
+	// 	arrows: false,
+	// 	dots: false,
+	// 	infinite: true,
+	// 	speed: 1000,
+	// 	slidesToShow: 12,
+	// 	slidesToScroll: 1,
+	// 	centerMode: true,
+	// 	focusOnSelect: true,
+	// 	autoplaySpeed: 1800,
+	// 	asNavFor: ".galary-sl-big",
+	// 	adaptiveHeight: true,
+	// 	vertical: true
+	// });
+	// $('.galary-sl-big').slick({
+	// 	arrows: false,
+	// 	dots: false,
+	// 	fade: true,
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	draggable: false,
+	// 	asNavFor: ".galary-sl-small"
+	// });
 
 
 	// Выбо колличества

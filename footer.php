@@ -13,26 +13,10 @@
 
 			<div class="footer-menu">
 				<?php wp_nav_menu( array('theme_location' => 'menu_corp','menu_class' => 'footer__menu','container_class' => 'footer__menu','container' => false )); ?>
-<!-- 				<ul>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">О компании</a></li>
-					<li><a href="#">Оплата и доставка</a></li> 
-					<li><a href="#">Сотрудничество</a></li> 
-					<li><a href="#">Контакты</a></li> 
-				</ul> -->
 			</div>
 
 			<div class="footer-menu">
 					<?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'footer__menu-r','container_class' => 'footer__menu-r','container' => false )); ?>
-<!-- 				<ul>
-					<li><a href="#">Спотривные сидения</a></li>
-					<li><a href="#">Анатомические сидения</a></li>
-					<li><a href="#">Игровые кресла</a></li> 
-					<li><a href="#">Кресла для аттракционов</a></li> 
-					<li><a href="#">Компьютерные кресла</a></li> 
-					<li><a href="#">Диваны для микроавтобусов</a></li> 
-					<li><a href="#">Сидения для кресел</a></li> 
-				</ul> -->
 			</div>
 
 			<div class="footer-menu">

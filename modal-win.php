@@ -3,14 +3,13 @@
 -->
 
 <div style="display: none;">
-    <div class="box-modal" id="messgeModal">
-        <div class="box-modal_close arcticmodal-close"><?_e("закрыть","rubex");?></div>
+  <div class="box-modal" id="messgeModal">
+    <div class="box-modal_close arcticmodal-close"><?_e("закрыть","rubex");?></div>
         
-        <div class = "modalline" id = "lineIcon">
-        </div>
+    <div class = "modalline" id = "lineIcon">
+    </div>
     
-        <div class = "modalline" id = "lineMsg">
-        </div>
+    <div class = "modalline" id = "lineMsg">
     </div>
 </div>  
 
@@ -64,10 +63,11 @@
 
 
 <div style="display: none;">
-		<div class="box-modal box-modal-new box-modal-new__cust galaryw" id="galaryW">
-			<div class="box-modal_close box-modal_close_new arcticmodal-close">X</div>
+	<div class="box-modal box-modal-new box-modal-new__cust galaryw" id="galaryW">
+		<div class="box-modal_close box-modal_close_new arcticmodal-close">X</div>
+			<div class="galaryw__flex">
 
-			<div class="select-prod-sl">
+				<div class="select-prod-sl">
 					<!-- Большой слайдер -->
 					<div class="select-slider-big">
 						<?
@@ -106,14 +106,38 @@
 									title = "<? echo $itemw['galery_works_img_alt']; ?>"
 									src = "<?php echo wp_get_attachment_image_src($itemw['galery_works_img'], 'large')[0];?>" />
 								</div>
-								<?
+							<?
 								$pictwIndex++;
-							}
-						}
+									}
+								}
 						?>
 					</div>
-					
-			</div>
+				</div>
 
+				<div class="galaryw__product">
+				<?
+						$galPRod = carbon_get_the_post_meta('galery_prod_complex');
+						if($galPRod) {
+							$galPRodIndex = 0;
+							foreach($galPRod as $itemprod) {
+								?>
+							<a href="<? echo $itemprod['galery_prod_link']; ?>" class="galaryw__product-body">
+								<div class="galaryw__product-img">
+									<img src = "<?php echo wp_get_attachment_image_src($itemprod['galery_works_img'], 'large')[0];?>" loading="lazy"/>
+								</div>
+								<div class="galaryw__info-block">
+									<div class="galaryw__product-title"><? echo $itemprod['galery_prod_title']; ?></div>
+									<div class="galaryw__product-price"><? echo $itemprod['galery_prod_price']; ?> руб.</div>
+								</div>
+							</a>
+							<?
+								$galPRodIndex++;
+									}
+								}
+						?>
+				</div>
+
+			</div>		
 		</div>
 	</div>
+</div>

@@ -44,7 +44,8 @@ get_header(); ?>
 
 					<ul class="galery-block__menu menu-galery">
 						<?php
-  							$post_id_curent = get_query_var('page_id');
+  							$post_id_curent = $post->ID;
+							// print_r($post);
 							$args = array( 'numberposts' => -1, 'order' => 'ASC', 'category' => 21 );
   							$myposts = get_posts( $args );
   						foreach( $myposts as $post ){

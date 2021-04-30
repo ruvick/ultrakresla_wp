@@ -44,18 +44,17 @@ get_header(); ?>
 
 					<ul class="galery-block__menu menu-galery">
 						<?php
-  						global $post;
-  							$args = array( 'numberposts' => -1, 'order' => 'ASC', 'offset'=> 1, 'category' => 21 );
+  							$args = array( 'numberposts' => -1, 'order' => 'ASC', 'category' => 21 );
   							$myposts = get_posts( $args );
   						foreach( $myposts as $post ){
     					setup_postdata($post);
     				?>
-							<li><a href="<?php the_permalink(); ?>" 
+							<li class="<?php if (is_single('')) { echo "active-page"; } ?>"><a href="<?php the_permalink(); ?>" 
 								class="menu-galery__link"><?php the_title(); ?> (<?php echo carbon_get_post_meta(get_the_ID(),"number_img"); ?>)</a></li>
     				<?php 
  					 		}
   						wp_reset_postdata();
-  					?>
+  					?> 
 					</ul>
 
 						<div class="galery-block__galery-row">
@@ -63,15 +62,15 @@ get_header(); ?>
 						$galw = carbon_get_the_post_meta('galery_works');
 						if($galw) {
 							$galwIndex = 0;
-							foreach($galw as $galw_item) {
+							foreach($galw as $galw_item) { 
 								?>
-							<div class="galery-block__galery-img">
+							<a href="#" class="galery-block__galery-img">
 								<img
 									id = "pict-<? echo empty($galw_item['galery_works_img_sku'])?$galwIndex:$galw_item['galery_works_img_sku']; ?>" 
 									alt = "<? echo $galw_item['galery_works_img_alt']; ?>"
 									title = "<? echo $galw_item['galery_works_img_alt']; ?>"
 									src = "<?php echo wp_get_attachment_image_src($galw_item['galery_works_img'], 'full')[0];?>" />
-							</div>
+							</a>
 								<?
 								$galwIndex++;
 							}

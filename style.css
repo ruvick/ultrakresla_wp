@@ -3600,8 +3600,8 @@ body.ie .ibg img {
   margin-bottom: 30px;
 }
 
-.galery-block {
-
+.galery-block-cat h3 {
+  margin-bottom: 15px;
 }
 
 .galery-block__menu {
@@ -3652,11 +3652,36 @@ body.ie .ibg img {
 }
 
 
+.galery-block-cat .galery-block__galery-row {
+  max-height: 415px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#galaryW .box-modal-new {
+  max-width: 1300px;
+  width: 100%;
+  min-height: 0;
+}
 
 
 
-
-
+#galaryW .select-prod-slider__item {
+  max-width: 38px !important;
+  width: 100% !important;
+  height: 51px !important;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
 
 @media (max-width: 1200px) {
   .slick-prev {

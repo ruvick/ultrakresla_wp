@@ -12,7 +12,7 @@
         <div class = "modalline" id = "lineMsg">
         </div>
     </div>
-</div> 
+</div>  
 
 	<div style="display: none;">
 		<div class="box-modal box-modal-new box-modal-new__cust" id="question">
@@ -59,5 +59,61 @@
 				</form>
 
 			</div>
+		</div>
+	</div>
+
+
+<div style="display: none;">
+		<div class="box-modal box-modal-new box-modal-new__cust galaryw" id="galaryW">
+			<div class="box-modal_close box-modal_close_new arcticmodal-close">X</div>
+
+			<div class="select-prod-sl">
+					<!-- Большой слайдер -->
+					<div class="select-slider-big">
+						<?
+						$pictw = carbon_get_the_post_meta('galery_works');
+						if($pictw) {
+							$pictwIndex = 0;
+							foreach($pictw as $itemw) {
+								?>
+								<div class="select-slider-big__item">
+										<img
+										id = "pict-<? echo empty($itemw['galery_works_img_sku'])?$pictwIndex:$itew['galery_works_img_sku']; ?>" 
+										alt = "<? echo $itemw['galery_works_img_alt']; ?>"
+										title = "<? echo $itemw['galery_works_img_alt']; ?>"
+										src = "<?php echo wp_get_attachment_image_src($itemw['galery_works_img'], 'full')[0];?>" />
+								</div>
+								<?
+								$pictwIndex++;
+							}
+						}
+						?>
+					</div>
+
+					<!-- Маленький слайдер  -->
+					<div class="select-prod-slider">
+						<?
+						$pictw = carbon_get_the_post_meta('galery_works');
+						if($pictw) {
+							$pictwIndex = 0;
+							foreach($pictw as $itemw) {
+								?>
+								<div class="select-prod-slider__item">
+									<img 
+									data-indexelem = "<?echo $i;?>"
+									id = "<? echo $itemw['galery_works_img_sku']; ?>" 
+									alt = "<? echo $itemw['galery_works_img_alt']; ?>"
+									title = "<? echo $itemw['galery_works_img_alt']; ?>"
+									src = "<?php echo wp_get_attachment_image_src($itemw['galery_works_img'], 'large')[0];?>" />
+								</div>
+								<?
+								$pictwIndex++;
+							}
+						}
+						?>
+					</div>
+					
+			</div>
+
 		</div>
 	</div>

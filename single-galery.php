@@ -51,7 +51,7 @@ get_header(); ?>
   						foreach( $myposts as $post ){
     					setup_postdata($post);
     				?>
-							<li class="<?php if ($post_id_curent ==  get_the_ID()) { echo "active-page"; } ?>"><a href="<?php the_permalink(); ?>" 
+							<li class="allLi <?php if ($post_id_curent ==  get_the_ID()) { echo "active-page"; } ?>"><a href="<?php the_permalink(); ?>" 
 								class="menu-galery__link"><?php the_title(); ?> (<?php echo carbon_get_post_meta(get_the_ID(),"number_img"); ?>)</a></li>
     				<?php 
  					 		}

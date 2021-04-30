@@ -44,12 +44,13 @@ get_header(); ?>
 
 					<ul class="galery-block__menu menu-galery">
 						<?php
-  							$args = array( 'numberposts' => -1, 'order' => 'ASC', 'category' => 21 );
+  							$post_id_curent = get_query_var('page_id');
+							$args = array( 'numberposts' => -1, 'order' => 'ASC', 'category' => 21 );
   							$myposts = get_posts( $args );
   						foreach( $myposts as $post ){
     					setup_postdata($post);
     				?>
-							<li class="<?php if (is_single('')) { echo "active-page"; } ?>"><a href="<?php the_permalink(); ?>" 
+							<li class="<?php if ($post_id_curent ==  get_the_ID()) { echo "active-page"; } ?>"><a href="<?php the_permalink(); ?>" 
 								class="menu-galery__link"><?php the_title(); ?> (<?php echo carbon_get_post_meta(get_the_ID(),"number_img"); ?>)</a></li>
     				<?php 
  					 		}

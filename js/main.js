@@ -150,13 +150,10 @@ $(document).ready(function () {
 	$('.galary-sl-small').slick({
 		arrows: false,
 		dots: false,
-		infinite: true,
-		speed: 1000,
 		slidesToShow: 12,
 		slidesToScroll: 1,
-		centerMode: true,
+		infinite: false,
 		focusOnSelect: true,
-		autoplaySpeed: 1800,
 		asNavFor: ".galary-sl-big",
 		adaptiveHeight: true
 	});

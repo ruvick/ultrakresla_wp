@@ -159,7 +159,6 @@ $(document).ready(function () {
 		autoplaySpeed: 1800,
 		asNavFor: ".galary-sl-big",
 		adaptiveHeight: true
-		// vertical: true
 	});
 	$('.galary-sl-big').slick({
 		arrows: false,

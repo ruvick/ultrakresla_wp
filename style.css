@@ -3615,19 +3615,22 @@ body.ie .ibg img {
 }
 .menu-galery li {
   font-size: 20px;
-  /* font-weight: 700;
-  color: #727272; */
   margin-bottom: 15px;
-  margin-right: 38px;
+  margin-right: 32px;
+}
+.menu-galery li a {
+  font-weight: 600;
+  color: #727272;
+}
+.menu-galery .active-page a {
+  color: #000;
+  font-weight: 600;
 }
 .menu-galery li:nth-child(6) {
   margin-right: 0px;
 }
 .menu-galery li:last-child {
   margin-right: 0px;
-}
-.menu-galery__link {
-
 }
 
 .galery-block__galery-row {

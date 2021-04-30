@@ -147,29 +147,32 @@ $(document).ready(function () {
 
 
 	// Slider Модального окна
-	// $('.galary-sl-small').slick({
-	// 	arrows: false,
-	// 	dots: false,
-	// 	infinite: true,
-	// 	speed: 1000,
-	// 	slidesToShow: 12,
-	// 	slidesToScroll: 1,
-	// 	centerMode: true,
-	// 	focusOnSelect: true,
-	// 	autoplaySpeed: 1800,
-	// 	asNavFor: ".galary-sl-big",
-	// 	adaptiveHeight: true,
-	// 	vertical: true
-	// });
-	// $('.galary-sl-big').slick({
-	// 	arrows: false,
-	// 	dots: false,
-	// 	fade: true,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	draggable: false,
-	// 	asNavFor: ".galary-sl-small"
-	// });
+	$('.galary-sl-small').slick({
+		arrows: false,
+		dots: false,
+		infinite: true,
+		speed: 1000,
+		slidesToShow: 12,
+		slidesToScroll: 1,
+		centerMode: true,
+		focusOnSelect: true,
+		autoplaySpeed: 1800,
+		asNavFor: ".galary-sl-big",
+		adaptiveHeight: true
+		// vertical: true
+	});
+	$('.galary-sl-big').slick({
+		arrows: false,
+		dots: false,
+		fade: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		draggable: true,
+		asNavFor: ".galary-sl-small"
+	});
+
+
+
 
 
 	// Выбо колличества
@@ -336,6 +339,8 @@ $(document).ready(function () {
 	$(".galery-block__galery-img").on('click', function (e) {
 		e.preventDefault();
 		jQuery("#galaryW").arcticmodal();
+		$('.galary-sl-big').slick('setPosition');
+		$('.galary-sl-small').slick('setPosition');
 	});
 
 

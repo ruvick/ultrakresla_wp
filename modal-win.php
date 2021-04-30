@@ -69,7 +69,7 @@
 
 				<div class="select-prod-sl">
 					<!-- Большой слайдер -->
-					<div class="select-slider-big">
+					<div class="galary-sl-big">
 						<?
 						$pictw = carbon_get_the_post_meta('galery_works');
 						if($pictw) {
@@ -91,7 +91,7 @@
 					</div>
 
 					<!-- Маленький слайдер  -->
-					<div class="select-prod-slider">
+					<div class="galary-sl-small">
 						<?
 						$pictw = carbon_get_the_post_meta('galery_works');
 						if($pictw) {

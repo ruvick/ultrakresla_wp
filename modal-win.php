@@ -65,9 +65,10 @@
 <div style="display: none;">
 	<div class="box-modal box-modal-new box-modal-new__cust galaryw" id="galaryW">
 		<div class="box-modal_close box-modal_close_new arcticmodal-close">X</div>
+		<h3><?php the_title();?></h3>
 			<div class="galaryw__flex">
 
-				<div class="select-prod-sl">
+				<div class="galaryw__sl-wraper">
 					<!-- Большой слайдер -->
 					<div class="galary-sl-big">
 						<?
@@ -77,7 +78,7 @@
 							foreach($pictw as $itemw) {
 								?>
 								<div class="select-slider-big__item">
-										<img
+										<img data-image
 										id = "pict-<? echo empty($itemw['galery_works_img_sku'])?$pictwIndex:$itew['galery_works_img_sku']; ?>" 
 										alt = "<? echo $itemw['galery_works_img_alt']; ?>"
 										title = "<? echo $itemw['galery_works_img_alt']; ?>"

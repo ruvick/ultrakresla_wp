@@ -150,9 +150,9 @@ $(document).ready(function () {
 	$('.galary-sl-small').slick({
 		arrows: false,
 		dots: false,
-		slidesToShow: 12,
+		slidesToShow: 10,
 		slidesToScroll: 1,
-		infinite: false,
+		infinite: true,
 		focusOnSelect: true,
 		asNavFor: ".galary-sl-big",
 		adaptiveHeight: true
@@ -160,13 +160,10 @@ $(document).ready(function () {
 	$('.galary-sl-big').slick({
 		arrows: false,
 		dots: false,
-		fade: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		draggable: true,
 		asNavFor: ".galary-sl-small"
 	});
-
 
 
 
@@ -338,8 +335,6 @@ $(document).ready(function () {
 		$('.galary-sl-big').slick('setPosition');
 		$('.galary-sl-small').slick('setPosition');
 	});
-
-
 
 	$(".fancybox").fancybox();
 

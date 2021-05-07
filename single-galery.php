@@ -44,12 +44,12 @@ get_header(); ?>
 
 						<div class="galery-block__galery-row">
 						<?
-						$galw = carbon_get_the_post_meta('galery_works');
+						$galw = carbon_get_the_post_meta('galery_works'); 
 						if($galw) {
 							$galwIndex = 0;
 							foreach($galw as $galw_item) { 
 								?>
-							<a href="#" class="galery-block__galery-img">
+							<a href="#callback" class="galery-block__galery-img link pl">
 								<img
 									id = "pict-<? echo empty($galw_item['galery_works_img_sku'])?$galwIndex:$galw_item['galery_works_img_sku']; ?>" 
 									alt = "<? echo $galw_item['galery_works_img_alt']; ?>"

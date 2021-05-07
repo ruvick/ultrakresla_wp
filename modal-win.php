@@ -2,16 +2,19 @@
     В этом файле описываем все  всплывающие окна
 -->
 
-<div style="display: none;">
+<!-- <div style="display: none;">
   <div class="box-modal" id="messgeModal">
     <div class="box-modal_close arcticmodal-close"><?_e("закрыть","rubex");?></div>
         
-    <div class = "modalline" id = "lineIcon">
-    </div>
+    	<div class = "modalline" id = "lineIcon">
+    	</div>
     
-    <div class = "modalline" id = "lineMsg">
-    </div>
-</div>  
+    	<div class = "modalline" id = "lineMsg">
+    	</div>
+			
+		</div>
+	</div>  
+</div>   -->
 
 	<div style="display: none;">
 		<div class="box-modal box-modal-new box-modal-new__cust" id="question">
@@ -61,11 +64,14 @@
 		</div>
 	</div>
 
+<!-- Галерея наших работ -->
+<div class="popup popup-callback">
+	<div class="popup-table table">
+	<div class="cell">
+			<div class="popup-content" id="galaryW">
+			<div class="popup-close">X</div> 
 
-<div style="display: none;">
-	<div class="box-modal box-modal-new box-modal-new__cust galaryw" id="galaryW">
-		<div class="box-modal_close box-modal_close_new arcticmodal-close">X</div>
-		<h3><?php the_title();?></h3>
+			<h3><?php the_title();?></h3>
 			<div class="galaryw__flex">
 
 				<div class="galaryw__sl-wraper">
@@ -139,6 +145,8 @@
 				</div>
 
 			</div>		
-		</div>
+			</div>
+			</div>
 	</div>
 </div>
+<!-- <a href="#callback" class="link pl"></a> -->

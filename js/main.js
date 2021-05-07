@@ -154,6 +154,7 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		infinite: true,
 		focusOnSelect: true,
+		variableWidth: true,
 		asNavFor: ".galary-sl-big",
 		adaptiveHeight: true
 	});
@@ -162,10 +163,9 @@ $(document).ready(function () {
 		dots: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		adaptiveHeight: true,
 		asNavFor: ".galary-sl-small"
 	});
-
-
 
 
 	// Выбо колличества
@@ -329,12 +329,13 @@ $(document).ready(function () {
 		jQuery("#cashbackM").arcticmodal();
 	});
 
-	$(".galery-block__galery-img").on('click', function (e) {
-		e.preventDefault();
-		jQuery("#galaryW").arcticmodal();
-		$('.galary-sl-big').slick('setPosition');
-		$('.galary-sl-small').slick('setPosition');
-	});
+	// $(".galery-block__galery-img").on('click', function (e) {
+	// 	e.preventDefault();
+	// 	jQuery("#galaryW").arcticmodal();
+	// 	$('.galary-sl-big').slick('setPosition');
+	// 	$('.galary-sl-small').slick('setPosition');
+	// });
+
 
 	$(".fancybox").fancybox();
 
@@ -363,7 +364,7 @@ $(document).ready(function () {
 	};
 
 
-	//POPUP
+	//POPUP Галерея наших работ
 	$('.pl').click(function (event) {
 		var pl = $(this).attr('href').replace('#', '');
 		var v = $(this).data('vid');

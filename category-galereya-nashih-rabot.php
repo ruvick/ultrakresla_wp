@@ -25,7 +25,7 @@
     					setup_postdata($post);
     				?>
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?>(<?php echo carbon_get_post_meta(get_the_ID(),"number_img"); ?>)</a></h3>
-							<div class="galery-block__galery-row">
+							<a href="<?php the_permalink(); ?>" class="galery-block__galery-row">
 						<?
 							$galw = carbon_get_the_post_meta('galery_works');
 								if($galw) {
@@ -44,7 +44,7 @@
 								}
 							}
 						?>
-							</div>
+							</a>
     			<?php 
  						}
   					wp_reset_postdata();

@@ -65,11 +65,10 @@
 	</div>
 
 <!-- Галерея наших работ -->
-<div class="popup popup-callback">
-	<div class="popup-table table">
-	<div class="cell">
-			<div class="popup-content" id="galaryW">
-			<div class="popup-close">X</div> 
+<div class="popup popup_galary">
+	<div class="popup__content">
+		<div class="popup__body" id="galaryW">
+			<div class="popup__close">X</div> 
 
 			<h3><?php the_title();?></h3>
 			<div class="galaryw__flex">
@@ -109,6 +108,7 @@
 									<img 
 									data-indexelem = "<?echo $i;?>"
 									id = "<? echo $itemw['galery_works_img_sku']; ?>" 
+									data-slide = "<? echo empty($itemw['galery_works_img_sku'])?$pictwIndex:$itew['galery_works_img_sku']; ?>" 
 									alt = "<? echo $itemw['galery_works_img_alt']; ?>"
 									title = "<? echo $itemw['galery_works_img_alt']; ?>"
 									src = "<?php echo wp_get_attachment_image_src($itemw['galery_works_img'], 'large')[0];?>" />
@@ -146,7 +146,6 @@
 
 			</div>		
 			</div>
-			</div>
 	</div>
 </div>
-<!-- <a href="#callback" class="link pl"></a> -->
+<!-- <a href="#galary" class="_popup-link"></a> -->

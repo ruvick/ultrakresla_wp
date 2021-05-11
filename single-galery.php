@@ -49,9 +49,10 @@ get_header(); ?>
 							$galwIndex = 0;
 							foreach($galw as $galw_item) { 
 								?>
-							<a href="#callback" class="galery-block__galery-img link pl">
+							<a href="#galary" class="galery-block__galery-img _popup-link">
 								<img
 									id = "pict-<? echo empty($galw_item['galery_works_img_sku'])?$galwIndex:$galw_item['galery_works_img_sku']; ?>" 
+									data-slide = "<? echo empty($galw_item['galery_works_img_sku'])?$galwIndex:$galw_item['galery_works_img_sku']; ?>"
 									alt = "<? echo $galw_item['galery_works_img_alt']; ?>"
 									title = "<? echo $galw_item['galery_works_img_alt']; ?>"
 									src = "<?php echo wp_get_attachment_image_src($galw_item['galery_works_img'], 'full')[0];?>" />

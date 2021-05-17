@@ -299,7 +299,7 @@ get_header(); ?>
 				
 				<a href="<?php echo get_category_link(9);?>" class="three-img__one position">
 					<img src="<?php echo get_template_directory_uri();?>/img/similar-01.jpg" alt="">
-					<div class="info-img__text color-t-01">
+					<div class="info-img__text color-t-01 color-t-left">
 						<p>
 							Спортивные <br>
 							сидения
@@ -309,7 +309,7 @@ get_header(); ?>
 
 				<a href="<?php echo get_category_link(12);?>" class="three-img__one position">
 					<img src="<?php echo get_template_directory_uri();?>/img/similar-02.jpg" alt="">
-					<div class="info-img__text color-t-03">
+					<div class="info-img__text color-t-03 color-t-right">
 						<p>
 							Игровые <br>
 							кресла
@@ -319,7 +319,7 @@ get_header(); ?>
 
 				<a href="<?php echo get_category_link(14);?>" class="three-img__one position">
 					<img src="<?php echo get_template_directory_uri();?>/img/similar-03.jpg" alt="">
-					<div class="info-img__text color-t-08"> 
+					<div class="info-img__text color-t-08 color-t-left"> 
 						<p>
 							Компьютерные <br>
 							кресла
@@ -329,7 +329,7 @@ get_header(); ?>
 
 				<a href="<?php echo get_category_link(12);?>" class="three-img__one position">
 					<img src="<?php echo get_template_directory_uri();?>/img/similar-04.jpg" alt="">
-					<div class="info-img__text color-t-05">
+					<div class="info-img__text color-t-05 color-t-right">
 						<p>
 							Кресла для <br>
 							автосимуляторов

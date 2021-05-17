@@ -9,14 +9,14 @@
 
 		<?php get_template_part('template-parts/benefit-slider');?>
 
-			<div class="info-img d-flex">
+			<div class="info-img d-flex"> 
 
-				<div class="info-img__col">
+				<div class="info-img__col"> 
 
 					<div class="info-img__three three-img d-flex">
 						<a href="<?php echo get_category_link(9);?>" class="three-img__one position">
 							<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-01.jpg" alt="">
-							<div class="info-img__text color-t-01">
+							<div class="info-img__text color-t-01 color-t-left">
 								<p>
 									Спортивные <br> 
 									сидения
@@ -31,7 +31,7 @@
 								</a>
 								<a href="<?php echo get_category_link(12);?>" class="three-img__item position">
 									<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-03.jpg" alt="">
-									<div class="info-img__text color-t-03">
+									<div class="info-img__text color-t-03 color-t-right">
 										<p>
 											Игровые <br>
 											кресла
@@ -44,7 +44,7 @@
 
 						<a href="<?php echo get_category_link(17);?>" class="info-img__one position">
 							<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-04.jpg" alt="">
-							<div class="info-img__text color-t-04">
+							<div class="info-img__text color-t-04 color-t-right">
 								<p>
 									Кресла и диваны для <br>
 									микроавтобусов
@@ -58,7 +58,7 @@
 
 						<a href="<?php echo get_category_link(12);?>" class="info-img__one position">
 							<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-05.jpg" alt="">
-							<div class="info-img__text color-t-05">
+							<div class="info-img__text color-t-05 color-t-right">
 								<p>
 									Кресла для <br>
 									автосимуляторов 
@@ -70,7 +70,7 @@
 							<div class="three-img__two d-flex">
 								<a href="<?php echo get_category_link(15);?>" class="three-img__item position">
 									<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-06.jpg" alt="">
-									<div class="info-img__text color-t-06">
+									<div class="info-img__text color-t-06 color-t-left">
 										<p>
 											Сидения для <br>
 											спецтехники
@@ -79,7 +79,7 @@
 								</a>
 								<a href="<?php echo get_category_link(19);?>" class="three-img__item position">
 									<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-07.jpg" alt="">
-									<div class="info-img__text color-t-07">
+									<div class="info-img__text color-t-07 color-t-left">
 										<p>
 											Сидения для <br>
 											катеров и лодок
@@ -89,7 +89,7 @@
 							</div>
 							<a href="<?php echo get_category_link(14);?>" class="three-img__one position">
 								<img src="<?php echo get_template_directory_uri();?>/img/info-card/card-08.jpg" alt="">
-								<div class="info-img__text color-t-08">
+								<div class="info-img__text color-t-08 color-t-right">
 									<p>
 										Компьютерные <br>
 										кресла
@@ -204,7 +204,7 @@
 					?>
 					<div class="useful__row d-flex">
 
-						<a href="<?php echo get_permalink($posts[0]->ID);?>" class="useful__item-img-item useful__item-img_01" 
+						<a href="<?php echo get_permalink($posts[0]->ID);?>" class="useful__item-img-item useful__item-img_01 color-t-left" 
 							style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[0]->ID, 'full' );?>);">
 							<!-- <img src="img/useful/useful-01.jpg" alt=""> -->
 							<p>
@@ -212,11 +212,11 @@
 								echo get_the_title( $posts[0]->ID );
 								?>
 							</p> 
-							<div class="nuar_blk"></div>
+							<div class="nuar_blk color-t-left"></div>
 						</a>
 
 						<div class="useful__item-img d-flex">
-							<a href="<?php echo get_permalink($posts[1]->ID);?>" class="useful__item-img-item useful__item-img_02"
+							<a href="<?php echo get_permalink($posts[1]->ID);?>" class="useful__item-img-item useful__item-img_02 color-t-left"
 								style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[1]->ID, 'full' );?>);">
 								<!-- <img src="img/useful/useful-02.jpg" alt=""> -->
 								<p>
@@ -224,9 +224,9 @@
 									echo get_the_title( $posts[1]->ID );
 									?>
 								</p> 
-								<div class="nuar_blk"></div>
+								<div class="nuar_blk color-t-left"></div>
 							</a>
-							<a href="<?php echo get_permalink($posts[2]->ID);?>" class="useful__item-img-item useful__item-img_03" 
+							<a href="<?php echo get_permalink($posts[2]->ID);?>" class="useful__item-img-item useful__item-img_03 color-t-left" 
 								style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[2]->ID, 'full' );?>);">
 								<!-- <img src="img/useful/useful-03.jpg" alt=""> -->
 								<p>
@@ -234,13 +234,13 @@
 									echo get_the_title( $posts[2]->ID );
 									?>
 								</p> 
-								<div class="nuar_blk"></div>
+								<div class="nuar_blk color-t-left"></div>
 							</a>
 						</div>
 
 						<div class="useful__item-img d-flex">
 
-							<a href="<?php echo get_permalink($posts[3]->ID);?>" class="useful__item-img-item useful__item-img_04" 
+							<a href="<?php echo get_permalink($posts[3]->ID);?>" class="useful__item-img-item useful__item-img_04 color-t-right" 
 								style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[3]->ID, 'full' );?>);">
 								<!-- <img src="img/useful/useful-04.jpg" alt=""> -->
 								<p>
@@ -248,10 +248,10 @@
 									echo get_the_title( $posts[3]->ID );
 									?>
 								</p> 
-								<div class="nuar_blk"></div>
+								<div class="nuar_blk color-t-right"></div>
 							</a>
 
-							<a href="<?php echo get_permalink($posts[4]->ID);?>" class="useful__item-img-item useful__item-img_05" 
+							<a href="<?php echo get_permalink($posts[4]->ID);?>" class="useful__item-img-item useful__item-img_05 color-t-right" 
 								style="background-image: url(<?php echo get_the_post_thumbnail_url( $posts[4]->ID, 'full' );?>);">
 								<!-- <img src="img/useful/useful-05.jpg" alt=""> -->
 								<p>
@@ -259,7 +259,7 @@
 									echo get_the_title( $posts[4]->ID );
 									?>
 								</p> 
-								<div class="nuar_blk"></div>
+								<div class="nuar_blk color-t-right"></div>
 							</a>
 						</div>
 

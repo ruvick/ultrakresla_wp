@@ -3666,6 +3666,54 @@ body.ie .ibg img {
   font-size: 16px;
 }
 
+.cat_elem .color-t::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 135px;
+  border-radius: inherit;
+  transform: skewY(9deg);
+  transform-origin: 0% 50%;
+}
+.cat_elem:nth-child(1) .color-t::before {
+  background: #ed3636;
+}
+.cat_elem:nth-child(2) .color-t::before {
+  background: #f1c918;
+}
+.cat_elem:nth-child(3) .color-t::before {
+  background: #33ddab;
+  transform: skewY(-9deg);
+  transform-origin: 100% 50%;
+}
+.cat_elem:nth-child(4) .color-t::before {
+  background: #b9de38;
+}
+.cat_elem:nth-child(5) .color-t::before {
+  background: #3ddae8;
+  transform: skewY(-9deg);
+  transform-origin: 100% 50%;
+}
+/* .color-t-right .color-t-right::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  border-radius: inherit;
+  transform: skewY(-9deg);
+  transform-origin: 100% 50%;
+} */
+
+.cat_elem:nth-child(3) .title,
+.cat_elem:nth-child(5) .title {
+  text-align: right;
+}
+
+
 .blocks-gallery-item {
   border: 2px solid #bcbdbf;
   padding: 5px;

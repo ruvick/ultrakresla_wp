@@ -5450,9 +5450,9 @@ body.ie .ibg img {
   .three-img__one {
     height: 262px;
   }
-  .info-img__col img {
+  /* .info-img__col img {
     height: auto;
-  }
+  } */
   .galary-sl-big .select-slider-big__item {
     max-height: 320px; }
 }

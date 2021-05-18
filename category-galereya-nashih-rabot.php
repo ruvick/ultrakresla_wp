@@ -29,7 +29,7 @@
 							<a href="<?php the_permalink(); ?>" class="galery-block__galery-img">
 								<img src = "<?php echo wp_get_attachment_image_src($galw_item['galery_works_img'], 'full')[0];?>" />
 								<div class="galery-color-block color-t-left">
-									<p><?php the_title(); ?>(<?php echo carbon_get_post_meta(get_the_ID(),"number_img"); ?>)</p>
+									<p><?php the_title(); ?> (<?php echo carbon_get_post_meta(get_the_ID(),"number_img"); ?> фото)</p>
 								</div>
 							</a>
 						<?php

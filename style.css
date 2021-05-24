@@ -4125,7 +4125,21 @@ body.ie .ibg img {
 		background: url("../img/icons/close.svg") 0 0 no-repeat;
 	}
 
+.page-fabrics h3 {
+  margin-bottom: 15px;
+}
 
+.page-fabrics-block__row .galery-color-block {
+    height: 90px;
+}
+
+.page-fabrics-block__row .galery-color-block p {
+  margin-bottom: 0;
+}
+
+.page-fabrics-block__row {
+  margin-bottom: 30px;
+}
 
   
 

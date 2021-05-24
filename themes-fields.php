@@ -158,6 +158,34 @@ Container::make('post_meta', 'ultra_product_cr', 'Характеристики �
         Field::make('text', 'galery_works_img_sku', 'ID для модификации')->set_width(30),
         Field::make('text', 'galery_works_img_alt', 'alt и title')->set_width(30)        
       ) ),
+      Field::make( 'complex', 'galery_fabrics', "Галерея тканей" )
+      ->add_fields( array(
+        Field::make('image', 'galery_fabrics_img', 'Изображение' )->set_width(30),
+        Field::make('text', 'galery_fabrics_img_alt', 'alt и title')->set_width(30)        
+      ) ),
+
+  ));
+
+  Container::make('post_meta', 'page-gallery-tkaney-obivki-sidenii', 'Характеристики записи')
+  ->show_on_template(array('page-gallery-tkaney-obivki-sidenii.php'))
+      ->add_fields(array(   
+      Field::make( 'complex', 'galery_velours', "Велюр" )
+      ->add_fields( array(
+        Field::make('image', 'galery_velours_img', 'Изображение' )->set_width(30),
+        Field::make('text', 'galery_velours_img_alt', 'alt и title')->set_width(30)        
+      ) ),
+
+      Field::make( 'complex', 'galery_eco', "Эко-Кожа" )
+      ->add_fields( array(
+        Field::make('image', 'galery_eco_img', 'Изображение' )->set_width(30),
+        Field::make('text', 'galery_eco_img_alt', 'alt и title')->set_width(30)        
+      ) ),
+
+      Field::make( 'complex', 'galery_leather', "Кожа" )
+      ->add_fields( array(
+        Field::make('image', 'galery_leather_img', 'Изображение' )->set_width(30),
+        Field::make('text', 'galery_leather_img_alt', 'alt и title')->set_width(30)        
+      ) ),
 
   ));
 

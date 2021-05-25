@@ -4141,7 +4141,41 @@ body.ie .ibg img {
   margin-bottom: 30px;
 }
 
-  
+.archive-prod-card .galery-block__galery-img {
+  /* background: grey; */
+}
+.archive-prod-card .galery-block__galery-img img {
+  max-width: 100%;
+  /* width: 100%; */
+  object-fit: cover;
+  /* height: 100%; */
+  height: auto;
+}
+
+.archive-prod-card .galery-block__galery-img:nth-child(1n) .color-t-left:before {
+  background: #008945;
+}
+.archive-prod-card .galery-block__galery-img:nth-child(2n) .color-t-left:before {
+  background: #ed6c11;
+}
+.archive-prod-card .galery-block__galery-img:nth-child(3n) .color-t-left:before {
+  background: #39134c;
+}
+.archive-prod-card .galery-block__galery-img:nth-child(4n) .color-t-left:before {
+  background: #008945;
+}
+.archive-prod-card .galery-block__galery-img:nth-child(5n) .color-t-left:before {
+  background: #c8390f;
+}
+.archive-prod-card .galery-block__galery-img:nth-child(6n) .color-t-left:before {
+  background: #3ddae8;
+}
+.archive-prod-card .galery-block__galery-img:nth-child(7n) .color-t-left:before {
+  background: #ff8625;
+}
+.archive-prod-card .galery-block__galery-img:nth-child(8n) .color-t-left:before {
+  background: #3778bc;
+}
 
 
 
